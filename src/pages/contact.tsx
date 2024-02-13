@@ -6,7 +6,6 @@ import AccordionSummary from "@mui/material/AccordionSummary";
 import AccordionDetails from "@mui/material/AccordionDetails";
 import ExpandMoreIcon from "@mui/icons-material/ExpandMore";
 
-
 function Contact() {
   //const [open, setOpen] = React.useState(1);
 
@@ -58,18 +57,19 @@ function Contact() {
     },
   ];
 
-  // bg-gradient-to-b from-slate-950 to-[#010838]  
   return (
-    <div className="flex flex-col justify-center w-full items-center">
-      {/* <div>
-        <div className="bg-blue-600 mt-10 w-full lg:h-20"></div>
-        <img src={one} alt="" className="mt-10 filter brightness-110 grayscale  invert-0 " />
-      </div> */}
+    <div className="flex flex-col justify-center w-full items-center bg-[#090D29]">
       <div className="w-full relative">
-            {/* <div className="absolute mt-20 inset-0 bg-opacity-40 bg-blue-950 z-10"></div> */}
-            <img src={one} className=" mt-20 w-full hue-rotate-180 z-0 " alt="" />
-          </div>
-      
+        <div className="absolute mt-20 inset-0 opacity-10 bg-[#090D29] z-10" />
+        <img
+          src={one}
+          className="absolute mt-20 w-full grayscale z-5 "
+          alt=""
+        />
+        <img src={one} className="mt-20 w-full grayscale " alt="" />
+        {/* <div className="absolute mt-20 inset-0 opacity-100 bg-[#090D29] z-0"/> */}
+      </div>
+
       <h1
         className="text-3xl my-8 text-center font-bold lg:text-7xl mb-3 text-white sm:text-center lg:text-start"
         style={{
@@ -81,8 +81,12 @@ function Contact() {
         CONTACT US
       </h1>
 
-      <div className="w-full flex flex-col lg:flex-row gap-10 justify-center items-center mt-8">
-        <div className="w-full lg:w-1/3 flex flex-col  justify-center items-center space-y-5 lg:border-r-2">
+      <div className="w-full flex flex-col lg:flex-row gap-10 justify-center items-center mt-8 relative">
+
+        
+        
+        <div className="w-full lg:w-1/3 flex flex-col  justify-center items-center space-y-5 relative ">
+        <div className="h-[140%] -right-[5%] top-0 w-[1px] bg-white absolute hidden lg:block" />
           <svg
             xmlns="http://www.w3.org/2000/svg"
             fill="none"
@@ -109,7 +113,8 @@ function Contact() {
           </p>
         </div>
 
-        <div className="w-full lg:w-1/3 flex flex-col justify-center items-center space-y-5 lg:border-r-2">
+        <div className="w-full lg:w-1/3 flex flex-col justify-center items-center space-y-5 relative ">
+          <div className="h-[140%] -right-[5%] top-0 w-[1px] bg-white absolute hidden lg:block" />
           <svg
             xmlns="http://www.w3.org/2000/svg"
             fill="none"
@@ -166,7 +171,7 @@ function Contact() {
         </div>
       </div>
 
-      <div className="w-full flex flex-row justify-center items-center mt-8 space-x-5 my-8">
+      <div className="w-full flex flex-row justify-center items-center gap-10 space-x-5 my-20">
         <Link to={""}>
           {" "}
           <i className="fa-brands fa-facebook-f text-white text-2xl"></i>
@@ -201,8 +206,8 @@ function Contact() {
           <img src={two} alt="" />
         </div>
 
-        <div className="w-full lg:w-1/2 flex flex-col   mt-8">
-          <h3 className="text-white text-2xl mb-8">
+        <div className="w-full lg:w-1/2 flex flex-col px-10   mt-8">
+          <h3 className="text-white font-bold text-2xl mb-8">
             Frequently Asked Questions
           </h3>
           <div className="w-full h-[2px] bg-white mb-2" />
@@ -210,7 +215,7 @@ function Contact() {
             {accordions.map(({ data, isOpen, key, title }) => (
               <Accordion
                 defaultExpanded={isOpen}
-                className="bg-black border-b-2 border-white"
+                className="bg-black border-b-2 border-white "
                 disableGutters
                 key={key}
               >
@@ -226,6 +231,8 @@ function Contact() {
                     color: "#fff",
                     fontSize: "16px",
                     fontWeight: "600",
+                    display: "flex",
+                    alignItems: "flex-start"
                   }}
                 >
                   {title}
@@ -239,19 +246,21 @@ function Contact() {
         </div>
       </div>
 
-      <h3 className="text-white text-2xl font-semibold mt-12">Disclaimers</h3>
+      <div className="flex flex-col items-center justify-between my-16">
+        <h3 className="text-white text-2xl font-semibold">DISCLAIMERS</h3>
 
-      <p className="text-white text-[16px] lg:mx-32 mx-[30px] mt-8 lg:text-center">
-        Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam
-        nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat
-        volutpat.Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed
-        diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat
-        volutpat.Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed
-        diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat
-        volutpat.Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed
-        diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat
-        volutpat.
-      </p>
+        <p className="text-white font-light text-[16px] lg:mx-32 mx-[30px] mt-8 lg:text-center">
+          Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam
+          nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat
+          volutpat.Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed
+          diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam
+          erat volutpat.Lorem ipsum dolor sit amet, consectetuer adipiscing
+          elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna
+          aliquam erat volutpat.Lorem ipsum dolor sit amet, consectetuer
+          adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet
+          dolore magna aliquam erat volutpat.
+        </p>
+      </div>
     </div>
   );
 }

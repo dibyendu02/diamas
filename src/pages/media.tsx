@@ -13,7 +13,7 @@ import blog1 from "../assets/media/blogs/1.png";
 import blog2 from "../assets/media/blogs/2.png";
 import blog3 from "../assets/media/blogs/3.png";
 import blog4 from "../assets/media/blogs/4.png";
-
+import Scrollbar from "../components/scrollbar";
 
 function Media() {
   const [active, setActive] = useState("Press");
@@ -21,48 +21,42 @@ function Media() {
   const [showButtons, setShowButtons] = useState(true);
 
   useEffect(() => {
-      const handleScroll = () => {
+    const handleScroll = () => {
       const currentPosition = window.scrollY;
       setScrollPosition(currentPosition);
 
       // Show buttons if scrolled more than half the screen
-      setShowButtons(currentPosition > window.innerHeight / 70);
-      };
+      setShowButtons(currentPosition > window.innerHeight);
+    };
 
-      window.addEventListener("scroll", handleScroll);
+    window.addEventListener("scroll", handleScroll);
 
-      return () => {
+    return () => {
       window.removeEventListener("scroll", handleScroll);
-      };
+    };
   }, [scrollPosition]);
 
-
-
   const scrollToBottom = () => {
-      window.scrollTo({
-        top: document.documentElement.scrollHeight,
-        behavior: "smooth", // Optional, smooth scrolling animation
-      });
-    };
-    const scrollToTop = () => {
-      window.scrollTo({
-        top: 0,
-        behavior: "smooth",
-      });
-    };
-    
+    window.scrollTo({
+      top: document.documentElement.scrollHeight,
+      behavior: "smooth", // Optional, smooth scrolling animation
+    });
+  };
+  const scrollToTop = () => {
+    window.scrollTo({
+      top: 0,
+      behavior: "smooth",
+    });
+  };
+
   return (
     <div className="flex flex-col justify-center items-center">
-      <div className="flex flex-col justify-center items-center w-full">
-        {/* <div className="z-10 lg:top-0 w-full h-[500px] bg-gradient-to-b from-slate-800 to-[#2b2f4b] absolute bg-[rgba(0,0,0,0.5)]"></div> */}
-
-        {/* <div
-          style={{ "--image-url": `url(${one})` }}
-          className="bg-[image:var(--image-url)] bg-contain bg-no-repeat bg-bottom  
-          w-full h-[300px] lg:h-[700px] object-cover justify-center items-center flex"
-        >
+      <div className="flex flex-col justify-center items-center w-full mb-20">
+        <div className="w-full h-[300px] lg:h-[700px] flex items-center justify-center relative">
+          <div className="absolute h-full inset-0 bg-opacity-20 bg-blue-950 z-10"></div>
+          <img src={one} className="z-0 object-cover h-full" alt="" />
           <h1
-            className="text-3xl lg:text-7xl my-3 font-[Bulter] font-bold text-white text-center lg:text-start z-10 uppercase"
+            className="absolute text-3xl lg:text-7xl my-3 font-[Bulter] font-bold text-white text-center lg:text-start z-10 uppercase"
             style={{
               letterSpacing: 5,
               lineHeight: 1.4,
@@ -70,71 +64,60 @@ function Media() {
           >
             MEDIA
           </h1>
-        </div> */}
 
-
-        <div className="w-full h-[300px] lg:h-[700px] flex items-center justify-center">
-            <div className="absolute h-full inset-0 bg-opacity-20 bg-blue-950 z-10"></div>
-            <img src={one} className="z-0 object-cover h-full" alt="" />
-            <h1
-              className="absolute text-3xl lg:text-7xl my-3 font-[Bulter] font-bold text-white text-center lg:text-start z-10 uppercase"
-              style={{
-                letterSpacing: 5,
-                lineHeight: 1.4,
-              }}
+          {!showButtons && (
+            <div
+              className="hidden lg:flex gap-10 justify-center items-center  
+           w-full absolute -bottom-12
+        p-4 text-white"
             >
-              MEDIA
-            </h1>
+              <div className="w-[40%] h-[1px] bg-white " />
+              <div className="h-16 w-10 rounded-full border-2 border-white flex flex-col gap-2 items-center justify-between py-2 text-white ">
+                <button onClick={scrollToTop}>
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    fill="none"
+                    viewBox="0 0 24 24"
+                    strokeWidth={4}
+                    stroke="currentColor"
+                    className="w-4 h-4"
+                  >
+                    <path
+                      strokeLinecap="round"
+                      strokeLinejoin="round"
+                      d="m4.5 15.75 7.5-7.5 7.5 7.5"
+                    />
+                  </svg>
+                </button>
+
+                <button onClick={scrollToBottom}>
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    fill="none"
+                    viewBox="0 0 24 24"
+                    strokeWidth={4}
+                    stroke="currentColor"
+                    className="w-4 h-4"
+                  >
+                    <path
+                      strokeLinecap="round"
+                      strokeLinejoin="round"
+                      d="m19.5 8.25-7.5 7.5-7.5-7.5"
+                    />
+                  </svg>
+                </button>
+              </div>
+              <div className="w-[40%] h-[1px] bg-white " />
+            </div>
+          )}
         </div>
       </div>
 
-      
-      {showButtons && <div
-        className="hidden lg:flex gap-10 justify-center items-center  
-         fixed bottom-0 z-50  w-full
-        p-4 text-white"
-      >
-        <div className="w-[40%] h-[1px] bg-white " />
-        <div className="h-16 w-10 rounded-full border-2 border-white flex flex-col gap-2 items-center justify-between py-2 text-white ">
-          <button onClick={scrollToTop}>
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              fill="none"
-              viewBox="0 0 24 24"
-              strokeWidth={4}
-              stroke="currentColor"
-              className="w-4 h-4"
-            >
-              <path
-                strokeLinecap="round"
-                strokeLinejoin="round"
-                d="m4.5 15.75 7.5-7.5 7.5 7.5"
-              />
-            </svg>
-          </button>
+      <div className="flex w-full justify-between">
+        {showButtons && <Scrollbar />}
+      </div>
 
-          <button onClick={scrollToBottom}>
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              fill="none"
-              viewBox="0 0 24 24"
-              strokeWidth={4}
-              stroke="currentColor"
-              className="w-4 h-4"
-            >
-              <path
-                strokeLinecap="round"
-                strokeLinejoin="round"
-                d="m19.5 8.25-7.5 7.5-7.5-7.5"
-              />
-            </svg>
-          </button>
-        </div>
-        <div className="w-[40%] h-[1px] bg-white " />
-      </div> }
-      
-
-      <div className="flex mt-0 flex-col items-center w-full lg:flex-row lg:mt-8">
+      <div className="flex mt-0 items-center w-full flex-row gap-4 lg:gap-0 lg:mt-8">
         <div className="w-96 h-[1px] bg-white"></div>
         <div
           className="text-white lg:text-2xl lg:ms-28 cursor-pointer"
@@ -269,11 +252,10 @@ function Media() {
               magna aliquam erat volutpat.Lorem ipsum dolor sit amet,
               consectetuer adipiscing elit, sed diam nonummy nibh euismod
               tincidunt ut laoreet dolore magna aliquam erat volutpat.
-              
             </h3>
-            <img src={blog1} alt=""  />
+            <img src={blog1} alt="" />
           </div>
-          <img src={blog3}  alt="" />
+          <img src={blog3} alt="" />
         </div>
 
         <div className="block lg:flex flex-col lg:w-1/2 w-full gap-3">

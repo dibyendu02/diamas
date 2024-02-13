@@ -7,41 +7,40 @@ import five from "../assets/collection/5.png";
 import six from "../assets/collection/6.png";
 import seven from "../assets/collection/7.png";
 import eight from "../assets/collection/8.png";
+import Scrollbar from "../components/scrollbar";
 
 function collection() {
   const [scrollPosition, setScrollPosition] = useState(0);
   const [showButtons, setShowButtons] = useState(false);
 
   useEffect(() => {
-      const handleScroll = () => {
+    const handleScroll = () => {
       const currentPosition = window.scrollY;
       setScrollPosition(currentPosition);
 
       // Show buttons if scrolled more than half the screen
       setShowButtons(currentPosition > window.innerHeight / 2);
-      };
+    };
 
-      window.addEventListener("scroll", handleScroll);
+    window.addEventListener("scroll", handleScroll);
 
-      return () => {
+    return () => {
       window.removeEventListener("scroll", handleScroll);
-      };
+    };
   }, [scrollPosition]);
 
-
-
   const scrollToBottom = () => {
-      window.scrollTo({
-        top: document.documentElement.scrollHeight,
-        behavior: "smooth", // Optional, smooth scrolling animation
-      });
-    };
-    const scrollToTop = () => {
-      window.scrollTo({
-        top: 0,
-        behavior: "smooth",
-      });
-    };
+    window.scrollTo({
+      top: document.documentElement.scrollHeight,
+      behavior: "smooth", // Optional, smooth scrolling animation
+    });
+  };
+  const scrollToTop = () => {
+    window.scrollTo({
+      top: 0,
+      behavior: "smooth",
+    });
+  };
   return (
     <div className="flex flex-col justify-center items-center ">
       <div
@@ -50,7 +49,7 @@ function collection() {
         }}
         className="bg-[image:var(--image-url)] bg-cover 
          bg-center w-full lg:h-[600px] object-cover 
-         justify-center items-center flex bg-blue-950 bg-opacity:25 gayscale
+         justify-center items-center flex  gayscale relative
          "
       >
         <h1
@@ -63,14 +62,11 @@ function collection() {
           Collections
         </h1>
 
-       
-      </div>
-
-      {showButtons && <div
-            // className="hidden lg:flex mt-16 gap-10 justify-center items-center lg:mx-0 sticky bottom-0"
+        {!showButtons && (
+          <div
             className="hidden lg:flex gap-10 justify-center items-center  
-             fixed bottom-0 z-50  w-full
-            p-4 text-white"
+       w-full absolute -bottom-12
+      p-4 text-white"
           >
             <div className="w-[40%] h-[1px] bg-white " />
             <div className="h-16 w-10 rounded-full border border-white flex flex-col gap-2 items-center justify-between py-2 text-white ">
@@ -79,7 +75,7 @@ function collection() {
                   xmlns="http://www.w3.org/2000/svg"
                   fill="none"
                   viewBox="0 0 24 24"
-                  strokeWidth={1.5}
+                  strokeWidth={4}
                   stroke="currentColor"
                   className="w-4 h-4"
                 >
@@ -90,7 +86,7 @@ function collection() {
                   />
                 </svg>
               </button>
-    
+
               <button onClick={scrollToBottom}>
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
@@ -109,14 +105,18 @@ function collection() {
               </button>
             </div>
             <div className="w-[40%] h-[1px] bg-white " />
-          </div>}
+          </div>
+        )}
 
-      {/* <button
-      onClick={scrollToBottom}
-      className="hidden lg:flex mt-[-38px] justify-center items-center lg:mx-0">
         
-        <img src={layer1} alt="" />
-      </button> */}
+      </div>
+
+      <div className="flex w-full justify-between">
+        {showButtons && <Scrollbar />}
+      </div>
+      
+      
+      
 
       <h1
         className="text-white bacalisties dancing-script text-center mt-12"
@@ -139,7 +139,7 @@ function collection() {
         </div>
       </div>
 
-      <p className="mb-3 text-white  lg:text-start my-12 lg:mx-24 lg:text-2xl sm:text-start mx-[30px]">
+      <p className="mb-3 text-white font-light  lg:text-start my-12 lg:mx-24 lg:text-2xl sm:text-start mx-[30px]">
         Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam
         nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat
         volutpat.Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed
@@ -163,7 +163,7 @@ function collection() {
             <img src={five} className="w-full" alt="" />
           </div>
           <div className="h-full p-4 lg:w-1/2 ">
-            <p className="mb-3 text-white lg:text-start my-12 lg:mx-24 lg:text-2xl sm:text-start mx-[30px]">
+            <p className="mb-3 font-light text-white lg:text-start my-12 lg:mx-24 lg:text-2xl sm:text-start mx-[30px]">
               Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam
               nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam
               erat volutpat.Lorem ipsum dolor sit amet, consectetuer adipiscing
@@ -187,7 +187,7 @@ function collection() {
         </h1>
         <div className="flex flex-col lg:flex-row sm:w-full lg:w-auto justify-center items-center">
           <div className="h-full p-4 lg:w-1/2 ">
-            <p className="mb-3 text-white lg:text-start my-12 lg:mx-24 lg:text-2xl sm:text-start mx-[30px]">
+            <p className="mb-3 text-white font-light lg:text-start my-12 lg:mx-24 lg:text-2xl sm:text-start mx-[30px]">
               Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam
               nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam
               erat volutpat.Lorem ipsum dolor sit amet, consectetuer adipiscing
@@ -217,7 +217,7 @@ function collection() {
             <img src={seven} className="w-full" alt="" />
           </div>
           <div className="h-full p-4 lg:w-1/2 ">
-            <p className="mb-3 text-white lg:text-start my-12 lg:mx-24 lg:text-2xl sm:text-start mx-[30px]">
+            <p className="mb-3 text-white font-light lg:text-start my-12 lg:mx-24 lg:text-2xl sm:text-start mx-[30px]">
               Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam
               nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam
               erat volutpat.Lorem ipsum dolor sit amet, consectetuer adipiscing
@@ -244,7 +244,7 @@ function collection() {
           <img src={eight} alt="" className="w-full lg:h-auto h-full" />
         </div>
 
-        <p className="mb-3 text-white lg:text-xl lg:text-center my-12 lg:mx-24 sm:text-start mx-[30px]">
+        <p className="mb-20 text-white font-light lg:text-xl lg:text-center my-16 lg:mx-24 sm:text-start mx-[30px]">
           Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam
           nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat
           volutpat.Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed
