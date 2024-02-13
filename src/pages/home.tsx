@@ -193,9 +193,16 @@ const home = () => {
             <img src={slider4} className="object-cover" alt="" />
           </SwiperSlide>
         </Swiper>
-        <img src={diamond} alt="diamond" className="absolute opacity-60 blur-sm top-20 left-[15%] rotate-180 hidden lg:block " />
-        <img src={diamond} alt="diamond" className="absolute opacity-60 blur-xs top-20 right-[15%] hidden lg:block " />
-
+        <img
+          src={diamond}
+          alt="diamond"
+          className="absolute opacity-60 blur-sm top-20 left-[15%] rotate-180 hidden lg:block "
+        />
+        <img
+          src={diamond}
+          alt="diamond"
+          className="absolute opacity-60 blur-xs top-20 right-[15%] hidden lg:block "
+        />
       </div>
 
       <div className="container relative w-full  ml-auto  lg:py-24 flex flex-wrap justify-center items-center self-center mt-20">
@@ -255,12 +262,12 @@ const home = () => {
         <div className="mapdiv h-full p-4 lg:w-[45%] lg:top-[16%] w-full  static left-[27%]  lg:absolute lg:transform -translate-x-1/2 z-10">
           <iframe
             src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3502.02705431727!2d77.068682370812!3d28.628951246325638!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x390d04c2d11feb9f%3A0x5b42213df8236053!2sa%2C%20A-157%2C%20Guru%20Virjanand%20Marg%2C%20near%20Police%20Station%2C%20A-Block%2C%20Vikaspuri%2C%20Delhi%2C%20110018!5e0!3m2!1sen!2sin!4v1706261050023!5m2!1sen!2sin"
-            style={{ borderRadius: 10 }}
+            style={{borderRadius: 10}}
             allowFullScreen={true}
             aria-hidden="false"
             tabIndex={0}
             className="w-full h-[67%]"
-          />
+          ></iframe>
         </div>
 
         <div className="h-full lg:p-[1rem] mx-2  lg:relative border border-white lg:ms-[19rem] lg:w-[60%] z-0 relative">

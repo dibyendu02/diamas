@@ -69,7 +69,7 @@ function collection() {
       p-4 text-white"
           >
             <div className="w-[40%] h-[1px] bg-white " />
-            <div className="h-16 w-10 rounded-full border border-white flex flex-col gap-2 items-center justify-between py-2 text-white ">
+            <div className="h-16 w-10 rounded-full border-2 border-white flex flex-col gap-2 items-center justify-between py-2 text-white ">
               <button onClick={scrollToTop}>
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
@@ -92,7 +92,7 @@ function collection() {
                   xmlns="http://www.w3.org/2000/svg"
                   fill="none"
                   viewBox="0 0 24 24"
-                  strokeWidth={1.5}
+                  strokeWidth={4}
                   stroke="currentColor"
                   className="w-4 h-4"
                 >
