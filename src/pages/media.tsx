@@ -14,10 +14,11 @@ import blog2 from "../assets/media/blogs/2.png";
 import blog3 from "../assets/media/blogs/3.png";
 import blog4 from "../assets/media/blogs/4.png";
 
+
 function Media() {
   const [active, setActive] = useState("Press");
   const [scrollPosition, setScrollPosition] = useState(0);
-  const [showButtons, setShowButtons] = useState(false);
+  const [showButtons, setShowButtons] = useState(true);
 
   useEffect(() => {
       const handleScroll = () => {
@@ -25,7 +26,7 @@ function Media() {
       setScrollPosition(currentPosition);
 
       // Show buttons if scrolled more than half the screen
-      setShowButtons(currentPosition > window.innerHeight / 2);
+      setShowButtons(currentPosition > window.innerHeight / 70);
       };
 
       window.addEventListener("scroll", handleScroll);
@@ -87,56 +88,51 @@ function Media() {
         </div>
       </div>
 
-      {/* <button
-      onClick={scrollToBottom}
-      className="hidden lg:flex mt-[-36px] mb-[60px] justify-center items-center lg:mx-0 z-20">
-        {" "}
-        <img src={layer1} alt="" />
-      </button> */}
+      
       {showButtons && <div
-            // className="hidden lg:flex mt-16 gap-10 justify-center items-center lg:mx-0 sticky bottom-0"
-            className="hidden lg:flex gap-10 justify-center items-center  
-             fixed bottom-0 z-50  w-full
-            p-4 text-white"
-          >
-            <div className="w-[40%] h-[1px] bg-white " />
-            <div className="h-16 w-10 rounded-full border border-white flex flex-col gap-2 items-center justify-between py-2 text-white ">
-              <button onClick={scrollToTop}>
-                <svg
-                  xmlns="http://www.w3.org/2000/svg"
-                  fill="none"
-                  viewBox="0 0 24 24"
-                  strokeWidth={1.5}
-                  stroke="currentColor"
-                  className="w-4 h-4"
-                >
-                  <path
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                    d="m4.5 15.75 7.5-7.5 7.5 7.5"
-                  />
-                </svg>
-              </button>
-    
-              <button onClick={scrollToBottom}>
-                <svg
-                  xmlns="http://www.w3.org/2000/svg"
-                  fill="none"
-                  viewBox="0 0 24 24"
-                  strokeWidth={1.5}
-                  stroke="currentColor"
-                  className="w-4 h-4"
-                >
-                  <path
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                    d="m19.5 8.25-7.5 7.5-7.5-7.5"
-                  />
-                </svg>
-              </button>
-            </div>
-            <div className="w-[40%] h-[1px] bg-white " />
-          </div>}
+        className="hidden lg:flex gap-10 justify-center items-center  
+         fixed bottom-0 z-50  w-full
+        p-4 text-white"
+      >
+        <div className="w-[40%] h-[1px] bg-white " />
+        <div className="h-16 w-10 rounded-full border-2 border-white flex flex-col gap-2 items-center justify-between py-2 text-white ">
+          <button onClick={scrollToTop}>
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              fill="none"
+              viewBox="0 0 24 24"
+              strokeWidth={4}
+              stroke="currentColor"
+              className="w-4 h-4"
+            >
+              <path
+                strokeLinecap="round"
+                strokeLinejoin="round"
+                d="m4.5 15.75 7.5-7.5 7.5 7.5"
+              />
+            </svg>
+          </button>
+
+          <button onClick={scrollToBottom}>
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              fill="none"
+              viewBox="0 0 24 24"
+              strokeWidth={4}
+              stroke="currentColor"
+              className="w-4 h-4"
+            >
+              <path
+                strokeLinecap="round"
+                strokeLinejoin="round"
+                d="m19.5 8.25-7.5 7.5-7.5-7.5"
+              />
+            </svg>
+          </button>
+        </div>
+        <div className="w-[40%] h-[1px] bg-white " />
+      </div> }
+      
 
       <div className="flex mt-0 flex-col items-center w-full lg:flex-row lg:mt-8">
         <div className="w-96 h-[1px] bg-white"></div>

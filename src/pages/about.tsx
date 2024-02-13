@@ -2,19 +2,20 @@ import one from "../assets/about/1.png";
 import two from "../assets/about/2.png";
 import three from "../assets/about/3.png";
 import four from "../assets/about/4.png";
+import lines from "../assets/about/lines.png"
 
 
 function About() {
   return (
     <div
       style={{ backgroundImage: `url(${one})` }}
-      className=" bg-contain flex flex-col justify-center items-center bg-[image:var(--image-url)] lg:bg-cover   bg-no-repeat w-full p-8  "
+      className="bg-contain flex flex-col justify-center items-center bg-[image:var(--image-url)] lg:bg-cover   bg-no-repeat w-full  p-10 lg:p-0  "
     >
-      <div className="mt-[95%]  lg:mt-[30%] text-center">
-        <h1 className="text-center text-[40px]  sm:m-auto  lg:text-6xl lg:ml-[400px] lg:w-[400px] font-[Butler] text-white leading-10 tracking-widest border border-white p-8 py-2">
+      <div className="mt-[95%]  lg:mt-[35%] lg:ml-24 text-center">
+        <h1 className="text-start text-[40px]  sm:m-auto  lg:text-7xl lg:ml-[400px] lg:w-[400px] font-[Butler] text-white leading-10 border-2 border-white p-8 py-2">
           ADITYA <br /> DHAWAN
         </h1>
-        <h3 className="text-white m-auto  text-justify mt-5 lg:w-96 lg:ml-[400px] sm:w-full ">
+        <h3 className="text-white m-auto  text-justify text-lg leading-tight tracking-wider mt-5 lg:w-96 lg:ml-[400px] sm:w-full ">
           In the heart of Diamas beats the vision of Aditya Dhawan; where
           diamonds are not just stones but enduring symbols of beauty. Growing
           up amidst the artistry of Kasturi showrooms, Aditya brings fresh
@@ -24,21 +25,28 @@ function About() {
         </h3>
       </div>
 
-      <div className="flex flex-col justify-center items-center w-[80%] bg-opacity-125 bg-[#071152] lg:mt-96 rounded-lg border border-transparent p-8">
-        <h1 className="lg:text-6xl font-[Butler] text-white lg:p-8 py-2">
-          DIAMAS
-        </h1>
-
-        <div className="flex w-40 mb-5">
-          <div className="h-1 bg-blue-600 w-1/3"></div>
-          <div className="h-1 bg-white w-1/3"></div>
-          <div className="h-1 bg-blue-600 w-1/3"></div>
+      <div className="relative flex flex-col justify-center items-center lg:w-[80%] bg-opacity-90 bg-[#090D29] lg:mt-[35%] rounded-[35px] border border-transparent">
+        <div className="absolute top-0 left-0">
+          <img src={lines} alt="lines" />
         </div>
 
-        <div className=" lg:flex w-full justify-between items-center gap-16 tracking-widest sm:block ">
-          <img src={two} alt="" />
-          <div className="flex flex-col gap-5 justify-center">
-            <h3 className="text-white lg:text-2xl">
+        <div className="flex flex-col gap-5 items-center lg:mb-20 my-8 ">
+          <h1 className="lg:text-8xl font-[Butler] text-white  ">
+            DIAMAS
+          </h1>
+          <div className="flex w-56 mb-5 ">
+            <div className="h-1 bg-blue-600 w-1/3 rounded-full"></div>
+            <div className="h-1 bg-white w-1/3"></div>
+            <div className="h-1 bg-blue-600 w-1/3 rounded-full"></div>
+          </div>
+        </div>
+        
+
+        <div className=" lg:flex w-full justify-between items-center gap-20 lg:gap-16 lg:pl-20 lg:pr-10 tracking-widest sm:block ">
+          
+          <img src={two} alt="" className="lg:w-[50%] py-10" />
+          <div className="flex flex-col gap-5 justify-center w-[90%] ">
+            <h3 className="text-white lg:text-xl font-light">
               Every piece of jewellery should tell a story and our quality
               diamonds tell ours. We utilise 45 years of industry experience to
               make bespoke pieces with the purest diamonds. Meant to honour the
@@ -51,15 +59,16 @@ function About() {
         </div>
 
         <div
-          className="flex w-full justify-between items-center mt-8 bg-[image:var(--image-url)] bg-cover bg-no-repeat lg:p-8 sm:p-4"
-          style={{ backgroundImage: `url(${three})` }}
+          className="flex relative h-full  mt-28 flex-col   bg-no-repeat z-10"
+          // style={{ backgroundImage: `url(${three})` }}
         >
-          <div className="bg-[#384173] flex flex-col w-full pt-10 lg:w-1/3 sm:w-2/3 ">
-            <h1 className=" text-white text-[30px] bacalisties relative z-10 sm:text-base md:text-base lg:ml-8 lg:text-7xl">
+          <img src={three} alt="three" className="" />
+          <div className="bg-[#384173] flex flex-col gap-2 w-full pt-20 top-10 left-5 lg:w-[40%] lg:h-[88%] sm:w-2/3 lg:absolute">
+            <h1 className=" text-white text-[30px] bacalisties relative z-10 sm:text-base md:text-base lg:ml-8 lg:text-8xl">
               Craftsmanship
             </h1>
 
-            <h3 className="lg:text-sm text-white p-8 pt-0   sm:p-4 ">
+            <h3 className="lg:text-xl text-white lg:p-10 pt-0 font-light p-4 ">
               Beyond technical mastery, our artisans employ generations of
               experience, honing jewellery excellence. Guided by Aditya Dhawan’s
               pioneering vision, each piece is sculpted with precision to
@@ -71,7 +80,7 @@ function About() {
           </div>
         </div>
 
-        <div className="pl-28 mt-20 mb-5">
+        <div className="lg:pl-28 mt-20 mb-5">
           <h1
             className="text-white bacalisties text-center text-[2rem] lg:-mb-12 lg:ms-96 lg:text-7xl mt-8"
           >
@@ -79,10 +88,10 @@ function About() {
           </h1>
         </div>
 
-        <div className="lg:flex w-full justify-between items-center mt-8">
+        <div className="lg:flex w-full justify-between items-center mt-8 p-10">
           <div className="w-full lg:w-1/2 relative">
-            <div className="absolute inset-0 bg-opacity-25 bg-blue-950 z-10"></div>
-            <img src={four} className="w-full z-0" alt="" />
+            {/* <div className="absolute inset-0 opacity-0 bg-blue-950 z-10"></div> */}
+            <img src={four} className="w-full z-0 brightness-125" alt="" />
           </div>
           <div className="w-full lg:w-1/2 space-y-5 lg:ms-16 ">
             {/* <div>
@@ -91,18 +100,18 @@ function About() {
               </h1>
             </div> */}
             
-            <h3 className="text-white">
+            <h3 className="text-white font-light lg:text-xl">
               At Diamas, we hold a simple yet profound philosophy: the value of
               a diamond is not just appreciated; it inherently grows.
             </h3>
-            <h3 className="text-white">
+            <h3 className="text-white font-light lg:text-xl">
               Our commitment to this principle is reflected in our exclusive
               selection of high-quality diamonds, sourced individually from
               international sources and meeting standards set by the
               International Gemological Institute (IGI), a global authority in
               diamond and jewellery certification since 1975.
             </h3>
-            <h3 className="text-white">
+            <h3 className="text-white font-light lg:text-xl">
               Building on the foundation of his father's applied knowledge and
               his own IGI certification, Aditya envisions a unique mission,
               aspiring to introduce exceptional diamonds to India, crafting

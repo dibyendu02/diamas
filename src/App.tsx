@@ -8,7 +8,7 @@ import Media from "./pages/media";
 import Collection from "./pages/collection";
 import Error from "./pages/404";
 import Header from "./components/header";
-import { FooterWithSocialLinks } from './components/footer';
+import FooterWithSocialLinks from './components/footer';
 
 function App() {
   return (

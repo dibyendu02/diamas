@@ -3,7 +3,7 @@
   padding: 0;
   background-color: #090d29;
   min-height: 100vh;
-  font-family: "Ubuntu", sans-serif;
+  font-family: "Inria Sans", sans-serif;
 }
 
 .swiper-button-prev{
@@ -52,8 +52,8 @@ a {
 }
 
 .swiper {
-  width: 300px !important;
-  height: 380px !important;
+  width: 400px !important;
+  height: 500px !important;
 }
 
 .swiper-slide {
@@ -81,8 +81,8 @@ a {
 
 @media(max-width : 640px){
   .swiper {
-    width: 200px !important;
-    height: 280px !important;
+    width: 250px !important;
+    height: 300px !important;
 }
 
 .swiper-button-prev{

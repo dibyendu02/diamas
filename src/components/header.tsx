@@ -6,37 +6,6 @@ export default function NavbarSimple() {
   const [openNav, setOpenNav] = React.useState(false);
   const [currentRoute, setCurrentRoute] = React.useState("home");
 
-  // const routes = [
-  //   {
-  //     name: "Home",
-  //     path: "/",
-  //   },
-  //   {
-  //     name: "About Us",
-  //     path: "/about",
-  //   },
-  //   {
-  //     name: "Services",
-  //     path: "/services",
-  //   },
-  //   {
-  //     name: "Legacy",
-  //     path: "/legacy",
-  //   },
-  //   {
-  //     name: "Collection",
-  //     path: "/collection",
-  //   },
-  //   {
-  //     name: "Media",
-  //     path: "/media",
-  //   },
-  //   {
-  //     name: "Contact Us",
-  //     path: "/contact",
-  //   },
-  // ];
-
   const handleClick = (data: any) => {
     setCurrentRoute(data);
     // setOpenNav(false)
@@ -81,7 +50,7 @@ export default function NavbarSimple() {
   }, []);
 
   return (
-    <nav className="bg-transparent border-gray-200 px-4 lg:absolute z-10 w-full font-[Butler] font-normal">
+    <nav className="bg-transparent border-gray-200 px-4 lg:absolute z-20 w-full font-[Butler] font-normal">
       <div className="flex flex-wrap justify-between mx-auto">
         <img
           src={logo}
