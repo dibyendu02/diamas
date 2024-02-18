@@ -89,7 +89,7 @@ function About() {
         >
           <img src={three} alt="three" className="" />
           <div className="bg-[#384173] flex flex-col gap-2 w-full pt-20 top-10 left-5 lg:w-[40%] lg:h-[88%] sm:w-2/3 lg:absolute">
-            <h1 className=" text-white text-[30px] bacalisties relative z-10 sm:text-base md:text-base lg:ml-8 lg:text-8xl">
+            <h1 className=" text-white bacalisties relative z-10 text-4xl lg:ml-8 lg:text-8xl">
               Craftsmanship
             </h1>
 

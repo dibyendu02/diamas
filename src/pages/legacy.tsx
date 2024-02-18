@@ -106,7 +106,7 @@ function legacy() {
           The House of Kasturi is the soul of Diamas
         </h3>
 
-        <h3 className="text-white w-[80%]  lg:w-8/12 lg:text-center mb-9 lg:-ms-14 z-10 text-lg ">
+        <h3 className="text-white w-[80%]  lg:w-8/12 text-center mb-9 lg:-ms-14 z-10 text-lg ">
           a place where tradition echoes in every jewel, radiating a richness
           that withstands time's test. Aditya's origins in diamond artistry are
           rooted here, under his father Surinder Kumar's visionary guidance.
@@ -130,7 +130,7 @@ function legacy() {
           SURINDER KUMAR
         </h1>
 
-        <h3 className="text-white w-[80%] lg:w-8/12 lg:text-start lg:-ms-14 z-10 text-lg">
+        <h3 className="text-white w-[80%] lg:w-8/12 text-center lg:-ms-14 z-10 text-lg">
           Surinder Kumar, the visionary voice behind Diamas, imprints the spirit
           of craftsmanship across generations. Just as his father passed the
           passion for jewellery on to Surinder, Surinder guides his son Aditya.
@@ -140,9 +140,7 @@ function legacy() {
           setting, one may glimpse shadows of the man in the style, the
           attention to detail, the refusal to settle for less than the sublime.
           Surinder's passion becomes purpose, craft matures as art, and Diamas’
-          creations sparkle with his influence radiating through each
-        </h3>
-        <h3 className="text-white w-[80%] lg:w-8/12 lg:text-center lg:-ms-14 z-10 text-lg">
+          creations sparkle with his influence radiating through each 
           elegant facet as timeless as the diamonds themselves.
         </h3>
       </div>
