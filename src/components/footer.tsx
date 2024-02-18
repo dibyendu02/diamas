@@ -9,7 +9,7 @@ const LINKS = [
       { label: "Terms of Service", link: "" },
       { label: "Legal", link: "" },
       { label: "Privacy Policy", link: "" },
-      { label: "Status", link: "" },
+      
     ],
   },
   {
@@ -21,7 +21,6 @@ const LINKS = [
       },
       { label: "Blog", link: "" },
       { label: "Contact Us", link: "contact" },
-      { label: "Pricing", link: "" },
       { label: "Testimonials", link: "" },
     ],
   },
@@ -31,11 +30,7 @@ const FooterWithSocialLinks = () => {
   return (
     <div className="flex flex-wrap w-full py-10 lg:px-20 xl:px-40 mx-auto border-t-2 border-white">
       <div className="flex flex-1 lg:block flex-col justify-center items-center w-full">
-        <img src={logo} className="h-28 w-28" alt="Flowbite Logo" />
-        <h3 className="text-white mb-3 text-sm">
-          Copyright © 2020 Landify UI Kit.
-        </h3>
-        <h3 className="text-white mb-5 text-sm">All rights reserved</h3>
+        <img src={logo} width={160} height={160} alt="Flowbite Logo" />
         <svg
           width="176"
           height="33"
@@ -108,6 +103,11 @@ const FooterWithSocialLinks = () => {
             </clipPath>
           </defs>
         </svg>
+
+        <h3 className="text-white mb-3 mt-5 text-sm">
+          Copyright © 2020 Landify UI Kit.
+        </h3>
+        <h3 className="text-white mb-5 text-sm">All rights reserved</h3>
       </div>
 
       <div className="flex gap-10 flex-wrap  justify-center mx-auto lg:mx-0">
@@ -128,7 +128,7 @@ const FooterWithSocialLinks = () => {
           ))}
         </div>
 
-        <div className="mt-8">
+        <div className="mt-[8%]">
           <h1 className="mb-3 text-white font-bold text-lg">Stay up to date</h1>
 
           <div className="w-72">

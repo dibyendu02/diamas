@@ -271,7 +271,7 @@ const home = () => {
         </div>
 
         <div className="h-full lg:p-[1rem] mx-2  lg:relative border border-white lg:ms-[19rem] lg:w-[60%] z-0 relative">
-          <div className="w-full px-16 py-20 flex-col space-y-5 lg:ml-[35%]">
+          <div className="w-full px-16 py-20 flex-col space-y-5 lg:ml-[30%]">
             <p className="lg:text-[60px] lg:tracking-[5px] lg:leading-[1.4] font-[Kalnia] text-2xl mb-3 text-white">
               OUR STORES
             </p>
@@ -285,7 +285,7 @@ const home = () => {
               Vikaspuri, Delhi, 110018
             </p>
 
-            <a className="text-white mt-3 text-sm inline-flex items-center space-x-1 rounded-lg border-blue-300 border p-1 px-2 hover:bg-slate-500 hover:cursor-pointer">
+            <a href="./contact" className="text-white mt-3 text-sm inline-flex items-center space-x-1 rounded-lg border-blue-300 border p-1 px-2 hover:bg-slate-500 hover:cursor-pointer">
               <h6 className="text-sm text-blue-300 font-[Kalnia] ">
                 Know More
               </h6>

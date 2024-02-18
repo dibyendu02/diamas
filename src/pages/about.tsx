@@ -1,11 +1,32 @@
+import { useEffect, useState } from "react";
 import one from "../assets/about/1.png";
 import two from "../assets/about/2.png";
 import three from "../assets/about/3.png";
 import four from "../assets/about/4.png";
 import lines from "../assets/about/lines.png"
+import Scrollbar from "../components/scrollbar";
 
 
 function About() {
+  const [scrollPosition, setScrollPosition] = useState(0);
+  const [showButtons, setShowButtons] = useState(false);
+
+  useEffect(() => {
+    const handleScroll = () => {
+      const currentPosition = window.scrollY;
+      setScrollPosition(currentPosition);
+
+      // Show buttons if scrolled more than half the screen
+      setShowButtons(currentPosition > window.innerHeight/2);
+    };
+
+    window.addEventListener("scroll", handleScroll);
+
+    return () => {
+      window.removeEventListener("scroll", handleScroll);
+    };
+  }, [scrollPosition]);
+
   return (
     <div
       style={{ backgroundImage: `url(${one})` }}
@@ -23,6 +44,10 @@ function About() {
           design. Every creation reflects not just craftsmanship but a
           deep-rooted passion for the eternal allure of diamonds.
         </h3>
+      </div>
+      
+      <div className="w-full">
+        {showButtons && <Scrollbar />}
       </div>
 
       <div className="relative flex flex-col justify-center items-center lg:w-[80%] bg-opacity-90 bg-[#090D29] lg:mt-[35%] rounded-[35px] border border-transparent">

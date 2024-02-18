@@ -1,13 +1,22 @@
 import { useEffect, useState } from "react";
 import one from "../assets/collection/1.png";
-import two from "../assets/collection/2.png";
-import three from "../assets/collection/3.png";
-import four from "../assets/collection/4.png";
+// import two from "../assets/collection/2.png";
+// import three from "../assets/collection/3.png";
+// import four from "../assets/collection/4.png";
 import five from "../assets/collection/5.png";
 import six from "../assets/collection/6.png";
 import seven from "../assets/collection/7.png";
 import eight from "../assets/collection/8.png";
 import Scrollbar from "../components/scrollbar";
+
+import neclace1 from "../assets/collection/Necklace1.png"
+import neclace2 from "../assets/collection/Necklace2.png"
+import neclace3 from "../assets/collection/Necklace3.png"
+import neclace4 from "../assets/collection/Necklace4.png"
+import neclace5 from "../assets/collection/Necklace5.png"
+
+import group from "../assets/collection/Group.png"
+
 
 function collection() {
   const [scrollPosition, setScrollPosition] = useState(0);
@@ -48,8 +57,8 @@ function collection() {
           backgroundImage: `url(${one})`,
         }}
         className="bg-[image:var(--image-url)] bg-cover 
-         bg-center w-full lg:h-[600px] object-cover 
-         justify-center items-center flex  gayscale relative
+         bg-center w-full md:h-[500px] lg:h-[600px] object-cover 
+         justify-center items-center flex  gayscale relative z-10
          "
       >
         <h1
@@ -116,65 +125,85 @@ function collection() {
       </div>
       
       
+      <div className="relative">
+        <div className="">
+          <h1
+            className="text-white bacalisties dancing-script text-center mt-36"
+            style={{
+              fontSize: "5rem",
+            }}
+          >
+            Necklace
+          </h1>
+
+          <div className="flex flex-col md:flex-row md:flex-wrap lg:flex-row lg:flex-wrap sm:w-full lg:w-full justify-center items-center  mt-10 lg:mt-10 mx-5  gap-10 lg:absolute z-10 ">
+            <div className="h-full p-4 md:w-[40%] lg:w-[28%] bg-black">
+              <img src={neclace1} className="w-full" alt="" />
+            </div>
+            <div className="h-full p-4 md:w-[40%] lg:w-[28%] bg-black">
+              <img src={neclace2} className="w-full" alt="" />
+            </div>
+            <div className="h-full p-4 md:w-[40%] lg:w-[28%] bg-black">
+              <img src={neclace3} className="w-full" alt="" />
+            </div>
+            <div className="h-full p-4 md:w-[40%] lg:w-[28%] bg-black">
+              <img src={neclace4} className="w-full" alt="" />
+            </div>
+            <div className="h-full p-4 md:w-[40%] lg:w-[28%] bg-black">
+              <img src={neclace5} className="w-full" alt="" />
+            </div>
+            <div className="h-full p-4 md:w-[40%] lg:w-[28%] bg-black">
+              <img src={neclace5} className="w-full" alt="" />
+            </div>
+          </div>
+
+          <p className="mb-3 text-white font-light  lg:text-start my-12 lg:mx-24 lg:text-2xl sm:text-start mx-[30px] lg:mt-[180vh]">
+            Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam
+            nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat
+            volutpat.Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed
+            diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat
+            volutpat.Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed
+            diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat
+            volutpat.
+          </p>
+        </div>
+        
+        <div className="flex flex-col mt-10 lg:mt-16 lg:mx-20 gap-5">
+          <h1
+            className="text-white bacalisties text-center lg:absolute z-10 lg:-mt-10 self-center sm:mb-5"
+            style={{
+              fontSize: "5rem",
+            }}
+          >
+            Rings
+          </h1>
+          <div className="flex flex-col lg:flex-row sm:w-full lg:w-auto justify-center items-center">
+            <div className="h-full p-4 lg:w-1/2 ">
+              <img src={five} className="w-full" alt="" />
+            </div>
+            <div className="h-full p-4 lg:w-1/2 ">
+              <p className="mb-3 font-light text-white lg:text-start my-12 lg:mx-24 lg:text-2xl sm:text-start mx-[30px]">
+                Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam
+                nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam
+                erat volutpat.Lorem ipsum dolor sit amet, consectetuer adipiscing
+                elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore
+                magna aliquam erat volutpat.Lorem ipsum dolor sit amet,
+                consectetuer adipiscing elit, sed diam nonummy nibh euismod
+                tincidunt ut laoreet dolore magna aliquam erat volutpat.
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <img
+          src={group}
+          alt="lines"
+          className="absolute w-[60%] -top-36 left-0 z-0 hidden lg:block"
+        />
+      </div>
+
+
       
-
-      <h1
-        className="text-white bacalisties dancing-script text-center mt-12"
-        style={{
-          fontSize: "5rem",
-        }}
-      >
-        Necklace
-      </h1>
-
-      <div className="flex flex-col lg:flex-row sm:w-full lg:w-auto justify-center items-center lg:space-x-10 mt-10 lg:mt-10 lg:mx-5 gap-5">
-        <div className="h-full p-4 lg:w-1/3 bg-black">
-          <img src={two} className="w-full" alt="" />
-        </div>
-        <div className="h-full p-4 lg:w-1/3 bg-black">
-          <img src={three} className="w-full" alt="" />
-        </div>
-        <div className="h-full p-4 lg:w-1/3 bg-black">
-          <img src={four} className="w-full" alt="" />
-        </div>
-      </div>
-
-      <p className="mb-3 text-white font-light  lg:text-start my-12 lg:mx-24 lg:text-2xl sm:text-start mx-[30px]">
-        Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam
-        nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat
-        volutpat.Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed
-        diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat
-        volutpat.Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed
-        diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat
-        volutpat.
-      </p>
-
-      <div className="flex flex-col mt-10 lg:mt-16 lg:mx-20 gap-5">
-        <h1
-          className="text-white bacalisties text-center lg:absolute z-10 lg:-mt-10 self-center sm:mb-5"
-          style={{
-            fontSize: "5rem",
-          }}
-        >
-          Rings
-        </h1>
-        <div className="flex flex-col lg:flex-row sm:w-full lg:w-auto justify-center items-center">
-          <div className="h-full p-4 lg:w-1/2 ">
-            <img src={five} className="w-full" alt="" />
-          </div>
-          <div className="h-full p-4 lg:w-1/2 ">
-            <p className="mb-3 font-light text-white lg:text-start my-12 lg:mx-24 lg:text-2xl sm:text-start mx-[30px]">
-              Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam
-              nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam
-              erat volutpat.Lorem ipsum dolor sit amet, consectetuer adipiscing
-              elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore
-              magna aliquam erat volutpat.Lorem ipsum dolor sit amet,
-              consectetuer adipiscing elit, sed diam nonummy nibh euismod
-              tincidunt ut laoreet dolore magna aliquam erat volutpat.
-            </p>
-          </div>
-        </div>
-      </div>
 
       <div className="flex flex-col mt-10 lg:mt-16 lg:mx-20 gap-5">
         <h1

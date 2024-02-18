@@ -36,11 +36,11 @@ export default function NavbarSimple() {
 
   const handleWindowResize = () =>
     // window.innerWidth >= 640 && setOpenNav(false);
-    window.innerWidth <= 640 ? setOpenNav(false) : setOpenNav(true);
+    window.innerWidth <= 767 ? setOpenNav(false) : setOpenNav(true);
   console.log("windpw resize" + window.innerWidth);
 
   React.useEffect(() => {
-    window.innerWidth <= 640 ? setOpenNav(false) : setOpenNav(true);
+    window.innerWidth <= 767 ? setOpenNav(false) : setOpenNav(true);
     window.addEventListener("resize", handleWindowResize);
     // console.log( "windows with"+window.innerWidth);
 
@@ -50,11 +50,16 @@ export default function NavbarSimple() {
   }, []);
 
   return (
+    <div
+        className="flex gap-10 justify-center items-center  
+         fixed lg:top-24 z-50  w-full
+        p-4 text-white"
+      >
     <nav className="bg-transparent border-gray-200 px-4 lg:absolute z-20 w-full font-[Butler] font-normal">
       <div className="flex flex-wrap justify-between mx-auto">
         <img
           src={logo}
-          className="sm:h-[100px] w-[100px] md:h-[236px] md:w-[236px] "
+          className="sm:h-[100px] w-[100px] lg:h-[236px] lg:w-[236px] "
           alt="Flowbite Logo"
         />
         <button
@@ -208,5 +213,6 @@ export default function NavbarSimple() {
         </div>
       </div>
     </nav>
+    </div>
   );
 }

@@ -18,7 +18,7 @@ export default function Scrollbar() {
          fixed bottom-0 z-50  w-full
         p-4 text-white"
       >
-        <div className="w-[40%] h-[1px] bg-white " />
+        {/* <div className="w-[40%] h-[1px] bg-white " /> */}
         <div className="h-16 w-10 rounded-full border-2 border-white flex flex-col gap-2 items-center justify-between py-2 text-white ">
           <button onClick={scrollToTop}>
             <svg
@@ -54,7 +54,7 @@ export default function Scrollbar() {
             </svg>
           </button>
         </div>
-        <div className="w-[40%] h-[1px] bg-white " />
+        {/* <div className="w-[40%] h-[1px] bg-white " /> */}
       </div>
     </div>
   );
