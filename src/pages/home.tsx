@@ -142,7 +142,7 @@ const home = () => {
               transforms his passion for diamonds into contemporary and
               luxurious works of art – each one, as unique as you.
             </p>
-            <a className="ms-16 text-white mt-3 text-sm inline-flex items-center space-x-1 rounded-lg border-blue-300 border p-1 px-2 hover:bg-slate-500 hover:cursor-pointer">
+            <a className="ms-10 text-white mt-3 text-sm inline-flex items-center space-x-1 rounded-lg border-blue-300 border p-1 px-2 hover:bg-slate-500 hover:cursor-pointer">
               <h6 className="text-sm text-blue-300 font-sans">Know More</h6>
               <svg
                 xmlns="http://www.w3.org/2000/svg"
