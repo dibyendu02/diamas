@@ -102,7 +102,7 @@ function Contact() {
             />
           </svg>
           <h3 className="text-white text-xl">Visit US</h3>
-          <p className="mb-3 text-white lg:text-center my-12 sm:text-start mx-[30px]">
+          <p className="mb-3 text-white text-center my-12 mx-[30px]">
             Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam
             nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat
             volutpat.Lorem ipsum dolor sit amet, consectetuer adipiscing elit,
@@ -131,7 +131,7 @@ function Contact() {
           </svg>
 
           <h3 className="text-white text-xl">Call US</h3>
-          <p className="mb-3 text-white lg:text-center my-12 sm:text-start mx-[30px]">
+          <p className="mb-3 text-white text-center my-12 mx-[30px]">
             Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam
             nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat
             volutpat.Lorem ipsum dolor sit amet, consectetuer adipiscing elit,
@@ -159,7 +159,7 @@ function Contact() {
           </svg>
 
           <h3 className="text-white text-xl">Contact US</h3>
-          <p className="mb-3 text-white lg:text-center my-12 sm:text-start mx-[30px]">
+          <p className="mb-3 text-white text-center my-12 mx-[30px]">
             Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam
             nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat
             volutpat.Lorem ipsum dolor sit amet, consectetuer adipiscing elit,
@@ -249,7 +249,7 @@ function Contact() {
       <div className="flex flex-col items-center justify-between my-16">
         <h3 className="text-white text-2xl font-semibold">DISCLAIMERS</h3>
 
-        <p className="text-white font-light text-[16px] lg:mx-32 mx-[30px] mt-8 lg:text-center">
+        <p className="text-white font-light text-[16px] lg:mx-32 mx-[30px] mt-8 text-center">
           Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam
           nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat
           volutpat.Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed

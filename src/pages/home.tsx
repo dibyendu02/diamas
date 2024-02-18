@@ -136,7 +136,7 @@ const home = () => {
               <br />
               DIAMAS
             </h1>
-            <p className="mb-3 text-white lg:text-xl lg:w-96 ms-16">
+            <p className="mb-3 text-white text-center lg:text-start lg:text-xl lg:w-96 mx:10 md:mx-0 lg:ms-16">
               Diamonds are a statement unto themselves. At Diamas, Aditya Dhawan
               transforms his passion for diamonds into contemporary and
               luxurious works of art – each one, as unique as you.
