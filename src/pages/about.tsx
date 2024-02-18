@@ -71,7 +71,8 @@ function About() {
           
           <img src={two} alt="" className="lg:w-[50%] py-10" />
           <div className="flex flex-col gap-5 justify-center w-[90%] ">
-            <h3 className="text-white lg:text-xl font-light">
+
+            <h3 className="text-white  text-justify text-lg leading-tight tracking-wider mt-5 lg:w-96 sm:w-full ">
               Every piece of jewellery should tell a story and our quality
               diamonds tell ours. We utilise 45 years of industry experience to
               make bespoke pieces with the purest diamonds. Meant to honour the
@@ -88,12 +89,12 @@ function About() {
           // style={{ backgroundImage: `url(${three})` }}
         >
           <img src={three} alt="three" className="" />
-          <div className="bg-[#384173] flex flex-col gap-2 w-full pt-20 top-10 left-5 lg:w-[40%] lg:h-[88%] sm:w-2/3 lg:absolute">
+          <div className="bg-[#384173] flex flex-col gap-2 w-full pt-20 top-10 left-5 lg:w-[40%] lg:h-[75%] sm:w-2/3 lg:absolute">
             <h1 className=" text-white bacalisties relative z-10 text-4xl lg:ml-8 lg:text-8xl">
               Craftsmanship
             </h1>
 
-            <h3 className="lg:text-xl text-white lg:p-10 pt-0 font-light p-4 ">
+            <h3 className="text-white mx-auto pt-5  text-justify text-lg leading-tight tracking-wider mt-5 lg:w-96 sm:w-full ">
               Beyond technical mastery, our artisans employ generations of
               experience, honing jewellery excellence. Guided by Aditya Dhawan’s
               pioneering vision, each piece is sculpted with precision to
@@ -124,8 +125,27 @@ function About() {
                 Diamond Quality
               </h1>
             </div> */}
+
+            <h3 className="text-white mx-auto pt-5  text-justify text-lg leading-tight tracking-wider mt-5 p-2 sm:w-full ">
+              At Diamas, we hold a simple yet profound philosophy: the value of
+              a diamond is not just appreciated; it inherently grows.
+            </h3>
+            <h3 className="text-white mx-auto pt-5  text-justify text-lg leading-tight tracking-wider mt-5 p-2 sm:w-full ">
+              Our commitment to this principle is reflected in our exclusive
+              selection of high-quality diamonds, sourced individually from
+              international sources and meeting standards set by the
+              International Gemological Institute (IGI), a global authority in
+              diamond and jewellery certification since 1975.
+            </h3>
+            <h3 className="text-white mx-auto pt-5  text-justify text-lg leading-tight tracking-wider mt-5 p-2 sm:w-full ">
+              Building on the foundation of his father's applied knowledge and
+              his own IGI certification, Aditya envisions a unique mission,
+              aspiring to introduce exceptional diamonds to India, crafting
+              exquisite high-end jewellery for those who appreciate diamonds
+              from the heart.
+            </h3>
             
-            <h3 className="text-white font-light lg:text-xl">
+            {/* <h3 className="text-white font-light lg:text-xl">
               At Diamas, we hold a simple yet profound philosophy: the value of
               a diamond is not just appreciated; it inherently grows.
             </h3>
@@ -142,7 +162,7 @@ function About() {
               aspiring to introduce exceptional diamonds to India, crafting
               exquisite high-end jewellery for those who appreciate diamonds
               from the heart.
-            </h3>
+            </h3> */}
           </div>
         </div>
       </div>

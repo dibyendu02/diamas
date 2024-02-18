@@ -244,7 +244,7 @@ function Media() {
       <div className="flex flex-col lg:flex-row w-full p-8 gap-3">
         <div className="flex flex-col lg:w-1/2 w-full gap-3">
           <div className="block lg:flex w-full items-center gap-3">
-            <h3 className="text-white h-full leading-5 my-3">
+            <h3 className="text-white mx-auto h-full  text-justify text-lg leading-tight tracking-wider my-10 sm:w-full ">
               Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam
               nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam
               erat volutpat.Lorem ipsum dolor sit amet, consectetuer adipiscing
@@ -261,7 +261,7 @@ function Media() {
         <div className="block lg:flex flex-col lg:w-1/2 w-full gap-3">
           <img src={blog2} alt="" />
           <div className="block lg:flex w-full items-center gap-3">
-            <h3 className="text-white h-full leading-5 my-3">
+            <h3 className="text-white mx-auto h-full  text-justify text-lg leading-tight tracking-wider my-10 sm:w-full ">
               Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam
               nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam
               erat volutpat.Lorem ipsum dolor sit amet, consectetuer adipiscing

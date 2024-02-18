@@ -178,19 +178,19 @@ function collection() {
             Rings
           </h1>
           <div className="flex flex-col lg:flex-row sm:w-full lg:w-auto justify-center items-center">
-            <div className="h-full p-4 lg:w-1/2 ">
-              <img src={five} className="w-full" alt="" />
+            <div className="h-full p-5 lg:w-1/2">
+              <img src={five} className="lg:w-[65%] lg:ml-20 " alt="" />
             </div>
-            <div className="h-full p-4 lg:w-1/2 ">
-              <p className="mb-3 font-light text-white lg:text-start my-12 lg:mx-24 lg:text-2xl sm:text-start mx-[30px]">
-                Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam
-                nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam
-                erat volutpat.Lorem ipsum dolor sit amet, consectetuer adipiscing
-                elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore
-                magna aliquam erat volutpat.Lorem ipsum dolor sit amet,
-                consectetuer adipiscing elit, sed diam nonummy nibh euismod
-                tincidunt ut laoreet dolore magna aliquam erat volutpat.
-              </p>
+            <div className="h-full p-4 ">
+            <p className="text-white pt-5 lg:ml-10  text-justify text-lg leading-tight tracking-wider mt-5 lg:w-80 sm:w-full ">
+              Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam
+              nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam
+              erat volutpat.Lorem ipsum dolor sit amet, consectetuer adipiscing
+              elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore
+              magna aliquam erat volutpat.Lorem ipsum dolor sit amet,
+              consectetuer adipiscing elit, sed diam nonummy nibh euismod
+              tincidunt ut laoreet dolore magna aliquam erat volutpat.
+            </p>
             </div>
           </div>
         </div>
@@ -205,9 +205,9 @@ function collection() {
 
       
 
-      <div className="flex flex-col mt-10 lg:mt-16 lg:mx-20 gap-5">
+      <div className="flex flex-col mt-10 lg:mt-40 lg:mx-20 gap-5">
         <h1
-          className="text-white bacalisties text-center lg:absolute z-10 lg:-mt-10 self-center sm:mb-5"
+          className="text-white bacalisties text-center lg:absolute z-10 lg:-mt-14 self-center sm:mb-5"
           style={{
             fontSize: "5rem",
           }}
@@ -216,7 +216,7 @@ function collection() {
         </h1>
         <div className="flex flex-col lg:flex-row sm:w-full lg:w-auto justify-center items-center">
           <div className="h-full p-4 lg:w-1/2 ">
-            <p className="mb-3 text-white font-light lg:text-start my-12 lg:mx-24 lg:text-2xl sm:text-start mx-[30px]">
+            <p className="text-white  text-justify text-lg leading-tight tracking-wider mt-16 lg:w-80 sm:w-full ">
               Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam
               nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam
               erat volutpat.Lorem ipsum dolor sit amet, consectetuer adipiscing
@@ -232,9 +232,10 @@ function collection() {
         </div>
       </div>
 
+
       <div className="flex flex-col mt-10 lg:mt-40 lg:mx-20 gap-5">
         <h1
-          className="text-white bacalisties text-center lg:absolute z-10 lg:-mt-16 self-center sm:mb-5"
+          className="text-white bacalisties text-center lg:absolute z-10 lg:-mt-20 self-center sm:mb-5"
           style={{
             fontSize: "5rem",
           }}
@@ -246,7 +247,7 @@ function collection() {
             <img src={seven} className="w-full" alt="" />
           </div>
           <div className="h-full p-4 lg:w-1/2 ">
-            <p className="mb-3 text-white font-light lg:text-start my-12 lg:mx-24 lg:text-2xl sm:text-start mx-[30px]">
+            <p className="text-white lg:ml-32  text-justify text-lg leading-tight tracking-wider mt-16 lg:w-80 sm:w-full ">
               Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam
               nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam
               erat volutpat.Lorem ipsum dolor sit amet, consectetuer adipiscing
@@ -256,8 +257,11 @@ function collection() {
               tincidunt ut laoreet dolore magna aliquam erat volutpat.
             </p>
           </div>
+          
         </div>
       </div>
+
+      
 
       <div className="flex flex-col mt-10 lg:mt-40  ">
         <h1

@@ -136,7 +136,8 @@ const home = () => {
               <br />
               DIAMAS
             </h1>
-            <p className="mb-3 text-white text-center lg:text-start lg:text-xl lg:w-96 mx:10 md:mx-0 lg:ms-16">
+
+            <p className="text-white mx-10  text-justify text-lg leading-tight tracking-wider mt-5 lg:w-96 sm:w-full ">
               Diamonds are a statement unto themselves. At Diamas, Aditya Dhawan
               transforms his passion for diamonds into contemporary and
               luxurious works of art – each one, as unique as you.
@@ -218,10 +219,16 @@ const home = () => {
             >
               LEGACY
             </h1>
-            <p className="mb-3 text-white font-light lg:text-xl">
+            {/* <p className="mb-3 text-white font-light lg:text-xl">
               Diamonds are a statement unto themselves. At Diamas, Aditya Dhawan
               transforms his passion for diamonds into contemporary and
               luxurious works of art – each one, as unique as you.
+            </p> */}
+            <p className="text-white  text-justify text-lg leading-tight tracking-wider mb-3 lg:w-[90%] sm:w-full ">
+              Drawing from a legacy in jewellery craftsmanship, Diamas excels by
+              blending time-honoured techniques with the highest quality
+              diamonds. Our artisans ensure that each design radiates
+              brilliance, meant to inspire for generations.
             </p>
             <a className="text-white mt-3 text-sm inline-flex items-center space-x-1 rounded-lg border-blue-300 border p-1 px-2 hover:bg-slate-500 hover:cursor-pointer">
               <h6 className="text-sm text-blue-300 font-sans">Know More</h6>
@@ -262,7 +269,7 @@ const home = () => {
         <div className="mapdiv h-full p-4 lg:w-[45%] lg:top-[16%] w-full  static left-[27%]  lg:absolute lg:transform -translate-x-1/2 z-10">
           <iframe
             src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3502.02705431727!2d77.068682370812!3d28.628951246325638!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x390d04c2d11feb9f%3A0x5b42213df8236053!2sa%2C%20A-157%2C%20Guru%20Virjanand%20Marg%2C%20near%20Police%20Station%2C%20A-Block%2C%20Vikaspuri%2C%20Delhi%2C%20110018!5e0!3m2!1sen!2sin!4v1706261050023!5m2!1sen!2sin"
-            style={{borderRadius: 10}}
+            style={{ borderRadius: 10 }}
             allowFullScreen={true}
             aria-hidden="false"
             tabIndex={0}
@@ -276,16 +283,19 @@ const home = () => {
               OUR STORES
             </p>
 
-            <p className="text-white lg:w-[60%] lg:tracking-[5px] lg:text-[20px] font-['Butler']">
+            <p className="text-white lg:w-[60%] lg:tracking-[5px] lg:text-[20px]">
               WALK IN OR SCHEDULE AN APPOINTMENT
             </p>
 
-            <p className="text-white text-[16px] font-['Butler'] lg:w-[40%]">
+            <p className="text-white text-[16px] lg:w-[28%]">
               A-157, Guru Virjanand Marg, Near Police Station, A-Block,
               Vikaspuri, Delhi, 110018
             </p>
 
-            <a href="./contact" className="text-white mt-3 text-sm inline-flex items-center space-x-1 rounded-lg border-blue-300 border p-1 px-2 hover:bg-slate-500 hover:cursor-pointer">
+            <a
+              href="./contact"
+              className="text-white mt-3 text-sm inline-flex items-center space-x-1 rounded-lg border-blue-300 border p-1 px-2 hover:bg-slate-500 hover:cursor-pointer"
+            >
               <h6 className="text-sm text-blue-300 font-[Kalnia] ">
                 Know More
               </h6>
