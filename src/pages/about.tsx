@@ -94,7 +94,7 @@ function About() {
               Craftsmanship
             </h1>
 
-            <h3 className="text-white mx-auto pt-5  text-justify text-lg leading-tight tracking-wider mt-5 lg:w-96 sm:w-full ">
+            <h3 className="text-white mx-auto pt-5 p-3  text-justify text-lg leading-tight tracking-wider mt-5 lg:w-96 sm:w-full ">
               Beyond technical mastery, our artisans employ generations of
               experience, honing jewellery excellence. Guided by Aditya Dhawan’s
               pioneering vision, each piece is sculpted with precision to
@@ -114,7 +114,7 @@ function About() {
           </h1>
         </div>
 
-        <div className="lg:flex w-full justify-between items-center mt-8 p-10">
+        <div className="lg:flex w-full justify-between items-center mt-8 lg:p-10 md:p-5">
           <div className="w-full lg:w-1/2 relative">
             {/* <div className="absolute inset-0 opacity-0 bg-blue-950 z-10"></div> */}
             <img src={four} className="w-full z-0 brightness-125" alt="" />
