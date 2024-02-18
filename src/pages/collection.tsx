@@ -273,7 +273,7 @@ function collection() {
           <img src={eight} alt="" className="w-full lg:h-auto h-full" />
         </div>
 
-        <p className="mb-20 text-white font-light lg:text-xl lg:text-center my-16 lg:mx-24 sm:text-start mx-[30px]">
+        <p className="mb-20 text-white font-light lg:text-xl text-center my-16 lg:mx-24 mx-[30px]">
           Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam
           nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat
           volutpat.Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed
