@@ -6,21 +6,15 @@ import Contact from "./pages/contact";
 import Legacy from "./pages/legacy";
 import Media from "./pages/media";
 import Collection from "./pages/collection";
-import Error from "./pages/404";
 import Header from "./components/header";
-import FooterWithSocialLinks from './components/footer';
+import FooterWithSocialLinks from "./components/footer";
+import ErrorPage from "./pages/404";
 
 function App() {
   return (
-    <div
-      style={{
-        overflow: "hidden",
-      }}
-    >
+    <div style={{ overflow: "hidden" }}>
       <BrowserRouter>
-
         <Header />
-        
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/about" element={<About />} />
@@ -28,7 +22,8 @@ function App() {
           <Route path="/collection" element={<Collection />} />
           <Route path="/media" element={<Media />} />
           <Route path="/legacy" element={<Legacy />} />
-          <Route path="/*" element={<Error />} />
+          {/* Catch-all route for paths not matched by any other route */}
+          <Route path="*" element={<ErrorPage />} />
         </Routes>
         <div className="">
           <FooterWithSocialLinks />

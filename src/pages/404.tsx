@@ -1,6 +1,6 @@
 
-function Error() {
+function ErrorPage() {
   return <div>404</div>;
 }
 
-export default Error;
+export default ErrorPage;
