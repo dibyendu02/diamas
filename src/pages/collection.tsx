@@ -201,7 +201,7 @@ function collection() {
         <img
           src={lines2}
           alt="lines"
-          className="absolute w-[80%] -bottom-[30%] right-0 z-0 hidden lg:block"
+          className="absolute w-[80%] -bottom-[24%] right-0 z-0 hidden lg:block"
         />
       </div>
 
