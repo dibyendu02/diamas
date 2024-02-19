@@ -155,7 +155,7 @@ function collection() {
             </div>
           </div>
 
-          <p className="mb-3 text-white font-light  text-center my-12 lg:mx-24 lg:text-2xl mx-[30px] lg:mt-[80%] ">
+          <p className="mb-3 text-white font-light  text-justify my-12 lg:mx-24 lg:text-2xl mx-[30px] lg:mt-[80%] ">
             Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam
             nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat
             volutpat.Lorem ipsum dolor sit amet, consectetuer adipiscing elit,
