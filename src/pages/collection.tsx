@@ -17,7 +17,7 @@ import neclace5 from "../assets/collection/Necklace5.png";
 
 import lines1 from "../assets/collection/lines1.png";
 import lines2 from "../assets/collection/lines2.png";
-import lines3 from "../assets/collection/lines3.png";
+// import lines3 from "../assets/collection/lines3.png";
 
 function collection() {
   const [scrollPosition, setScrollPosition] = useState(0);
