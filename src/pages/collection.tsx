@@ -9,14 +9,15 @@ import seven from "../assets/collection/7.png";
 import eight from "../assets/collection/8.png";
 import Scrollbar from "../components/scrollbar";
 
-import neclace1 from "../assets/collection/Necklace1.png"
-import neclace2 from "../assets/collection/Necklace2.png"
-import neclace3 from "../assets/collection/Necklace3.png"
-import neclace4 from "../assets/collection/Necklace4.png"
-import neclace5 from "../assets/collection/Necklace5.png"
+import neclace1 from "../assets/collection/Necklace1.png";
+import neclace2 from "../assets/collection/Necklace2.png";
+import neclace3 from "../assets/collection/Necklace3.png";
+import neclace4 from "../assets/collection/Necklace4.png";
+import neclace5 from "../assets/collection/Necklace5.png";
 
-import group from "../assets/collection/Group.png"
-
+import lines1 from "../assets/collection/lines1.png";
+import lines2 from "../assets/collection/lines2.png";
+import lines3 from "../assets/collection/lines3.png";
 
 function collection() {
   const [scrollPosition, setScrollPosition] = useState(0);
@@ -116,15 +117,12 @@ function collection() {
             <div className="w-[40%] h-[1px] bg-white " />
           </div>
         )}
-
-        
       </div>
 
       <div className="flex w-full justify-between">
         {showButtons && <Scrollbar />}
       </div>
-      
-      
+
       <div className="relative">
         <div className="">
           <h1
@@ -157,20 +155,20 @@ function collection() {
             </div>
           </div>
 
-          <p className="mb-3 text-white font-light  text-center my-12 lg:mx-24 lg:text-2xl mx-[30px] lg:mt-[180vh]">
+          <p className="mb-3 text-white font-light  text-center my-12 lg:mx-24 lg:text-2xl mx-[30px] lg:mt-[80%] ">
             Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam
             nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat
-            volutpat.Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed
-            diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat
-            volutpat.Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed
-            diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat
-            volutpat.
+            volutpat.Lorem ipsum dolor sit amet, consectetuer adipiscing elit,
+            sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna
+            aliquam erat volutpat.Lorem ipsum dolor sit amet, consectetuer
+            adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet
+            dolore magna aliquam erat volutpat.
           </p>
         </div>
-        
-        <div className="flex flex-col mt-10 lg:mt-16 lg:mx-20 gap-5">
+
+        <div className="flex flex-col mt-10 lg:mt-40 gap-5">
           <h1
-            className="text-white bacalisties text-center lg:absolute z-10 lg:-mt-10 self-center sm:mb-5"
+            className="text-white bacalisties text-center lg:absolute z-10 lg:-mt-10 lg:mr-8 self-center sm:mb-5"
             style={{
               fontSize: "5rem",
             }}
@@ -178,90 +176,95 @@ function collection() {
             Rings
           </h1>
           <div className="flex flex-col lg:flex-row sm:w-full lg:w-auto justify-center items-center">
-            <div className="h-full p-5 lg:w-1/2">
-              <img src={five} className="lg:w-[65%] lg:ml-20 " alt="" />
+            <div className="h-full p-5 lg:w-1/2 ">
+              <img src={five} className="lg:w-[75%]  " alt="" />
             </div>
             <div className="h-full p-4 ">
-            <p className="text-white pt-5 lg:ml-10  text-justify text-lg leading-tight tracking-wider mt-5 lg:w-80 sm:w-full ">
-              Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam
-              nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam
-              erat volutpat.Lorem ipsum dolor sit amet, consectetuer adipiscing
-              elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore
-              magna aliquam erat volutpat.Lorem ipsum dolor sit amet,
-              consectetuer adipiscing elit, sed diam nonummy nibh euismod
-              tincidunt ut laoreet dolore magna aliquam erat volutpat.
-            </p>
+              <p className="text-white pt-5  text-justify text-lg leading-tight tracking-wider mt-5 lg:w-80 sm:w-full ">
+                Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed
+                diam nonummy nibh euismod tincidunt ut laoreet dolore magna
+                aliquam erat volutpat.Lorem ipsum dolor sit amet, consectetuer
+                adipiscing elit, sed diam nonummy nibh euismod tincidunt ut
+                laoreet dolore magna aliquam erat volutpat.Lorem ipsum dolor sit
+                amet, consectetuer adipiscing elit, sed diam nonummy nibh
+                euismod tincidunt ut laoreet dolore magna aliquam erat volutpat.
+              </p>
             </div>
           </div>
         </div>
 
         <img
-          src={group}
+          src={lines1}
           alt="lines"
           className="absolute w-[60%] -top-36 left-0 z-0 hidden lg:block"
         />
+        <img
+          src={lines2}
+          alt="lines"
+          className="absolute w-[80%] -bottom-[30%] right-0 z-0 hidden lg:block"
+        />
       </div>
 
-
-      
-
-      <div className="flex flex-col mt-10 lg:mt-40 lg:mx-20 gap-5">
-        <h1
-          className="text-white bacalisties text-center lg:absolute z-10 lg:-mt-14 self-center sm:mb-5"
-          style={{
-            fontSize: "5rem",
-          }}
-        >
-          Earrings
-        </h1>
-        <div className="flex flex-col lg:flex-row sm:w-full lg:w-auto justify-center items-center">
-          <div className="h-full p-4 lg:w-1/2 ">
-            <p className="text-white  text-justify text-lg leading-tight tracking-wider mt-16 lg:w-80 sm:w-full ">
-              Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam
-              nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam
-              erat volutpat.Lorem ipsum dolor sit amet, consectetuer adipiscing
-              elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore
-              magna aliquam erat volutpat.Lorem ipsum dolor sit amet,
-              consectetuer adipiscing elit, sed diam nonummy nibh euismod
-              tincidunt ut laoreet dolore magna aliquam erat volutpat.
-            </p>
-          </div>
-          <div className="h-full p-4 lg:w-1/2 ">
-            <img src={six} className="w-full" alt="" />
+      <div className="relative">
+        <div className="flex flex-col mt-10 lg:mt-40  gap-5">
+          <h1
+            className="text-white bacalisties text-center lg:absolute z-10 lg:-mt-14 self-center sm:mb-5"
+            style={{
+              fontSize: "5rem",
+            }}
+          >
+            Earrings
+          </h1>
+          <div className="flex flex-col lg:flex-row sm:w-full lg:w-auto justify-center items-center">
+            <div className="h-full p-4 lg:w-1/2 ">
+              <p className="text-white  text-justify text-lg leading-tight tracking-wider mt-16 lg:w-80 sm:w-full ">
+                Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed
+                diam nonummy nibh euismod tincidunt ut laoreet dolore magna
+                aliquam erat volutpat.Lorem ipsum dolor sit amet, consectetuer
+                adipiscing elit, sed diam nonummy nibh euismod tincidunt ut
+                laoreet dolore magna aliquam erat volutpat.Lorem ipsum dolor sit
+                amet, consectetuer adipiscing elit, sed diam nonummy nibh
+                euismod tincidunt ut laoreet dolore magna aliquam erat volutpat.
+              </p>
+            </div>
+            <div className="h-full p-4 lg:w-1/2 ">
+              <img src={six} className="w-full" alt="" />
+            </div>
           </div>
         </div>
-      </div>
 
-
-      <div className="flex flex-col mt-10 lg:mt-40 lg:mx-20 gap-5">
-        <h1
-          className="text-white bacalisties text-center lg:absolute z-10 lg:-mt-20 self-center sm:mb-5"
-          style={{
-            fontSize: "5rem",
-          }}
-        >
-          Pendants
-        </h1>
-        <div className="flex flex-col lg:flex-row sm:w-full lg:w-auto justify-center items-center">
-          <div className="h-full p-4 lg:w-1/2 ">
-            <img src={seven} className="w-full" alt="" />
+        <div className="flex flex-col mt-10 lg:mt-40 w-full gap-5">
+          <h1
+            className="text-white bacalisties text-center lg:absolute z-10 lg:-mt-20 self-center sm:mb-5"
+            style={{
+              fontSize: "5rem",
+            }}
+          >
+            Pendants
+          </h1>
+          <div className="flex flex-col lg:flex-row sm:w-full lg:w-auto justify-center items-center">
+            <div className="h-full p-4 lg:w-1/2 ">
+              <img src={seven} className="w-full" alt="" />
+            </div>
+            <div className="h-full p-4 lg:w-1/2 ">
+              <p className="text-white lg:ml-32  text-justify text-lg leading-tight tracking-wider mt-16 lg:w-80 sm:w-full ">
+                Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed
+                diam nonummy nibh euismod tincidunt ut laoreet dolore magna
+                aliquam erat volutpat.Lorem ipsum dolor sit amet, consectetuer
+                adipiscing elit, sed diam nonummy nibh euismod tincidunt ut
+                laoreet dolore magna aliquam erat volutpat.Lorem ipsum dolor sit
+                amet, consectetuer adipiscing elit, sed diam nonummy nibh
+                euismod tincidunt ut laoreet dolore magna aliquam erat volutpat.
+              </p>
+            </div>
           </div>
-          <div className="h-full p-4 lg:w-1/2 ">
-            <p className="text-white lg:ml-32  text-justify text-lg leading-tight tracking-wider mt-16 lg:w-80 sm:w-full ">
-              Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam
-              nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam
-              erat volutpat.Lorem ipsum dolor sit amet, consectetuer adipiscing
-              elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore
-              magna aliquam erat volutpat.Lorem ipsum dolor sit amet,
-              consectetuer adipiscing elit, sed diam nonummy nibh euismod
-              tincidunt ut laoreet dolore magna aliquam erat volutpat.
-            </p>
-          </div>
-          
         </div>
+        {/* <img
+          src={lines3}
+          alt="lines"
+          className="absolute w-[100%] -bottom-[15%] left-0 z-0 hidden lg:block"
+        /> */}
       </div>
-
-      
 
       <div className="flex flex-col mt-10 lg:mt-40  ">
         <h1
