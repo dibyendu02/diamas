@@ -23,12 +23,12 @@ function App() {
         
         <Routes>
           <Route path="/" element={<Home />} />
-          <Route path="about" element={<About />} />
-          <Route path="contact" element={<Contact />} />
-          <Route path="collection" element={<Collection />} />
-          <Route path="media" element={<Media />} />
-          <Route path="legacy" element={<Legacy />} />
-          <Route path="*" element={<Error />} />
+          <Route path="/about" element={<About />} />
+          <Route path="/contact" element={<Contact />} />
+          <Route path="/collection" element={<Collection />} />
+          <Route path="/media" element={<Media />} />
+          <Route path="/legacy" element={<Legacy />} />
+          <Route path="/*" element={<Error />} />
         </Routes>
         <div className="">
           <FooterWithSocialLinks />
