@@ -1,6 +1,5 @@
 import { Link } from "react-router-dom";
 import contactBg from "../assets/contact/contact_bg.png";
-import one from "../assets/contact/1.png";
 import two from "../assets/contact/2.png";
 import Accordion from "@mui/material/Accordion";
 import AccordionSummary from "@mui/material/AccordionSummary";
