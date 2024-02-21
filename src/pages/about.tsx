@@ -3,9 +3,8 @@ import one from "../assets/about/1.png";
 import two from "../assets/about/2.png";
 import three from "../assets/about/3.png";
 import four from "../assets/about/4.png";
-import lines from "../assets/about/lines.png"
+import lines from "../assets/about/lines.png";
 import Scrollbar from "../components/scrollbar";
-
 
 function About() {
   const [scrollPosition, setScrollPosition] = useState(0);
@@ -17,7 +16,7 @@ function About() {
       setScrollPosition(currentPosition);
 
       // Show buttons if scrolled more than half the screen
-      setShowButtons(currentPosition > window.innerHeight/2);
+      setShowButtons(currentPosition > window.innerHeight / 2);
     };
 
     window.addEventListener("scroll", handleScroll);
@@ -37,7 +36,7 @@ function About() {
           ADITYA <br /> DHAWAN
         </h1>
         <h3 className="text-white m-auto  text-justify text-lg leading-tight tracking-wider mt-5 lg:w-96 lg:ml-[400px] sm:w-full ">
-          In the heart of Diamas beats the vision of Aditya Dhawan; where
+          At the heart of Diamas, beats the vision of Aditya Dhawan; where
           diamonds are not just stones but enduring symbols of beauty. Growing
           up amidst the artistry of Kasturi showrooms, Aditya brings fresh
           perspectives to jewellery, weaving nature's inspirations into every
@@ -45,10 +44,8 @@ function About() {
           deep-rooted passion for the eternal allure of diamonds.
         </h3>
       </div>
-      
-      <div className="w-full">
-        {showButtons && <Scrollbar />}
-      </div>
+
+      <div className="w-full">{showButtons && <Scrollbar />}</div>
 
       <div className="relative flex flex-col justify-center items-center lg:w-[80%] bg-opacity-90 bg-[#090D29] lg:mt-[35%] rounded-[35px] border border-transparent">
         <div className="absolute top-0 left-0">
@@ -56,22 +53,17 @@ function About() {
         </div>
 
         <div className="flex flex-col gap-5 items-center lg:mb-20 my-8 ">
-          <h1 className="lg:text-8xl font-[Butler] text-white  ">
-            DIAMAS
-          </h1>
+          <h1 className="lg:text-8xl font-[Butler] text-white  ">DIAMAS</h1>
           <div className="flex w-56 mb-5 ">
             <div className="h-1 bg-blue-600 w-1/3 rounded-full"></div>
             <div className="h-1 bg-white w-1/3"></div>
             <div className="h-1 bg-blue-600 w-1/3 rounded-full"></div>
           </div>
         </div>
-        
 
         <div className=" lg:flex w-full justify-between items-center gap-20 lg:gap-16 lg:pl-20 lg:pr-10 tracking-widest sm:block ">
-          
           <img src={two} alt="" className="lg:w-[50%] py-10" />
           <div className="flex flex-col gap-5 justify-center w-[90%] ">
-
             <h3 className="text-white  text-justify text-lg leading-tight tracking-wider mt-5 lg:w-96 sm:w-full ">
               Every piece of jewellery should tell a story and our quality
               diamonds tell ours. We utilise 45 years of industry experience to
@@ -107,9 +99,7 @@ function About() {
         </div>
 
         <div className="lg:pl-28 mt-20 mb-5">
-          <h1
-            className="text-white bacalisties text-center text-[2rem] lg:-mb-12 lg:ms-96 lg:text-7xl mt-8"
-          >
+          <h1 className="text-white bacalisties text-center text-[2rem] lg:-mb-12 lg:ms-96 lg:text-7xl mt-8">
             Diamond Quality
           </h1>
         </div>
@@ -144,25 +134,7 @@ function About() {
               exquisite high-end jewellery for those who appreciate diamonds
               from the heart.
             </h3>
-            
-            {/* <h3 className="text-white font-light lg:text-xl">
-              At Diamas, we hold a simple yet profound philosophy: the value of
-              a diamond is not just appreciated; it inherently grows.
-            </h3>
-            <h3 className="text-white font-light lg:text-xl">
-              Our commitment to this principle is reflected in our exclusive
-              selection of high-quality diamonds, sourced individually from
-              international sources and meeting standards set by the
-              International Gemological Institute (IGI), a global authority in
-              diamond and jewellery certification since 1975.
-            </h3>
-            <h3 className="text-white font-light lg:text-xl">
-              Building on the foundation of his father's applied knowledge and
-              his own IGI certification, Aditya envisions a unique mission,
-              aspiring to introduce exceptional diamonds to India, crafting
-              exquisite high-end jewellery for those who appreciate diamonds
-              from the heart.
-            </h3> */}
+
           </div>
         </div>
       </div>

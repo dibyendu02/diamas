@@ -2,14 +2,11 @@ import { useEffect, useState } from "react";
 import video from "../assets/video.mp4";
 import one from "../assets/home/home1.png";
 
-import slider1 from "../assets/home/slider1.png";
-import slider2 from "../assets/home/slider2.png";
 import slider3 from "../assets/home/slider3.png";
 import slider4 from "../assets/home/slider4.png";
 import slider6 from "../assets/home/slider6.png";
 
 import line1 from "../assets/home/line_3.png";
-import line2 from "../assets/home/line_2.png";
 import line4 from "../assets/home/line_4.png";
 
 import legacy from "../assets/home/legacy.png";
@@ -85,7 +82,7 @@ const home = () => {
         </div>
 
         <div className="h-full lg:ps-0 lg:p-0 p-4   ">
-          <div className="lg:ps-0 px-0 lg:pt-16 lg:pb-16 flex flex-col gap-5 ">
+          <div className="lg:ps-0 px-4 lg:pt-16 lg:pb-16 flex flex-col gap-5 ">
             <h1 className="font-[Bulter] font-normal text-3xl sm:tracking-[20px] lg:tracking-[16px] lg:leading-[1.2] lg:text-7xl mb-3 text-white text-center lg:text-start z-10 lg:relative">
               About
               <br />
@@ -178,7 +175,7 @@ const home = () => {
           className="absolute bottom-20 left-72 blur-sm w-1/2 hidden lg:block "
         />
         <div className="h-full p-4 lg:absolute top-[8%]  lg:left-40 z-20 lg:w-[40%]">
-          <div className="px-8 lg:pt-16 pb-16 relative">
+          <div className=" lg:pt-16 pb-16 relative">
             <h1
               className="font-[Bulter] font-normal text-3xl lg:text-7xl mb-3 text-white text-center lg:text-start"
               style={{

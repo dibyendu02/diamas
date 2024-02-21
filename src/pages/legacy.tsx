@@ -13,7 +13,7 @@ function legacy() {
       setScrollPosition(currentPosition);
 
       // Show buttons if scrolled more than half the screen
-      setShowButtons(currentPosition > window.innerHeight * 0.7 );
+      setShowButtons(currentPosition > window.innerHeight * 0.7);
     };
 
     window.addEventListener("scroll", handleScroll);
@@ -37,59 +37,58 @@ function legacy() {
   };
   return (
     <div className="flex flex-col justify-center items-center ">
-
       <div className="relative">
         <img src={main} alt="main" className="w-full object-cover" />
 
-        {!showButtons && <div
-          // className="hidden lg:flex mt-16 gap-10 justify-center items-center lg:mx-0 sticky bottom-0"
-          className="hidden lg:flex gap-10 justify-center items-center  
+        {!showButtons && (
+          <div
+            // className="hidden lg:flex mt-16 gap-10 justify-center items-center lg:mx-0 sticky bottom-0"
+            className="hidden lg:flex gap-10 justify-center items-center  
        w-full absolute -bottom-12
       p-4 text-white"
-        >
-          <div className="w-[40%] h-[1px] bg-white " />
-          <div className="h-16 w-10 rounded-full border-2 border-white flex flex-col gap-2 items-center justify-between py-2 text-white ">
-            <button onClick={scrollToTop}>
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                fill="none"
-                viewBox="0 0 24 24"
-                strokeWidth={4}
-                stroke="currentColor"
-                className="w-4 h-4"
-              >
-                <path
-                  strokeLinecap="round"
-                  strokeLinejoin="round"
-                  d="m4.5 15.75 7.5-7.5 7.5 7.5"
-                />
-              </svg>
-            </button>
+          >
+            <div className="w-[40%] h-[1px] bg-white " />
+            <div className="h-16 w-10 rounded-full border-2 border-white flex flex-col gap-2 items-center justify-between py-2 text-white ">
+              <button onClick={scrollToTop}>
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  fill="none"
+                  viewBox="0 0 24 24"
+                  strokeWidth={4}
+                  stroke="currentColor"
+                  className="w-4 h-4"
+                >
+                  <path
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                    d="m4.5 15.75 7.5-7.5 7.5 7.5"
+                  />
+                </svg>
+              </button>
 
-            <button onClick={scrollToBottom}>
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                fill="none"
-                viewBox="0 0 24 24"
-                strokeWidth={4}
-                stroke="currentColor"
-                className="w-4 h-4"
-              >
-                <path
-                  strokeLinecap="round"
-                  strokeLinejoin="round"
-                  d="m19.5 8.25-7.5 7.5-7.5-7.5"
-                />
-              </svg>
-            </button>
+              <button onClick={scrollToBottom}>
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  fill="none"
+                  viewBox="0 0 24 24"
+                  strokeWidth={4}
+                  stroke="currentColor"
+                  className="w-4 h-4"
+                >
+                  <path
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                    d="m19.5 8.25-7.5 7.5-7.5-7.5"
+                  />
+                </svg>
+              </button>
+            </div>
+            <div className="w-[40%] h-[1px] bg-white " />
           </div>
-          <div className="w-[40%] h-[1px] bg-white " />
-        </div>}
+        )}
 
-        {showButtons && <Scrollbar/>}
+        {showButtons && <Scrollbar />}
       </div>
-
-      
 
       <div className="my-28 flex flex-col items-center justify-center">
         <h1
@@ -115,7 +114,6 @@ function legacy() {
           present yet aims for the future - destined to breathe new life into
           enduring legacies.
         </h3>
-
       </div>
 
       <img src={two} alt="two" className="w-full object-cover" />
@@ -132,9 +130,6 @@ function legacy() {
         </h1>
 
         <h3 className="text-white mx-auto pt-5  text-justify font-normal text-xl leading-tight lg:w-[75%] tracking-wider mt-5 p-10 sm:w-full ">
-          A place where tradition echoes in every jewel, radiating a richness
-          that withstands time's test. Aditya's origins in diamond artistry are
-          rooted here, under his father Surinder Kumar's visionary guidance.
           Surinder Kumar, the visionary voice behind Diamas, imprints the spirit
           of craftsmanship across generations. Just as his father passed the
           passion for jewellery on to Surinder, Surinder guides his son Aditya.
@@ -143,24 +138,12 @@ function legacy() {
           Surinder steers Diamas towards a timeless legacy. In every cut and
           setting, one may glimpse shadows of the man in the style, the
           attention to detail, the refusal to settle for less than the sublime.
+          <br/>
           Surinder's passion becomes purpose, craft matures as art, and Diamas’
-          creations sparkle with his influence radiating through each 
-          elegant facet as timeless as the diamonds themselves.
+          creations sparkle with his influence radiating through each elegant
+          facet as timeless as the diamonds themselves.
         </h3>
-
-        {/* <h3 className="text-white w-[80%] lg:w-8/12 text-center lg:-ms-14 z-10 text-lg">
-          Surinder Kumar, the visionary voice behind Diamas, imprints the spirit
-          of craftsmanship across generations. Just as his father passed the
-          passion for jewellery on to Surinder, Surinder guides his son Aditya.
-          He inspires Aditya with his eye for perfection and multifaceted
-          leadership. Through respect for heritage and a duty to innovation,
-          Surinder steers Diamas towards a timeless legacy. In every cut and
-          setting, one may glimpse shadows of the man in the style, the
-          attention to detail, the refusal to settle for less than the sublime.
-          Surinder's passion becomes purpose, craft matures as art, and Diamas’
-          creations sparkle with his influence radiating through each 
-          elegant facet as timeless as the diamonds themselves.
-        </h3> */}
+        
       </div>
     </div>
   );

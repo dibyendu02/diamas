@@ -1,4 +1,5 @@
 import { Link } from "react-router-dom";
+import contactBg from "../assets/contact/contact_bg.png";
 import one from "../assets/contact/1.png";
 import two from "../assets/contact/2.png";
 import Accordion from "@mui/material/Accordion";
@@ -14,45 +15,45 @@ function Contact() {
   const accordions = [
     {
       key: 1,
-      title: "Where can I watch?",
-      data: `Nibh quisque suscipit fermentum netus nulla cras porttitor euismod nulla. Orci, dictumst nec aliquet id ullamcorper venenatis.`,
+      title: "Do you have physical stores or sell only online?",
+      data: "Diamas is proud to have elegant showrooms in [list locations] for you to visit and view our collections in person. We do not currently sell online, as we believe jewellery is best viewed and chosen in person. Please schedule an appointment or visit one of our stores to discover our pieces.",
       isOpen: true,
     },
     {
       key: 2,
-      title: "Mauris id nibh eu fermentum mattis purus?",
-      data: ``,
+      title: "What makes Diamas diamonds special?",
+      data: "At Diamas, we select and procure diamonds adhering to the highest quality standards, certified by the International Gemological Institute (IGI). With generations of jewellery expertise, our master artisans handcraft the diamonds into pieces reflecting our passion for creating timeless beauty.",
       isOpen: false,
     },
     {
       key: 3,
-      title: "Eros imperdiet rhoncus?",
-      data: ``,
+      title: "How can I customize or personalize Diamas jewellery?",
+      data: "Our personalized design consultations allow you to tailor Diamas pieces to your unique needs and style. Share your vision with our designers and gemologists to create one-of-a-kind diamond jewellery carrying personal significance. Contact or visit a Diamas boutique today to begin designing your meaningful heirloom.",
       isOpen: false,
     },
     {
       key: 4,
-      title: "Fames imperdiet quam fermentum?",
-      data: ``,
+      title: "What payment options do you offer in-store?",
+      data: "Diamas accepts all major credit cards, debit cards, checks, and wire transfers. We also offer customized payment plans, corporate accounts, and specialist financing options to ease the purchase process. Please ask an associate at any location about flexible payment solutions that suit your needs.",
       isOpen: false,
     },
     {
       key: 5,
-      title: "Varius vitae, convallis amet lacus sit aliquet nibh?",
-      data: ``,
+      title: "Do you buy back Diamas jewellery pieces?",
+      data: "Yes, Diamas offers competitive buy-back and exchange options for pieces purchased from our stores. This allows you to trade existing Diamas jewellery toward a new design or receive monetary value. Bring in your Diamas pieces to get a free valuation. Our gemology experts will assess them on parameters like quality, craftsmanship and current value.",
       isOpen: false,
     },
     {
       key: 6,
-      title: "Tortor nisl pellentesque sit quis orci dolor?",
-      data: ``,
+      title: "How do I care for my Diamas jewellery?",
+      data: 'Diamas recommends following jewellery care best practices to keep your precious pieces safely sparkling. Store them properly in soft cloth pouches inside jewellery boxes to avoid surface scratches. Clean diamonds, gold and platinum pieces by giving them a light polish with a clean microfiber cloth. Do not expose them to water, household chemicals or abrasives. We advise bringing Diamas jewellery into our boutiques every 2-3 years for professional steam or ultrasonic cleaning and servicing by our certified gemologists who will handle them with the utmost care. Our stores also provide inspections, light repairs, rhodium plating and more maintenance to retain the timeless luxe finish. Please consult our jewellery experts for advice about protecting your precious investment. ',
       isOpen: false,
     },
     {
       key: 7,
       title:
-        "Vestibulum mauris mauris elementum proin amet auctor ipsum nibh sollicitudin?",
-      data: ``,
+        "What is your jewellery return policy?",
+      data: "At Diamas boutiques, we allow returns or exchanges within 30 days of original purchase when accompanied by the sales receipt. Please ensure the jewellery is in original condition when bringing it in. Custom orders are made especially for you so cannot be returned or exchanged. Please examine pieces carefully before finalizing any purchase.",
       isOpen: false,
     },
   ];
@@ -60,14 +61,7 @@ function Contact() {
   return (
     <div className="flex flex-col justify-center w-full items-center bg-[#090D29]">
       <div className="w-full relative">
-        <div className="absolute mt-20 inset-0 opacity-10 bg-[#090D29] z-10" />
-        <img
-          src={one}
-          className="absolute mt-20 w-full grayscale z-5 "
-          alt=""
-        />
-        <img src={one} className="mt-20 w-full grayscale " alt="" />
-        {/* <div className="absolute mt-20 inset-0 opacity-100 bg-[#090D29] z-0"/> */}
+        <img src={contactBg} className="mt-20 w-full " alt="" />
       </div>
 
       <h1
@@ -211,7 +205,7 @@ function Contact() {
             Frequently Asked Questions
           </h3>
           <div className="w-full h-[2px] bg-white mb-2" />
-          <div className="flex flex-col lg:mr-16 lg:gap-8 gap-4  w-full">
+          <div className="flex flex-col lg:mr-16 gap-5  w-full">
             {accordions.map(({ data, isOpen, key, title }) => (
               <Accordion
                 defaultExpanded={isOpen}
@@ -221,8 +215,8 @@ function Contact() {
               >
                 <AccordionSummary
                   expandIcon={<ExpandMoreIcon sx={{ color: "#fff" }} />}
-                  aria-controls="panel1-content"
-                  id="panel1-header"
+                  //aria-controls="panel1-content"
+                  //id="panel1-header"
                   key={key}
                   color="black"
                   className="text-sm"
@@ -232,7 +226,7 @@ function Contact() {
                     fontSize: "16px",
                     fontWeight: "600",
                     display: "flex",
-                    alignItems: "flex-start"
+                    alignItems: "flex-center"
                   }}
                 >
                   {title}

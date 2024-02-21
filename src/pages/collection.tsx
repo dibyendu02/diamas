@@ -156,13 +156,10 @@ function collection() {
           </div>
 
           <p className="mb-3 text-white font-light  text-justify my-12 lg:mx-24 lg:text-2xl mx-[30px] lg:mt-[80%] ">
-            Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam
-            nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat
-            volutpat.Lorem ipsum dolor sit amet, consectetuer adipiscing elit,
-            sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna
-            aliquam erat volutpat.Lorem ipsum dolor sit amet, consectetuer
-            adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet
-            dolore magna aliquam erat volutpat.
+            Diamas necklaces embrace the extraordinary in the ordinary. Delicate
+            drops become bold when layered, while sculptural centrepieces
+            command attention. Our pieces accentuate and amplify, designed to
+            empower confidence, flair and fearless femininity.
           </p>
         </div>
 
@@ -181,13 +178,11 @@ function collection() {
             </div>
             <div className="h-full p-4 ">
               <p className="text-white pt-5  text-justify text-lg leading-tight tracking-wider mt-5 lg:w-80 sm:w-full ">
-                Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed
-                diam nonummy nibh euismod tincidunt ut laoreet dolore magna
-                aliquam erat volutpat.Lorem ipsum dolor sit amet, consectetuer
-                adipiscing elit, sed diam nonummy nibh euismod tincidunt ut
-                laoreet dolore magna aliquam erat volutpat.Lorem ipsum dolor sit
-                amet, consectetuer adipiscing elit, sed diam nonummy nibh
-                euismod tincidunt ut laoreet dolore magna aliquam erat volutpat.
+                A symbol of commitment or a meaningful self-gift – Diamas rings
+                commemorate relationships and milestones close to the heart. An
+                heirloom passed down honouring family ties; an anniversary band
+                etching promises in gold; an exquisite gem declaring self-love.
+                Each ring tells a story as unique as yours.
               </p>
             </div>
           </div>
@@ -218,13 +213,10 @@ function collection() {
           <div className="flex flex-col lg:flex-row sm:w-full lg:w-auto justify-center items-center">
             <div className="h-full p-4 lg:w-1/2 ">
               <p className="text-white  text-justify text-lg leading-tight tracking-wider mt-16 lg:w-80 sm:w-full ">
-                Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed
-                diam nonummy nibh euismod tincidunt ut laoreet dolore magna
-                aliquam erat volutpat.Lorem ipsum dolor sit amet, consectetuer
-                adipiscing elit, sed diam nonummy nibh euismod tincidunt ut
-                laoreet dolore magna aliquam erat volutpat.Lorem ipsum dolor sit
-                amet, consectetuer adipiscing elit, sed diam nonummy nibh
-                euismod tincidunt ut laoreet dolore magna aliquam erat volutpat.
+                Diamas earrings redefine everyday luxury whether accenting an
+                occasion ensemble or adding intrigue to casual wear. Delicate
+                dazzlers one day and statement pieces the next – our versatile
+                designs celebrate the many facets of your ever-evolving spirit.
               </p>
             </div>
             <div className="h-full p-4 lg:w-1/2 ">
@@ -248,22 +240,15 @@ function collection() {
             </div>
             <div className="h-full p-4 lg:w-1/2 ">
               <p className="text-white lg:ml-32  text-justify text-lg leading-tight tracking-wider mt-16 lg:w-80 sm:w-full ">
-                Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed
-                diam nonummy nibh euismod tincidunt ut laoreet dolore magna
-                aliquam erat volutpat.Lorem ipsum dolor sit amet, consectetuer
-                adipiscing elit, sed diam nonummy nibh euismod tincidunt ut
-                laoreet dolore magna aliquam erat volutpat.Lorem ipsum dolor sit
-                amet, consectetuer adipiscing elit, sed diam nonummy nibh
-                euismod tincidunt ut laoreet dolore magna aliquam erat volutpat.
+                Suspended on delicate chains, Diamas pendants preserve precious
+                memories. Exquisite motifs layer sentimental value within
+                elegant frames. An engraved initial pays tribute to a loved one;
+                an inspired emblem celebrates a meaningful journey. Hold your
+                most cherished moments forever - close to the heart.
               </p>
             </div>
           </div>
         </div>
-        {/* <img
-          src={lines3}
-          alt="lines"
-          className="absolute w-[100%] -bottom-[15%] left-0 z-0 hidden lg:block"
-        /> */}
       </div>
 
       <div className="flex flex-col mt-10 lg:mt-40  ">
@@ -281,13 +266,11 @@ function collection() {
         </div>
 
         <p className="mb-20 text-white font-light lg:text-xl text-center my-16 lg:mx-24 mx-[30px]">
-          Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam
-          nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat
-          volutpat.Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed
-          diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam
-          erat volutpat.Lorem ipsum dolor sit amet, consectetuer adipiscing
-          elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna
-          aliquam erat volutpat.
+          Stackable, movable artistry granting wrists a novelist’s touch -
+          Diamas bracelets and bangles become the distinguishing signature of a
+          woman and her story. Dainty chains one day and bold cuffs the next –
+          these treasured keepsakes empower you to curate looks as unique as
+          each new chapter.
         </p>
       </div>
     </div>
