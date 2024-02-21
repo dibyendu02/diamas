@@ -1,15 +1,21 @@
 import { useEffect, useState } from "react";
 import video from "../assets/video.mp4";
-import one from "../assets/home/1.png";
+import one from "../assets/home/home1.png";
 
 import slider1 from "../assets/home/slider1.png";
 import slider2 from "../assets/home/slider2.png";
 import slider3 from "../assets/home/slider3.png";
 import slider4 from "../assets/home/slider4.png";
+import slider6 from "../assets/home/slider6.png";
 
-import line1 from "../assets/home/line_1.png";
+import line1 from "../assets/home/line_3.png";
 import line2 from "../assets/home/line_2.png";
+import line4 from "../assets/home/line_4.png";
+
+import legacy from "../assets/home/legacy.png";
 import diamond from "../assets/home/diamond.png";
+import diamond_rotate from "../assets/home/diamond_rotate.png";
+import diamondIcon from "../assets/home/diamond_icon.png"
 
 import { Swiper, SwiperSlide } from "swiper/react";
 import { EffectCards, Navigation } from "swiper/modules";
@@ -40,18 +46,6 @@ const home = () => {
     };
   }, [scrollPosition]);
 
-  const scrollToBottom = () => {
-    window.scrollTo({
-      top: document.documentElement.scrollHeight,
-      behavior: "smooth", // Optional, smooth scrolling animation
-    });
-  };
-  const scrollToTop = () => {
-    window.scrollTo({
-      top: 0,
-      behavior: "smooth",
-    });
-  };
 
   return (
     <div className="w-full ">
@@ -71,78 +65,41 @@ const home = () => {
 
       {showButtons && <Scrollbar />}
 
-      {!showButtons && (
-        <div
-          className="hidden lg:flex gap-10 justify-center items-center  
-        my-5  w-full 
-        p-4 text-white"
-        >
-          <div className="w-[40%] h-[1px] bg-white " />
-          <div className="h-16 w-10 rounded-full border-2 border-white flex flex-col gap-2 items-center justify-between py-2 text-white ">
-            <button onClick={scrollToTop}>
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                fill="none"
-                viewBox="0 0 24 24"
-                strokeWidth={4}
-                stroke="currentColor"
-                className="w-4 h-4"
-              >
-                <path
-                  strokeLinecap="round"
-                  strokeLinejoin="round"
-                  d="m4.5 15.75 7.5-7.5 7.5 7.5"
-                />
-              </svg>
-            </button>
 
-            <button onClick={scrollToBottom}>
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                fill="none"
-                viewBox="0 0 24 24"
-                strokeWidth={4}
-                stroke="currentColor"
-                className="w-4 h-4"
-              >
-                <path
-                  strokeLinecap="round"
-                  strokeLinejoin="round"
-                  d="m19.5 8.25-7.5 7.5-7.5-7.5"
-                />
-              </svg>
-            </button>
-          </div>
-          <div className="w-[40%] h-[1px] bg-white " />
-        </div>
-      )}
-
-      <div className="container px-0 lg:pe-0 py-0  flex justify-center flex-wrap -z-0 lg:relative">
-        <div style={{ zIndex: 2 }} className="h-full px-0 p-4 lg:w-1/2">
-          <div className=" py-16 relative">
-            <div className="absolute my-16 inset-0 bg-opacity-40  bg-blue-950 z-10"></div>
+      <div className="container px-0 lg:pe-0 py-0 lg:mt-16  flex lg:gap-20 justify-center flex-wrap -z-0 lg:relative ">
+        <img
+          src={diamond_rotate}
+          alt="diamond"
+          className="absolute -top-28 left-40 blur-sm w-2/3 hidden lg:block "
+        />
+        <div style={{ zIndex: 2 }} className="h-full px-5 lg:px-0 p-4 lg:w-[40%]   ">
+          <div className=" lg:py-16 relative">
+            {/* <div className="absolute my-16 inset-0 bg-opacity-40  bg-blue-950 z-10"></div> */}
             <img
               src={one}
               alt=""
-              className="w-full z-1 brightness-105 hue-rotate-10"
+              className=" w-full z-1 brightness-105 hue-rotate-10 rounded-3xl"
             />
+            
           </div>
         </div>
 
-        <div className="h-full lg:ps-0 lg:p-0 p-4 lg:w-1/2 ">
-          <div className="lg:ps-0 px-0 lg:pt-16 lg:pb-16 ">
-            <h1 className="font-[Kalnia] text-3xl sm:tracking-[20px] lg:tracking-[40px] lg:leading-[1.4] lg:text-7xl mb-3 text-white text-center lg:text-start lg:-ms-5 z-10 lg:relative">
-              ABOUT
+        <div className="h-full lg:ps-0 lg:p-0 p-4   ">
+          <div className="lg:ps-0 px-0 lg:pt-16 lg:pb-16 flex flex-col gap-5 ">
+            <h1 className="font-[Bulter] font-normal text-3xl sm:tracking-[20px] lg:tracking-[16px] lg:leading-[1.2] lg:text-7xl mb-3 text-white text-center lg:text-start z-10 lg:relative">
+              About
               <br />
-              DIAMAS
+              Diamas
             </h1>
 
-            <p className="text-white mx-10  text-justify text-lg leading-tight tracking-wider mt-5 lg:w-96 sm:w-full ">
+            <img src={diamondIcon} alt="icon" className="lg:w-20 w-10 mx-auto lg:mx-0" />
+
+            <p className="text-white  text-justify text-lg leading-tight tracking-wider mt-5 lg:w-96 sm:w-full ">
               Diamonds are a statement unto themselves. At Diamas, Aditya Dhawan
               transforms his passion for diamonds into contemporary and
               luxurious works of art – each one, as unique as you.
             </p>
-            <a className="ms-10 text-white mt-3 text-sm inline-flex items-center space-x-1 rounded-lg border-blue-300 border p-1 px-2 hover:bg-slate-500 hover:cursor-pointer">
+            <a className=" text-white w-28 mt-3 text-sm inline-flex items-center justify-center space-x-1 rounded-3xl border-blue-300 border p-1 px-2 hover:bg-slate-500 hover:cursor-pointer">
               <h6 className="text-sm text-blue-300 font-sans">Know More</h6>
               <svg
                 xmlns="http://www.w3.org/2000/svg"
@@ -164,12 +121,12 @@ const home = () => {
         <img
           src={line1}
           alt="lines"
-          className="absolute w-[50%] top-[48%] left-0 z-0 hidden lg:block"
+          className="absolute w-[50%] -bottom-[42%] left-0 z-0 hidden lg:block"
         />
       </div>
 
-      <div className="relative lg:mt-60 flex flex-col gap-10  ">
-        <h1 className="text-white bacalisties text-center text-[50px] lg:text-[100px]  lg:font-normal lg:absolute z-10 -top-32 left-[38%]">
+      <div className="relative lg:mt-60 flex flex-col gap-10 mx-20  ">
+        <h1 className="text-white bacalisties text-center text-[50px] lg:text-[100px]  lg:font-normal lg:absolute z-10 -top-28 left-[38%]">
           Adornments
         </h1>
 
@@ -182,10 +139,7 @@ const home = () => {
           loop
         >
           <SwiperSlide>
-            <img src={slider1} className="object-cover" alt="" />
-          </SwiperSlide>
-          <SwiperSlide>
-            <img src={slider2} className="object-cover" alt="" />
+            <img src={slider6} className="object-cover h-full" alt="" />
           </SwiperSlide>
           <SwiperSlide>
             <img src={slider3} className="" alt="" />
@@ -195,9 +149,9 @@ const home = () => {
           </SwiperSlide>
         </Swiper>
         <img
-          src={diamond}
+          src={diamond_rotate}
           alt="diamond"
-          className="absolute opacity-60 blur-sm top-20 left-[15%] rotate-180 hidden lg:block "
+          className="absolute opacity-60 blur-sm top-20 left-[15%] hidden lg:block "
         />
         <img
           src={diamond}
@@ -206,28 +160,42 @@ const home = () => {
         />
       </div>
 
-      <div className="container relative w-full  ml-auto  lg:py-24 flex flex-wrap justify-center items-center self-center mt-20">
-        <div className="h-full p-4 lg:w-[40%]">
+
+      <div
+          className="hidden lg:flex gap-10 justify-center items-center  
+        my-10  w-full 
+        p-4 text-white"
+        >
+          <div className="w-[40%] h-[1px] bg-white " />
+          <img src={diamondIcon} alt="icon" className="lg:w-20 w-10 mx-auto lg:mx-0" />
+          <div className="w-[40%] h-[1px] bg-white " />
+        </div>
+
+      <div className="container relative w-full  ml-auto  lg:pb-24 flex flex-wrap justify-end lg:pr-[10%] p-5 items-center self-center">
+        <img
+          src={diamond_rotate}
+          alt="diamond"
+          className="absolute bottom-20 left-72 blur-sm w-1/2 hidden lg:block "
+        />
+        <div className="h-full p-4 lg:absolute top-[8%]  lg:left-40 z-20 lg:w-[40%]">
           <div className="px-8 lg:pt-16 pb-16 relative">
             <h1
-              className="text-3xl lg:text-7xl mb-3 text-white sm:text-center lg:text-start"
+              className="font-[Bulter] font-normal text-3xl lg:text-7xl mb-3 text-white text-center lg:text-start"
               style={{
                 letterSpacing: 5,
                 lineHeight: 1.4,
-                fontFamily: "Kalnia",
+                
               }}
             >
-              LEGACY
+              Legacy
             </h1>
-            {/* <p className="mb-3 text-white font-light lg:text-xl">
-              Diamonds are a statement unto themselves. At Diamas, Aditya Dhawan
-              transforms his passion for diamonds into contemporary and
-              luxurious works of art – each one, as unique as you.
-            </p> */}
-            <p className="text-white  text-justify text-lg leading-tight tracking-wider mb-3 lg:w-[90%] sm:w-full ">
+            <img src={diamondIcon} alt="icon" className="lg:w-20 w-10 mx-auto lg:mx-0 mb-8" />
+            <p className="text-white text-justify text-lg leading-tight tracking-wider mb-3 lg:w-[72%]  sm:w-full ">
               Drawing from a legacy in jewellery craftsmanship, Diamas excels by
               blending time-honoured techniques with the highest quality
-              diamonds. Our artisans ensure that each design radiates
+              diamonds. 
+              <br/>
+              Our artisans ensure that each design radiates
               brilliance, meant to inspire for generations.
             </p>
             <a className="text-white mt-3 text-sm inline-flex items-center space-x-1 rounded-lg border-blue-300 border p-1 px-2 hover:bg-slate-500 hover:cursor-pointer">
@@ -249,24 +217,29 @@ const home = () => {
             </a>
           </div>
         </div>
-        <div className="z-10 w-[45%] mt-5  flex justify-end">
+        <div className="z-10 w-full mt-5  flex justify-end">
           <img
             style={{ zIndex: 2 }}
-            src={slider2}
+            src={legacy}
             alt=""
-            className="object-contain h-full lg:w-[550px] lg:h-[550px] "
+            className="object-contain h-full lg:w-[60%] lg:h-[120%] rounded-3xl "
           />
         </div>
 
         <img
-          src={line2}
+          src={line4}
           alt="lines"
-          className="absolute  -top-16 right-0 z-0 hidden lg:block"
+          className="absolute  -bottom-[20%] right-0 z-0 hidden lg:block"
         />
       </div>
 
-      <div className="relative lg:px-1 lg:py-24 mx-auto flex flex-wrap justify-center items-center self-center">
-        <div className="mapdiv h-full p-4 lg:w-[45%] lg:top-[16%] w-full  static left-[27%]  lg:absolute lg:transform -translate-x-1/2 z-10">
+      <div className="relative lg:px-1 py-5 lg:py-24 mx-auto flex flex-wrap justify-center items-center self-center">
+        <img
+          src={diamond_rotate}
+          alt="diamond"
+          className="absolute bottom-12 left-36 blur-sm w-1/3 hidden lg:block "
+        />
+        <div className="mapdiv h-full p-4 lg:w-[30%] lg:top-[16%] w-full  static left-[30%]  lg:absolute lg:transform -translate-x-1/2 z-10">
           <iframe
             src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3502.02705431727!2d77.068682370812!3d28.628951246325638!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x390d04c2d11feb9f%3A0x5b42213df8236053!2sa%2C%20A-157%2C%20Guru%20Virjanand%20Marg%2C%20near%20Police%20Station%2C%20A-Block%2C%20Vikaspuri%2C%20Delhi%2C%20110018!5e0!3m2!1sen!2sin!4v1706261050023!5m2!1sen!2sin"
             style={{ borderRadius: 10 }}
@@ -277,14 +250,17 @@ const home = () => {
           ></iframe>
         </div>
 
-        <div className="h-full lg:p-[1rem] mx-2  lg:relative border border-white lg:ms-[19rem] lg:w-[60%] z-0 relative">
-          <div className="w-full px-16 py-20 flex-col space-y-5 lg:ml-[30%]">
+        <div className="h-full lg:p-[1rem] mx-2  lg:relative border border-white rounded-3xl lg:ms-[19rem] lg:w-[50%] z-0 relative">
+          <div className="w-full px-5 py-5 flex-col space-y-5 lg:ml-[30%]">
             <p className="lg:text-[60px] lg:tracking-[5px] lg:leading-[1.4] font-[Kalnia] text-2xl mb-3 text-white">
-              OUR STORES
+              OUR <br/> 
+              STORES
             </p>
 
             <p className="text-white lg:w-[60%] lg:tracking-[5px] lg:text-[20px]">
-              WALK IN OR SCHEDULE AN APPOINTMENT
+              WALK IN OR SCHEDULE
+              <br/>
+              AN APPOINTMENT
             </p>
 
             <p className="text-white text-[16px] lg:w-[28%]">
@@ -315,6 +291,11 @@ const home = () => {
               </svg>
             </a>
           </div>
+          <img
+            src={diamond}
+            alt="diamond"
+            className="absolute bottom-5 right-10 w-40 hidden lg:block "
+          />
         </div>
       </div>
     </div>
