@@ -24,6 +24,11 @@
     position: relative;
     object-fit: cover;
   }
+
+  .swiper-slide:not(.swiper-slide-active) {
+    filter: blur(4px); /* Adjust the blur intensity as needed */
+  }
+
   .swiper-slide img {
     width: 40rem;
     height: 28rem;
