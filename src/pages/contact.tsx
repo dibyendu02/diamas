@@ -185,7 +185,7 @@ function Contact() {
       </div>
 
       <div className="w-full flex flex-row justify-center items-center gap-10 space-x-5 my-20">
-        <Link to={""}>
+        <Link to="https://www.facebook.com/profile.php?id=61554517292760">
           {" "}
           <i className="fa-brands fa-facebook-f text-white text-2xl"></i>
         </Link>
@@ -198,7 +198,7 @@ function Contact() {
           <i className="fa-brands fa-twitter text-white text-2xl"></i>
         </Link>
 
-        <Link to={""}>
+        <Link to="https://www.instagram.com/diamasbyadityadhawan/">
           <i className="fa-brands fa-instagram text-white text-2xl"></i>
         </Link>
       </div>
