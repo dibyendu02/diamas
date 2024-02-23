@@ -2,13 +2,6 @@ import { useEffect, useState } from "react";
 import video from "../assets/video.mp4";
 import one from "../assets/home/home1.png";
 
-import slider1 from "../assets/home/slider1.png";
-import slider2 from "../assets/home/slider2.png";
-import slider5 from "../assets/home/slider5.png";
-import slider3 from "../assets/home/slider3.png";
-import slider4 from "../assets/home/slider4.png";
-import slider6 from "../assets/home/slider6.png";
-
 import line1 from "../assets/home/line_3.png";
 import line4 from "../assets/home/line_4.png";
 
