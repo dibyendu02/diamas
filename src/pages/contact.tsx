@@ -5,11 +5,31 @@ import Accordion from "@mui/material/Accordion";
 import AccordionSummary from "@mui/material/AccordionSummary";
 import AccordionDetails from "@mui/material/AccordionDetails";
 import ExpandMoreIcon from "@mui/icons-material/ExpandMore";
+import NavbarOnScroll from "../components/headerOnScroll";
+import { useEffect, useState } from "react";
 
 function Contact() {
   //const [open, setOpen] = React.useState(1);
 
   //const handleOpen = (value) => setOpen(open === value ? 0 : value);
+
+  const [scrollPosition, setScrollPosition] = useState(0);
+  const [showNavbar, setShowNavbar] = useState(false);
+
+  useEffect(() => {
+    const handleScroll = () => {
+      const currentPosition = window.scrollY;
+      setScrollPosition(currentPosition);
+
+      setShowNavbar(currentPosition > window.innerHeight / 4);
+    };
+
+    window.addEventListener("scroll", handleScroll);
+
+    return () => {
+      window.removeEventListener("scroll", handleScroll);
+    };
+  }, [scrollPosition]);
 
   const accordions = [
     {
@@ -45,13 +65,12 @@ function Contact() {
     {
       key: 6,
       title: "How do I care for my Diamas jewellery?",
-      data: 'Diamas recommends following jewellery care best practices to keep your precious pieces safely sparkling. Store them properly in soft cloth pouches inside jewellery boxes to avoid surface scratches. Clean diamonds, gold and platinum pieces by giving them a light polish with a clean microfiber cloth. Do not expose them to water, household chemicals or abrasives. We advise bringing Diamas jewellery into our boutiques every 2-3 years for professional steam or ultrasonic cleaning and servicing by our certified gemologists who will handle them with the utmost care. Our stores also provide inspections, light repairs, rhodium plating and more maintenance to retain the timeless luxe finish. Please consult our jewellery experts for advice about protecting your precious investment. ',
+      data: "Diamas recommends following jewellery care best practices to keep your precious pieces safely sparkling. Store them properly in soft cloth pouches inside jewellery boxes to avoid surface scratches. Clean diamonds, gold and platinum pieces by giving them a light polish with a clean microfiber cloth. Do not expose them to water, household chemicals or abrasives. We advise bringing Diamas jewellery into our boutiques every 2-3 years for professional steam or ultrasonic cleaning and servicing by our certified gemologists who will handle them with the utmost care. Our stores also provide inspections, light repairs, rhodium plating and more maintenance to retain the timeless luxe finish. Please consult our jewellery experts for advice about protecting your precious investment. ",
       isOpen: false,
     },
     {
       key: 7,
-      title:
-        "What is your jewellery return policy?",
+      title: "What is your jewellery return policy?",
       data: "At Diamas boutiques, we allow returns or exchanges within 30 days of original purchase when accompanied by the sales receipt. Please ensure the jewellery is in original condition when bringing it in. Custom orders are made especially for you so cannot be returned or exchanged. Please examine pieces carefully before finalizing any purchase.",
       isOpen: false,
     },
@@ -59,6 +78,7 @@ function Contact() {
 
   return (
     <div className="flex flex-col justify-center w-full items-center bg-[#090D29]">
+      {showNavbar && <NavbarOnScroll />}
       <div className="w-full relative">
         <img src={contactBg} className="mt-20 w-full " alt="" />
       </div>
@@ -75,11 +95,8 @@ function Contact() {
       </h1>
 
       <div className="w-full flex flex-col lg:flex-row gap-10 justify-center items-center mt-8 relative">
-
-        
-        
         <div className="w-full lg:w-1/3 flex flex-col  justify-center items-center space-y-5 relative ">
-        <div className="h-[140%] -right-[5%] top-0 w-[1px] bg-white absolute hidden lg:block" />
+          <div className="h-[140%] -right-[5%] top-0 w-[1px] bg-white absolute hidden lg:block" />
           <svg
             xmlns="http://www.w3.org/2000/svg"
             fill="none"
@@ -225,7 +242,7 @@ function Contact() {
                     fontSize: "16px",
                     fontWeight: "600",
                     display: "flex",
-                    alignItems: "flex-center"
+                    alignItems: "flex-center",
                   }}
                 >
                   {title}
@@ -240,18 +257,19 @@ function Contact() {
       </div>
 
       <div className="flex flex-col items-center justify-between my-16">
-        <h3 className="text-white text-2xl font-semibold">DISCLAIMERS</h3>
+        <h3 className="text-white text-2xl font-semibold">Trademark Notice</h3>
 
         <p className="text-white font-light text-[16px] lg:mx-32 mx-[30px] mt-8 text-justify">
-          Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam
-          nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat
-          volutpat.Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed
-          diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam
-          erat volutpat.Lorem ipsum dolor sit amet, consectetuer adipiscing
-          elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna
-          aliquam erat volutpat.Lorem ipsum dolor sit amet, consectetuer
-          adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet
-          dolore magna aliquam erat volutpat.
+          Diamas by Aditya Dhawan and the Diamas logo are registered trademarks
+          of Diamas (A Kasturi Jewellers Craft). All content and designs on this
+          website are copyrighted and owned by Diamas (A Kasturi Jewellers
+          Craft). Use of our trademarks or content without explicit written
+          permission is prohibited. Legal action will be taken against
+          infringement or misuse of our intellectual property. The website
+          contains material which is owned by or licensed to us. This material
+          includes, but is not limited to, the content, design, product design,
+          layout, appearance, look and graphics of the website. Any reproduction
+          of the website's material is prohibited without prior consent.
         </p>
       </div>
     </div>

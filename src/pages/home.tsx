@@ -2,6 +2,9 @@ import { useEffect, useState } from "react";
 import video from "../assets/video.mp4";
 import one from "../assets/home/home1.png";
 
+import slider1 from "../assets/home/slider1.png";
+import slider2 from "../assets/home/slider2.png";
+import slider5 from "../assets/home/slider5.png";
 import slider3 from "../assets/home/slider3.png";
 import slider4 from "../assets/home/slider4.png";
 import slider6 from "../assets/home/slider6.png";
@@ -12,20 +15,23 @@ import line4 from "../assets/home/line_4.png";
 import legacy from "../assets/home/legacy.png";
 import diamond from "../assets/home/diamond.png";
 import diamond_rotate from "../assets/home/diamond_rotate.png";
-import diamondIcon from "../assets/home/diamond_icon.png"
+import diamondIcon from "../assets/home/diamond_icon.png";
 
-import { Swiper, SwiperSlide } from "swiper/react";
-import { EffectCards, Navigation } from "swiper/modules";
 
 // Import Swiper styles
 import "swiper/css";
+import 'swiper/css/effect-coverflow';
+import 'swiper/css/pagination';
 import "swiper/css/effect-cards";
 import "swiper/css/navigation";
 import Scrollbar from "../components/scrollbar";
+import CollectionSwiper from "../components/swiper";
+import NavbarOnScroll from "../components/headerOnScroll";
 
 const home = () => {
   const [scrollPosition, setScrollPosition] = useState(0);
   const [showButtons, setShowButtons] = useState(false);
+  const [showNavbar, setShowNavbar] = useState(false);
 
   useEffect(() => {
     const handleScroll = () => {
@@ -34,6 +40,8 @@ const home = () => {
 
       // Show buttons if scrolled more than half the screen
       setShowButtons(currentPosition > window.innerHeight);
+
+      setShowNavbar(currentPosition > window.innerHeight / 4);
     };
 
     window.addEventListener("scroll", handleScroll);
@@ -43,9 +51,11 @@ const home = () => {
     };
   }, [scrollPosition]);
 
-
   return (
     <div className="w-full ">
+      {showNavbar && <NavbarOnScroll />}
+
+
       <div className="video-container w-full h-[850px] lg:h-[850px]">
         <video
           autoPlay
@@ -62,14 +72,16 @@ const home = () => {
 
       {showButtons && <Scrollbar />}
 
-
       <div className="container px-0 lg:pe-0 py-0 lg:mt-16  flex lg:gap-20 justify-center flex-wrap -z-0 lg:relative ">
         <img
           src={diamond_rotate}
           alt="diamond"
           className="absolute -top-28 left-40 blur-sm w-2/3 hidden lg:block "
         />
-        <div style={{ zIndex: 2 }} className="h-full px-5 lg:px-0 p-4 lg:w-[40%]   ">
+        <div
+          style={{ zIndex: 2 }}
+          className="h-full px-5 lg:px-0 p-4 lg:w-[40%]   "
+        >
           <div className=" lg:py-16 relative">
             {/* <div className="absolute my-16 inset-0 bg-opacity-40  bg-blue-950 z-10"></div> */}
             <img
@@ -77,7 +89,6 @@ const home = () => {
               alt=""
               className=" w-full z-1 brightness-105 hue-rotate-10 rounded-3xl"
             />
-            
           </div>
         </div>
 
@@ -89,7 +100,11 @@ const home = () => {
               Diamas
             </h1>
 
-            <img src={diamondIcon} alt="icon" className="lg:w-20 w-10 mx-auto lg:mx-0" />
+            <img
+              src={diamondIcon}
+              alt="icon"
+              className="lg:w-20 w-10 mx-auto lg:mx-0"
+            />
 
             <p className="text-white  text-justify text-lg leading-tight tracking-wider mt-5 lg:w-96 sm:w-full ">
               Diamonds are a statement unto themselves. At Diamas, Aditya Dhawan
@@ -122,51 +137,42 @@ const home = () => {
         />
       </div>
 
-      <div className="relative lg:mt-60 flex flex-col gap-10 mx-20  ">
-        <h1 className="text-white bacalisties text-center text-[50px] lg:text-[100px]  lg:font-normal lg:absolute z-10 -top-28 left-[38%]">
+      <div className="relative lg:mt-60 flex flex-col gap-10 mx-5  ">
+        <h1 className="text-white bacalisties text-center text-[50px] lg:text-[100px]  lg:font-normal lg:absolute z-10 -top-20 left-[38%]">
           Adornments
         </h1>
 
-        <Swiper
-          effect={"cards"}
-          grabCursor={true}
-          modules={[EffectCards, Navigation]}
-          className="swiper"
-          navigation={true}
-          loop
-        >
-          <SwiperSlide>
-            <img src={slider6} className="object-cover h-full" alt="" />
-          </SwiperSlide>
-          <SwiperSlide>
-            <img src={slider3} className="" alt="" />
-          </SwiperSlide>
-          <SwiperSlide>
-            <img src={slider4} className="object-cover" alt="" />
-          </SwiperSlide>
-        </Swiper>
+
+        <CollectionSwiper/>
+        
+
         <img
           src={diamond_rotate}
           alt="diamond"
-          className="absolute opacity-60 blur-sm top-20 left-[15%] hidden lg:block "
+          className="absolute opacity-60 blur-sm bottom-0 left-[10%] hidden lg:block "
         />
         <img
           src={diamond}
           alt="diamond"
-          className="absolute opacity-60 blur-xs top-20 right-[15%] hidden lg:block "
+          className="absolute opacity-60 blur-xs bottom-0 right-[10%] hidden lg:block "
         />
       </div>
 
+        
 
       <div
-          className="hidden lg:flex gap-10 justify-center items-center  
+        className="hidden lg:flex gap-10 justify-center items-center  
         my-10  w-full 
         p-4 text-white"
-        >
-          <div className="w-[40%] h-[1px] bg-white " />
-          <img src={diamondIcon} alt="icon" className="lg:w-20 w-10 mx-auto lg:mx-0" />
-          <div className="w-[40%] h-[1px] bg-white " />
-        </div>
+      >
+        <div className="w-[40%] h-[1px] bg-white " />
+        <img
+          src={diamondIcon}
+          alt="icon"
+          className="lg:w-20 w-10 mx-auto lg:mx-0"
+        />
+        <div className="w-[40%] h-[1px] bg-white " />
+      </div>
 
       <div className="container relative w-full  ml-auto  lg:pb-24 flex flex-wrap justify-end lg:pr-[10%] p-5 items-center self-center">
         <img
@@ -181,21 +187,24 @@ const home = () => {
               style={{
                 letterSpacing: 5,
                 lineHeight: 1.4,
-                
               }}
             >
               Legacy
             </h1>
-            <img src={diamondIcon} alt="icon" className="lg:w-20 w-10 mx-auto lg:mx-0 mb-8" />
+            <img
+              src={diamondIcon}
+              alt="icon"
+              className="lg:w-20 w-10 mx-auto lg:mx-0 mb-8"
+            />
             <p className="text-white text-justify text-lg leading-tight tracking-wider mb-3 lg:w-[72%]  sm:w-full ">
               Drawing from a legacy in jewellery craftsmanship, Diamas excels by
               blending time-honoured techniques with the highest quality
-              diamonds. 
-              <br/>
-              Our artisans ensure that each design radiates
-              brilliance, meant to inspire for generations.
+              diamonds.
+              <br />
+              Our artisans ensure that each design radiates brilliance, meant to
+              inspire for generations.
             </p>
-            <a className="text-white mt-3 text-sm inline-flex items-center space-x-1 rounded-lg border-blue-300 border p-1 px-2 hover:bg-slate-500 hover:cursor-pointer">
+            <a href="/legacy" className="text-white mt-3 text-sm inline-flex items-center space-x-1 rounded-lg border-blue-300 border p-1 px-2 hover:bg-slate-500 hover:cursor-pointer">
               <h6 className="text-sm text-blue-300 font-sans">Know More</h6>
               <svg
                 xmlns="http://www.w3.org/2000/svg"
@@ -250,13 +259,13 @@ const home = () => {
         <div className="h-full lg:p-[1rem] mx-2  lg:relative border border-white rounded-3xl lg:ms-[19rem] lg:w-[50%] z-0 relative">
           <div className="w-full px-5 py-5 flex-col space-y-5 lg:ml-[30%]">
             <p className="lg:text-[60px] lg:tracking-[5px] lg:leading-[1.4] font-[Kalnia] text-2xl mb-3 text-white">
-              OUR <br/> 
+              OUR <br />
               STORES
             </p>
 
             <p className="text-white lg:w-[60%] lg:tracking-[5px] lg:text-[20px]">
               WALK IN OR SCHEDULE
-              <br/>
+              <br />
               AN APPOINTMENT
             </p>
 

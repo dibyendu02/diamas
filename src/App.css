@@ -6,12 +6,6 @@
   font-family: "Inria Sans", sans-serif;
 }
 
-.swiper-button-prev{
-  left: -400px !important;
-}
-.swiper-button-next{
-  right: -400px !important;
-}
 
 .font-butler {
   font-family: "Butler", sans-serif;
@@ -51,7 +45,10 @@ a {
   padding: 10px;
 }
 
-.swiper {
+
+/* swiper styles */
+
+/* .swiper {
   width: 600px !important;
   height: 500px !important;
 }
@@ -66,6 +63,12 @@ a {
   color: #fff;
 }
 
+.swiper-button-prev{
+  left: -400px !important;
+}
+.swiper-button-next{
+  right: -400px !important;
+}
 .swiper-button-next,
 .swiper-button-prev {
   color: #fff;
@@ -99,4 +102,6 @@ a {
 
 
 }
-}
+} */
+
+

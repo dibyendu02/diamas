@@ -17,11 +17,13 @@ import neclace5 from "../assets/collection/Necklace5.png";
 
 import lines1 from "../assets/collection/lines1.png";
 import lines2 from "../assets/collection/lines2.png";
+import NavbarOnScroll from "../components/headerOnScroll";
 // import lines3 from "../assets/collection/lines3.png";
 
 function collection() {
   const [scrollPosition, setScrollPosition] = useState(0);
   const [showButtons, setShowButtons] = useState(false);
+  const [showNavbar, setShowNavbar] = useState(false);
 
   useEffect(() => {
     const handleScroll = () => {
@@ -30,6 +32,8 @@ function collection() {
 
       // Show buttons if scrolled more than half the screen
       setShowButtons(currentPosition > window.innerHeight / 2);
+
+      setShowNavbar(currentPosition > window.innerHeight / 4);
     };
 
     window.addEventListener("scroll", handleScroll);
@@ -53,6 +57,7 @@ function collection() {
   };
   return (
     <div className="flex flex-col justify-center items-center ">
+      {showNavbar && <NavbarOnScroll />}
       <div
         style={{
           backgroundImage: `url(${one})`,

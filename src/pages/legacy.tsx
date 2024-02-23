@@ -2,10 +2,12 @@ import { useEffect, useState } from "react";
 import main from "../assets/legacy/1.png";
 import two from "../assets/legacy/2.png";
 import Scrollbar from "../components/scrollbar";
+import NavbarOnScroll from "../components/headerOnScroll";
 
 function legacy() {
   const [scrollPosition, setScrollPosition] = useState(0);
   const [showButtons, setShowButtons] = useState(false);
+  const [showNavbar, setShowNavbar] = useState(false);
 
   useEffect(() => {
     const handleScroll = () => {
@@ -14,6 +16,8 @@ function legacy() {
 
       // Show buttons if scrolled more than half the screen
       setShowButtons(currentPosition > window.innerHeight * 0.7);
+
+      setShowNavbar(currentPosition > window.innerHeight / 4);
     };
 
     window.addEventListener("scroll", handleScroll);
@@ -37,6 +41,7 @@ function legacy() {
   };
   return (
     <div className="flex flex-col justify-center items-center ">
+      {showNavbar && <NavbarOnScroll />}
       <div className="relative">
         <img src={main} alt="main" className="w-full object-cover" />
 

@@ -10,3 +10,46 @@
     }
   
   }
+
+  .swiper_container {
+    width: 80%;
+    height: 35rem;
+    padding: 2rem 0;
+    position: relative;
+    color: white;
+  }
+  
+  .swiper-slide {
+    width: 40rem;
+    position: relative;
+    object-fit: cover;
+  }
+  .swiper-slide img {
+    width: 40rem;
+    height: 28rem;
+    border-radius: 2rem;
+    object-fit: cover;
+  }
+  
+  @media (max-width: 500px) {
+    .swiper_container {
+      width: 100%;
+      height: 35rem;
+    }
+    .swiper-slide {
+      width: 20rem !important;
+      
+    }
+    .swiper-slide img {
+      width: 20rem !important;
+      /* height: 28rem !important; */
+    }
+  }
+
+  
+  .swiper-slide-shadow-left,
+  .swiper-slide-shadow-right {
+    display: none;
+  }
+  
+  

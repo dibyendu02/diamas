@@ -14,11 +14,13 @@ import blog2 from "../assets/media/blogs/2.png";
 import blog3 from "../assets/media/blogs/3.png";
 import blog4 from "../assets/media/blogs/4.png";
 import Scrollbar from "../components/scrollbar";
+import NavbarOnScroll from "../components/headerOnScroll";
 
 function Media() {
   const [active, setActive] = useState("Press");
   const [scrollPosition, setScrollPosition] = useState(0);
   const [showButtons, setShowButtons] = useState(true);
+  const [showNavbar, setShowNavbar] = useState(false);
 
   useEffect(() => {
     const handleScroll = () => {
@@ -27,6 +29,8 @@ function Media() {
 
       // Show buttons if scrolled more than half the screen
       setShowButtons(currentPosition > window.innerHeight);
+
+      setShowNavbar(currentPosition > window.innerHeight / 4);
     };
 
     window.addEventListener("scroll", handleScroll);
@@ -51,6 +55,7 @@ function Media() {
 
   return (
     <div className="flex flex-col justify-center items-center">
+      {showNavbar && <NavbarOnScroll />}
       <div className="flex flex-col justify-center items-center w-full mb-20">
         <div className="w-full h-[300px] lg:h-[700px] flex items-center justify-center relative">
           <div className="absolute h-full inset-0 bg-opacity-20 bg-blue-950 z-10"></div>

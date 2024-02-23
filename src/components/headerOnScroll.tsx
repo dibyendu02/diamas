@@ -2,7 +2,7 @@ import React from "react";
 import logo from "../assets/logo.png";
 import { Link } from "react-router-dom";
 
-export default function NavbarSimple() {
+export default function NavbarOnScroll() {
   const [openNav, setOpenNav] = React.useState(false);
   const [currentRoute, setCurrentRoute] = React.useState("home");
 
@@ -52,14 +52,14 @@ export default function NavbarSimple() {
   return (
     <div
         className="flex gap-10 justify-center items-center  
-         absolute lg:top-24 z-50  w-full
+         fixed lg:top-10 z-50  w-full
         p-4 text-white"
       >
     <nav className="bg-transparent border-gray-200 px-4 lg:absolute z-20 w-full font-[Butler] font-normal">
       <div className="flex flex-wrap justify-between mx-auto">
         <img
           src={logo}
-          className="sm:h-[100px] w-[100px] lg:h-[236px] lg:w-[236px] "
+          className="sm:h-[100px] w-[100px] "
           alt="Flowbite Logo"
         />
         <button
