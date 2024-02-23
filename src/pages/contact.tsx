@@ -205,7 +205,7 @@ function Contact() {
 
       <div className="h-full p-4 w-full">
         <iframe
-          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3502.02705431727!2d77.068682370812!3d28.628951246325638!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x390d04c2d11feb9f%3A0x5b42213df8236053!2sa%2C%20A-157%2C%20Guru%20Virjanand%20Marg%2C%20near%20Police%20Station%2C%20A-Block%2C%20Vikaspuri%2C%20Delhi%2C%20110018!5e0!3m2!1sen!2sin!4v1706261050023!5m2!1sen!2sin"
+          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3502.02705431727!2d77.1019536!3d28.6404899!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x390d04c2d11feb9f%3A0x5b42213df8236053!2sa%2C%20A-157%2C%20Guru%20Virjanand%20Marg%2C%20near%20Police%20Station%2C%20A-Block%2C%20Vikaspuri%2C%20Delhi%2C%20110018!5e0!3m2!1sen!2sin!4v1706261050023!5m2!1sen!2sin"
           style={{ borderRadius: 10 }}
           allowFullScreen={true}
           aria-hidden="false"

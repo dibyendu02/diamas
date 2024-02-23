@@ -6,6 +6,9 @@ import four from "../assets/about/4.png";
 import lines from "../assets/about/lines.png";
 import Scrollbar from "../components/scrollbar";
 import NavbarOnScroll from "../components/headerOnScroll";
+import VideoPlayer from "../components/VideoPlayer";
+
+import video from "../assets/about/about-video.mp4";
 
 function About() {
   const [scrollPosition, setScrollPosition] = useState(0);
@@ -84,10 +87,14 @@ function About() {
         </div>
 
         <div
-          className="flex relative h-full  mt-28 flex-col   bg-no-repeat z-10"
+          className="flex relative h-full  mt-28 flex-col cursor-pointer  bg-no-repeat z-10"
           // style={{ backgroundImage: `url(${three})` }}
         >
-          <img src={three} alt="three" className="" />
+          {/* <img src={three} alt="three" className="" /> */}
+          <VideoPlayer
+            videoUrl={video}
+            thumbnailUrl={three}
+          />
           <div className="bg-[#384173] flex flex-col gap-2 w-full pt-20 top-10 left-5 lg:w-[40%] lg:h-[75%] sm:w-2/3 lg:absolute">
             <h1 className=" text-white bacalisties relative z-10 text-4xl lg:ml-8 lg:text-8xl">
               Craftsmanship

@@ -10,11 +10,10 @@ import diamond from "../assets/home/diamond.png";
 import diamond_rotate from "../assets/home/diamond_rotate.png";
 import diamondIcon from "../assets/home/diamond_icon.png";
 
-
 // Import Swiper styles
 import "swiper/css";
-import 'swiper/css/effect-coverflow';
-import 'swiper/css/pagination';
+import "swiper/css/effect-coverflow";
+import "swiper/css/pagination";
 import "swiper/css/effect-cards";
 import "swiper/css/navigation";
 import Scrollbar from "../components/scrollbar";
@@ -47,7 +46,6 @@ const home = () => {
   return (
     <div className="w-full ">
       {showNavbar && <NavbarOnScroll />}
-
 
       <div className="video-container w-full h-[850px] lg:h-[850px]">
         <video
@@ -85,7 +83,7 @@ const home = () => {
           </div>
         </div>
 
-        <div className="h-full lg:ps-0 lg:p-0 p-4   ">
+        <div className="h-full lg:ps-0 lg:p-0 p-4 z-30">
           <div className="lg:ps-0 px-4 lg:pt-16 lg:pb-16 flex flex-col gap-5 ">
             <h1 className="font-[Bulter] font-normal text-3xl sm:tracking-[20px] lg:tracking-[16px] lg:leading-[1.2] lg:text-7xl mb-3 text-white text-center lg:text-start z-10 lg:relative">
               About
@@ -104,7 +102,10 @@ const home = () => {
               transforms his passion for diamonds into contemporary and
               luxurious works of art – each one, as unique as you.
             </p>
-            <a className=" text-white w-28 mt-3 text-sm inline-flex items-center justify-center space-x-1 rounded-3xl border-blue-300 border p-1 px-2 hover:bg-slate-500 hover:cursor-pointer">
+            <a
+              href="/about"
+              className=" text-white w-28 mt-3 text-sm inline-flex items-center justify-center space-x-1 rounded-3xl border-blue-300 border p-1 px-2 hover:bg-slate-500 hover:cursor-pointer"
+            >
               <h6 className="text-sm text-blue-300 font-sans">Know More</h6>
               <svg
                 xmlns="http://www.w3.org/2000/svg"
@@ -135,9 +136,7 @@ const home = () => {
           Adornments
         </h1>
 
-
-        <CollectionSwiper/>
-        
+        <CollectionSwiper />
 
         <img
           src={diamond_rotate}
@@ -150,8 +149,6 @@ const home = () => {
           className="absolute opacity-60 blur-xs bottom-0 right-[10%] hidden lg:block "
         />
       </div>
-
-        
 
       <div
         className="hidden lg:flex gap-10 justify-center items-center  
@@ -197,7 +194,10 @@ const home = () => {
               Our artisans ensure that each design radiates brilliance, meant to
               inspire for generations.
             </p>
-            <a href="/legacy" className="text-white mt-3 text-sm inline-flex items-center space-x-1 rounded-lg border-blue-300 border p-1 px-2 hover:bg-slate-500 hover:cursor-pointer">
+            <a
+              href="/legacy"
+              className="text-white mt-3 text-sm inline-flex items-center space-x-1 rounded-3xl border-blue-300 border p-1 px-2 hover:bg-slate-500 hover:cursor-pointer"
+            >
               <h6 className="text-sm text-blue-300 font-sans">Know More</h6>
               <svg
                 xmlns="http://www.w3.org/2000/svg"
@@ -240,7 +240,7 @@ const home = () => {
         />
         <div className="mapdiv h-full p-4 lg:w-[30%] lg:top-[16%] w-full  static lg:left-[30%]  lg:absolute lg:transform lg:-translate-x-1/2 z-10">
           <iframe
-            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3502.02705431727!2d77.068682370812!3d28.628951246325638!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x390d04c2d11feb9f%3A0x5b42213df8236053!2sa%2C%20A-157%2C%20Guru%20Virjanand%20Marg%2C%20near%20Police%20Station%2C%20A-Block%2C%20Vikaspuri%2C%20Delhi%2C%20110018!5e0!3m2!1sen!2sin!4v1706261050023!5m2!1sen!2sin"
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3502.02705431727!2d77.1019536!3d28.6404899!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x390d04c2d11feb9f%3A0x5b42213df8236053!2sa%2C%20A-157%2C%20Guru%20Virjanand%20Marg%2C%20near%20Police%20Station%2C%20A-Block%2C%20Vikaspuri%2C%20Delhi%2C%20110018!5e0!3m2!1sen!2sin!4v1706261050023!5m2!1sen!2sin"
             style={{ borderRadius: 10 }}
             allowFullScreen={true}
             aria-hidden="false"
@@ -263,13 +263,12 @@ const home = () => {
             </p>
 
             <p className="text-white text-[16px] lg:w-[28%]">
-              A-157, Guru Virjanand Marg, Near Police Station, A-Block,
-              Vikaspuri, Delhi, 110018
+              Kasturi Jewellers Tilak Nagar, First Floor, 5B-16, Tilak Nagar, Delhi, 110018
             </p>
 
             <a
               href="./contact"
-              className="text-white mt-3 text-sm inline-flex items-center space-x-1 rounded-lg border-blue-300 border p-1 px-2 hover:bg-slate-500 hover:cursor-pointer"
+              className="text-white mt-3 text-sm inline-flex items-center space-x-1 rounded-3xl border-blue-300 border p-1 px-2 hover:bg-slate-500 hover:cursor-pointer"
             >
               <h6 className="text-sm text-blue-300 font-[Kalnia] ">
                 Know More
