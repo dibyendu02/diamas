@@ -121,7 +121,7 @@ export default function NavbarSimple() {
             </li>
             <li>
               <Link
-                to="about"
+                to="/about"
                 style={
                   currentRoute === "about"
                     ? {
@@ -139,7 +139,7 @@ export default function NavbarSimple() {
             </li>
             <li>
               <Link
-                to="legacy"
+                to="/legacy"
                 style={
                   currentRoute === "legacy"
                     ? {
@@ -157,7 +157,7 @@ export default function NavbarSimple() {
             </li>
             <li>
               <Link
-                to="collection"
+                to="/collection"
                 style={
                   currentRoute === "collection"
                     ? {
@@ -175,7 +175,7 @@ export default function NavbarSimple() {
             </li>
             <li>
               <Link
-                to="media"
+                to="/media"
                 style={
                   currentRoute === "media"
                     ? {
@@ -193,7 +193,7 @@ export default function NavbarSimple() {
             </li>
             <li>
               <Link
-                to="contact"
+                to="/contact"
                 style={
                   currentRoute === "contact"
                     ? {

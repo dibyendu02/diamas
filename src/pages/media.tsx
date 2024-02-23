@@ -54,8 +54,10 @@ function Media() {
   };
 
   return (
+    <>
+    {showNavbar && <NavbarOnScroll />}
     <div className="flex flex-col justify-center items-center">
-      {showNavbar && <NavbarOnScroll />}
+      
       <div className="flex flex-col justify-center items-center w-full mb-20">
         <div className="w-full h-[300px] lg:h-[700px] flex items-center justify-center relative">
           <div className="absolute h-full inset-0 bg-opacity-20 bg-blue-950 z-10"></div>
@@ -280,6 +282,8 @@ function Media() {
         </div>
       </div>
     </div>
+    </>
+    
   );
 }
 

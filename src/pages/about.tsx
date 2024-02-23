@@ -31,11 +31,13 @@ function About() {
   }, [scrollPosition]);
 
   return (
+    <>
+    {showNavbar && <NavbarOnScroll />}
     <div
       style={{ backgroundImage: `url(${one})` }}
       className="bg-contain flex flex-col justify-center items-center bg-[image:var(--image-url)] lg:bg-cover   bg-no-repeat w-full  p-10 lg:p-0  "
     >
-      {showNavbar && <NavbarOnScroll />}
+      
       <div className="mt-[95%]  lg:mt-[35%] lg:ml-24 text-center">
         <h1 className="text-start text-[40px]  sm:m-auto  lg:text-7xl lg:ml-[400px] lg:w-[400px] font-[Butler] text-white leading-10 border-2 border-white p-8 py-2">
           ADITYA <br /> DHAWAN
@@ -144,6 +146,8 @@ function About() {
         </div>
       </div>
     </div>
+    </>
+    
   );
 }
 

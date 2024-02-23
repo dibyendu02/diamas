@@ -77,8 +77,11 @@ function Contact() {
   ];
 
   return (
+
+    <>
+    {showNavbar && <NavbarOnScroll />}
     <div className="flex flex-col justify-center w-full items-center bg-[#090D29]">
-      {showNavbar && <NavbarOnScroll />}
+      
       <div className="w-full relative">
         <img src={contactBg} className="mt-20 w-full " alt="" />
       </div>
@@ -273,6 +276,8 @@ function Contact() {
         </p>
       </div>
     </div>
+    </>
+    
   );
 }
 

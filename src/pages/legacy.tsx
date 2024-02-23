@@ -40,8 +40,10 @@ function legacy() {
     });
   };
   return (
+    <>
+    {showNavbar && <NavbarOnScroll />}
     <div className="flex flex-col justify-center items-center ">
-      {showNavbar && <NavbarOnScroll />}
+      
       <div className="relative">
         <img src={main} alt="main" className="w-full object-cover" />
 
@@ -151,6 +153,8 @@ function legacy() {
         
       </div>
     </div>
+    </>
+    
   );
 }
 

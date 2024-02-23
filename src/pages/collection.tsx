@@ -56,8 +56,10 @@ function collection() {
     });
   };
   return (
+    <>
+    {showNavbar && <NavbarOnScroll />}
     <div className="flex flex-col justify-center items-center ">
-      {showNavbar && <NavbarOnScroll />}
+      
       <div
         style={{
           backgroundImage: `url(${one})`,
@@ -279,6 +281,8 @@ function collection() {
         </p>
       </div>
     </div>
+    </>
+    
   );
 }
 
