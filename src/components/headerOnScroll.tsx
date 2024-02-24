@@ -1,10 +1,11 @@
-import React from "react";
+import { useEffect, useState } from "react";
 import logo from "../assets/logo.png";
-import { Link } from "react-router-dom";
+import { Link, useLocation } from "react-router-dom";
 
-export default function NavbarOnScroll() {
-  const [openNav, setOpenNav] = React.useState(false);
-  const [currentRoute, setCurrentRoute] = React.useState("home");
+export default function NavbarSimple() {
+  const [openNav, setOpenNav] = useState(false);
+  const [currentRoute, setCurrentRoute] = useState("home");
+  const location = useLocation();
 
   const handleClick = (data: any) => {
     setCurrentRoute(data);
@@ -39,7 +40,7 @@ export default function NavbarOnScroll() {
     window.innerWidth <= 767 ? setOpenNav(false) : setOpenNav(true);
   console.log("windpw resize" + window.innerWidth);
 
-  React.useEffect(() => {
+  useEffect(() => {
     window.innerWidth <= 767 ? setOpenNav(false) : setOpenNav(true);
     window.addEventListener("resize", handleWindowResize);
     // console.log( "windows with"+window.innerWidth);
@@ -48,6 +49,11 @@ export default function NavbarOnScroll() {
       window.removeEventListener("resize", handleWindowResize);
     };
   }, []);
+
+  useEffect(() => {
+    // Update currentRoute when location changes
+    setCurrentRoute(location.pathname.split('/').pop() || "home"); // Provide a default value if pathname doesn't have segments
+  }, [location]);
 
   return (
     <div
