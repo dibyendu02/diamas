@@ -8,7 +8,7 @@ const LINKS = [
       { label: "Home", link: "/" },
       { label: "Help Center", link: "help" },
       { label: "Disclaimer", link: "terms" },
-      { label: "Blog", link: "https://www.linkedin.com/feed/update/urn:li:activity:7157691996017414144/" },
+      { label: "Blog", link: "media" },
       { label: "Privacy Policy", link: "privacy" },
       
     ],

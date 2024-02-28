@@ -38,10 +38,10 @@ function Media() {
       const currentPosition = window.scrollY;
       setScrollPosition(currentPosition);
 
-      (currentPosition > prevPosition) ? setShowback(true) : setShowback(false);
+      currentPosition > prevPosition ? setShowback(true) : setShowback(false);
 
       // Show buttons if scrolled more than half the screen
-      setShowButtons(currentPosition > window.innerHeight/2);
+      setShowButtons(currentPosition > window.innerHeight / 2);
 
       setShowNavbar(currentPosition > window.innerHeight / 4);
     };
@@ -54,16 +54,18 @@ function Media() {
   }, [scrollPosition]);
 
   //scroll to top on load
-  useEffect(() => {
-    window.scrollTo({
-      top: 0,
-      behavior: "smooth",
-    });
-  }, []);
+  // useEffect(() => {
+  //   window.scrollTo({
+  //     top: 0,
+  //     behavior: "smooth",
+  //   });
+  // }, []);
 
   return (
     <>
-      {showback && <div className="fixed bg-[#090D29] h-20 w-full z-40 top-0"></div>}
+      {showback && (
+        <div className="fixed bg-[#090D29] h-20 w-full z-40 top-0"></div>
+      )}
       {showNavbar && <NavbarOnScroll />}
       <div className="flex flex-col justify-center items-center">
         <div className="flex flex-col justify-center items-center w-full mb-20">
@@ -101,7 +103,9 @@ function Media() {
           >
             Events
           </div>
-          <div
+          <a
+            target="blank"
+            href="https://www.instagram.com/diamasbyadityadhawan/"
             className="text-white lg:text-2xl lg:mx-12 cursor-pointer"
             style={{
               textDecorationLine: active === "Press" ? "underline" : "none",
@@ -112,8 +116,8 @@ function Media() {
               setActive("Press");
             }}
           >
-            Press
-          </div>
+            Feeds
+          </a>
           <div
             className="text-white lg:text-2xl lg:mr-12 cursor-pointer"
             style={{
@@ -246,9 +250,49 @@ function Media() {
           BLOGS
         </h1>
 
-        <div className="flex flex-col lg:flex-row w-full p-8 gap-3">
-          <div className="flex flex-col lg:w-1/2 w-full gap-3">
-            <div className="block lg:flex w-full items-center gap-3">
+        <div className="flex flex-col lg:flex-row w-full px-10 gap-3">
+          <div className="flex flex-col lg:w-1/2 w-full p-5 pt-0 ">
+            <div className="block lg:flex lg:flex-col w-full items-start">
+              <h3 className="text-white mx-auto h-full  text-justify text-lg leading-tight tracking-wider my-5 sm:w-full ">
+                From a young age, I was always captivated by the allure of
+                diamonds and the art of jewellery design. I spent many childhood
+                afternoons wandering my family's jewellery shop, Kasturi
+                Jewellers, fascinated by my father and grandfather's creative
+                mastery. Their talents sparked a passion for jewellery crafting
+                that runs through my veins. After earning my certification from
+                the International Gemological Institute, I formally joined the
+                family business, excited to earn my own name in our legacy. My
+                father taught me that success stems not from profits but from
+                conducting business with integrity and passion.
+              </h3>
+              <a
+                target="blank"
+                href="https://www.linkedin.com/feed/update/urn:li:activity:7152542125350342656/"
+                className="text-white text-sm inline-flex items-center space-x-1 mb-10 rounded-lg border-blue-300 border p-1 px-2 hover:bg-slate-500 hover:cursor-pointer"
+              >
+                <h6 className="text-sm text-blue-300 font-sans">Read More</h6>
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  fill="none"
+                  viewBox="0 0 24 24"
+                  strokeWidth={1.5}
+                  stroke="currentColor"
+                  className="w-3 h-3 text-blue-300"
+                >
+                  <path
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                    d="M13.5 4.5 21 12m0 0-7.5 7.5M21 12H3"
+                  />
+                </svg>
+              </a>
+            </div>
+            <img src={blog3} alt="" />
+          </div>
+
+          <div className="block lg:flex flex-col lg:w-1/2 w-full gap-3 p-5">
+            <img src={blog2} alt="" />
+            <div className="block lg:flex lg:flex-col w-full items-start">
               <h3 className="text-white mx-auto h-full  text-justify text-lg leading-tight tracking-wider my-5 sm:w-full ">
                 Why Diamonds Capture Hearts and Minds? As a third-generation
                 jewellery designer, I’ve had a front-row view of the industry's
@@ -260,63 +304,32 @@ function Media() {
                 effortlessly add understated elegance to both everyday looks and
                 special occasions. The minimalist diamond earrings, pendants,
                 and bracelets we handcraft at Diamas resonate with modern
-                aesthetics. Advanced cutting techniques also create stunning new
-                diamond shapes and designs. This expands the possibilities for
-                personalised and unique jewellery. And unlike some metals, the
-                value of diamonds is less impacted by wear over time. When
-                people buy our artisanal designs, they can trust they are
-                getting diamonds held to the highest quality standards.
+                aesthetics.
               </h3>
-            </div>
-            <img src={blog3} alt="" />
-          </div>
-
-          <div className="block lg:flex flex-col lg:w-1/2 w-full gap-3">
-            <img src={blog2} alt="" />
-            <div className="block lg:flex w-full items-center gap-3">
-              <h3 className="text-white mx-auto h-full  text-justify text-lg leading-tight tracking-wider my-5 sm:w-full ">
-                From a young age, I was always captivated by the allure of
-                diamonds and the art of jewellery design. I spent many childhood
-                afternoons wandering my family's jewellery shop, Kasturi
-                Jewellers, fascinated by my father and grandfather's creative
-                mastery. Their talents sparked a passion for jewellery crafting
-                that runs through my veins. After earning my certification from
-                the International Gemological Institute, I formally joined the
-                family business, excited to earn my own name in our legacy. My
-                father taught me that success stems not from profits but from
-                conducting business with integrity and passion. His ability to
-                balance his roles as a businessman, leader, innovator, and
-                family patriarch has always inspired me to be better. Over the
-                years, I discovered my true passion lay in pushing the
-                boundaries of jewellery design – to create luxurious
-                one-of-a-kind pieces with high-quality diamonds which shine for
-                themselves. While Kasturi Jewellers will always be the
-                foundation of my learning, I felt called to branch out to fulfil
-                my creative aspirations. Thus, I’m thrilled to announce the
-                launch of my new venture, Diamas. As diamond masters, we
-                hand-select each jewel based on unparalleled diamond quality
-                sourced from trusted international partners. 
-              </h3>
+              <a
+                target="blank"
+                href="https://www.linkedin.com/feed/update/urn:li:activity:7157691996017414144/"
+                className="text-white text-sm inline-flex items-center space-x-1 mb-10 rounded-lg border-blue-300 border p-1 px-2 hover:bg-slate-500 hover:cursor-pointer"
+              >
+                <h6 className="text-sm text-blue-300 font-sans">Read More</h6>
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  fill="none"
+                  viewBox="0 0 24 24"
+                  strokeWidth={1.5}
+                  stroke="currentColor"
+                  className="w-3 h-3 text-blue-300"
+                >
+                  <path
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                    d="M13.5 4.5 21 12m0 0-7.5 7.5M21 12H3"
+                  />
+                </svg>
+              </a>
             </div>
           </div>
         </div>
-        <a href="https://www.linkedin.com/feed/update/urn:li:activity:7152542125350342656/" className="text-white text-sm inline-flex items-center space-x-1 mb-10 rounded-lg border-blue-300 border p-1 px-2 hover:bg-slate-500 hover:cursor-pointer">
-          <h6 className="text-sm text-blue-300 font-sans">Read More</h6>
-          <svg
-            xmlns="http://www.w3.org/2000/svg"
-            fill="none"
-            viewBox="0 0 24 24"
-            strokeWidth={1.5}
-            stroke="currentColor"
-            className="w-3 h-3 text-blue-300"
-          >
-            <path
-              strokeLinecap="round"
-              strokeLinejoin="round"
-              d="M13.5 4.5 21 12m0 0-7.5 7.5M21 12H3"
-            />
-          </svg>
-        </a>
       </div>
     </>
   );
