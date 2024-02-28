@@ -15,6 +15,7 @@ function About() {
   const [showButtons, setShowButtons] = useState(false);
   const [showNavbar, setShowNavbar] = useState(false);
   const [showContent, setShowContent] = useState(true);
+  const [showback, setShowback] = useState(false);
 
   const handleVideoPlay = () => {
     setShowContent(false); // Hide the content when video starts playing
@@ -30,8 +31,11 @@ function About() {
 
   useEffect(() => {
     const handleScroll = () => {
+      const prevPosition = scrollPosition;
       const currentPosition = window.scrollY;
       setScrollPosition(currentPosition);
+
+      (currentPosition > prevPosition) ? setShowback(true) : setShowback(false);
 
       // Show buttons if scrolled more than half the screen
       setShowButtons(currentPosition > window.innerHeight / 2);
@@ -56,6 +60,7 @@ function About() {
 
   return (
     <>
+      {showback && <div className="fixed bg-[#090D29] h-20 w-full z-40 top-0"></div>}
       {showNavbar && <NavbarOnScroll />}
       <div
         style={{ backgroundImage: `url(${one})` }}

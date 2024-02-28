@@ -24,14 +24,18 @@ const home = () => {
   const [scrollPosition, setScrollPosition] = useState(0);
   const [showButtons, setShowButtons] = useState(false);
   const [showNavbar, setShowNavbar] = useState(false);
+  const [showback, setShowback] = useState(false);
 
   useEffect(() => {
     const handleScroll = () => {
+      const prevPosition = scrollPosition;
       const currentPosition = window.scrollY;
       setScrollPosition(currentPosition);
 
+      (currentPosition > prevPosition) ? setShowback(true) : setShowback(false);
+
       // Show buttons if scrolled more than half the screen
-      setShowButtons(currentPosition > window.innerHeight);
+      setShowButtons(currentPosition > window.innerHeight/2);
 
       setShowNavbar(currentPosition > window.innerHeight / 4);
     };
@@ -52,7 +56,8 @@ const home = () => {
   }, []);
 
   return (
-    <div className="w-full ">
+    <div className="w-full relative ">
+      {showback && <div className="fixed bg-[#090D29] h-20 w-full z-40 top-0"></div>}
       {showNavbar && <NavbarOnScroll />}
 
       <div className="video-container w-full h-[850px] lg:h-[850px]">
@@ -274,7 +279,7 @@ const home = () => {
               AN APPOINTMENT
             </p>
 
-            <p className="text-white text-[16px] lg:w-[28%]">
+            <p className="text-white text-[16px] text-justify lg:w-[28%]">
               Diamas by Aditya Dhawan (A Kasturi Jewellers Craft) 5B-16, Second
               Floor, Tilak nagar, Delhi
             </p>

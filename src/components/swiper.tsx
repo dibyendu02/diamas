@@ -19,6 +19,8 @@ import slide5 from "../assets/home/slider5.png";
 import slide3 from "../assets/home/slider3.png";
 import slide4 from "../assets/home/slider4.png";
 import slide6 from "../assets/home/slider6.png";
+import slide7 from "../assets/home/slider7.png";
+import slide8 from "../assets/home/slider8.png";
 
 
 const CollectionSwiper = () => {
@@ -60,6 +62,12 @@ const CollectionSwiper = () => {
         </SwiperSlide>
         <SwiperSlide>
           <img src={slide6} alt="slide_image" />
+        </SwiperSlide>
+        <SwiperSlide>
+          <img src={slide7} alt="slide_image" />
+        </SwiperSlide>
+        <SwiperSlide>
+          <img src={slide8} alt="slide_image" />
         </SwiperSlide>
         <SwiperSlide>
           <img src={slide1} alt="slide_image" />

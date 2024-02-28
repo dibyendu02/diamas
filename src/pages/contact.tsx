@@ -15,11 +15,15 @@ function Contact() {
 
   const [scrollPosition, setScrollPosition] = useState(0);
   const [showNavbar, setShowNavbar] = useState(false);
+  const [showback, setShowback] = useState(false);
 
   useEffect(() => {
     const handleScroll = () => {
+      const prevPosition = scrollPosition;
       const currentPosition = window.scrollY;
       setScrollPosition(currentPosition);
+
+      (currentPosition > prevPosition) ? setShowback(true) : setShowback(false);
 
       setShowNavbar(currentPosition > window.innerHeight / 4);
     };
@@ -88,6 +92,7 @@ function Contact() {
   return (
 
     <>
+    {showback && <div className="fixed bg-[#090D29] h-20 w-full z-40 top-0"></div>}
     {showNavbar && <NavbarOnScroll />}
     <div className="flex flex-col justify-center w-full items-center bg-[#090D29]">
       

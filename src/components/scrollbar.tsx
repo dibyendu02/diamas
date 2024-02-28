@@ -15,7 +15,7 @@ export default function Scrollbar() {
     <div>
       <div
         className="hidden lg:flex gap-10  
-         fixed bottom-0 z-50  w-full h-full
+         fixed bottom-0 right-0 z-50 w-20 h-full
         p-4 text-white"
       >
         <div className="h-16 w-10 rounded-full border-2 border-white flex flex-col gap-2 items-center justify-between py-2 text-white absolute right-10 bottom-[45%] ">
