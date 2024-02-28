@@ -125,11 +125,11 @@ const home = () => {
                 />
               </svg>
             </a>
-            <img
+            {/* <img
               src={diamondIcon}
               alt="icon"
               className="lg:w-20 w-10 mx-auto lg:mx-0"
-            />
+            /> */}
             </div>
             
           </div>
@@ -220,11 +220,11 @@ const home = () => {
                 />
               </svg>
             </a>
-            <img
+            {/* <img
               src={diamondIcon}
               alt="icon"
               className="lg:w-20 w-10 mx-auto lg:mx-0"
-            />
+            /> */}
             </div>
           </div>
         </div>
