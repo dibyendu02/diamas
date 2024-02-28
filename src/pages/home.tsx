@@ -49,7 +49,7 @@ const home = () => {
       top: 0,
       behavior: "smooth",
     });
-  },[])
+  }, []);
 
   return (
     <div className="w-full ">
@@ -81,13 +81,13 @@ const home = () => {
           style={{ zIndex: 2 }}
           className="h-full px-5 lg:px-0 p-4 lg:w-[40%]   "
         >
-          <div className=" lg:py-16 relative">
-            {/* <div className="absolute my-16 inset-0 bg-opacity-40  bg-blue-950 z-10"></div> */}
+          <div className="lg:py-16 relative">
             <img
               src={one}
               alt=""
-              className=" w-full z-1 brightness-105 hue-rotate-10 rounded-3xl"
+              className="w-full z-1 brightness-105 hue-rotate-10 rounded-3xl"
             />
+            <div className="lg:my-16 rounded-3xl absolute inset-0 bg-gradient-to-b from-transparent to-blue-500 mix-blend-overlay" />
           </div>
         </div>
 
@@ -99,20 +99,15 @@ const home = () => {
               Diamas
             </h1>
 
-            <img
-              src={diamondIcon}
-              alt="icon"
-              className="lg:w-20 w-10 mx-auto lg:mx-0"
-            />
-
-            <p className="text-white  text-justify text-lg leading-tight tracking-wider mt-5 lg:w-96 sm:w-full ">
+            <p className="text-white  text-justify text-lg leading-tight tracking-wider lg:w-96 sm:w-full ">
               Diamonds are a statement unto themselves. At Diamas, Aditya Dhawan
               transforms his passion for diamonds into contemporary and
               luxurious works of art – each one, as unique as you.
             </p>
+            <div className="flex items-center lg:gap-10 gap-3">
             <a
               href="/about"
-              className=" text-white w-28 mt-3 text-sm inline-flex items-center justify-center space-x-1 rounded-3xl border-blue-300 border p-1 px-2 hover:bg-slate-500 hover:cursor-pointer"
+              className=" text-white h-8 w-28 mt-3 text-sm inline-flex items-center justify-center space-x-1 rounded-3xl border-blue-300 border p-1 px-2 hover:bg-slate-500 hover:cursor-pointer"
             >
               <h6 className="text-sm text-blue-300 font-sans">Know More</h6>
               <svg
@@ -130,6 +125,13 @@ const home = () => {
                 />
               </svg>
             </a>
+            <img
+              src={diamondIcon}
+              alt="icon"
+              className="lg:w-20 w-10 mx-auto lg:mx-0"
+            />
+            </div>
+            
           </div>
         </div>
         <img
@@ -189,11 +191,6 @@ const home = () => {
             >
               Legacy
             </h1>
-            <img
-              src={diamondIcon}
-              alt="icon"
-              className="lg:w-20 w-10 mx-auto lg:mx-0 mb-8"
-            />
             <p className="text-white text-justify text-lg leading-tight tracking-wider mb-3 lg:w-[72%]  sm:w-full ">
               Drawing from a legacy in jewellery craftsmanship, Diamas excels by
               blending time-honoured techniques with the highest quality
@@ -202,9 +199,10 @@ const home = () => {
               Our artisans ensure that each design radiates brilliance, meant to
               inspire for generations.
             </p>
+            <div className="flex items-center lg:gap-10 gap-3">
             <a
               href="/legacy"
-              className="text-white mt-3 text-sm inline-flex items-center space-x-1 rounded-3xl border-blue-300 border p-1 px-2 hover:bg-slate-500 hover:cursor-pointer"
+              className=" text-white h-8 w-28 mt-3 text-sm inline-flex items-center justify-center space-x-1 rounded-3xl border-blue-300 border p-1 px-2 hover:bg-slate-500 hover:cursor-pointer"
             >
               <h6 className="text-sm text-blue-300 font-sans">Know More</h6>
               <svg
@@ -222,6 +220,12 @@ const home = () => {
                 />
               </svg>
             </a>
+            <img
+              src={diamondIcon}
+              alt="icon"
+              className="lg:w-20 w-10 mx-auto lg:mx-0"
+            />
+            </div>
           </div>
         </div>
         <div className="z-10 w-full mt-5  flex justify-end">
@@ -271,10 +275,8 @@ const home = () => {
             </p>
 
             <p className="text-white text-[16px] lg:w-[28%]">
-
-              Diamas by Aditya Dhawan (A Kasturi Jewellers Craft) 5B-16, Second Floor, Tilak nagar,
-              Delhi
-
+              Diamas by Aditya Dhawan (A Kasturi Jewellers Craft) 5B-16, Second
+              Floor, Tilak nagar, Delhi
             </p>
 
             <a

@@ -27,18 +27,7 @@ function legacy() {
     };
   }, [scrollPosition]);
 
-  const scrollToBottom = () => {
-    window.scrollTo({
-      top: document.documentElement.scrollHeight,
-      behavior: "smooth", // Optional, smooth scrolling animation
-    });
-  };
-  const scrollToTop = () => {
-    window.scrollTo({
-      top: 0,
-      behavior: "smooth",
-    });
-  };
+
 
   //scroll to top on load
   useEffect(() => {
@@ -55,7 +44,7 @@ function legacy() {
       <div className="relative">
         <img src={main} alt="main" className="w-full object-cover" />
 
-        {!showButtons && (
+        {/* {!showButtons && (
           <div
             // className="hidden lg:flex mt-16 gap-10 justify-center items-center lg:mx-0 sticky bottom-0"
             className="hidden lg:flex gap-10 justify-center items-center  
@@ -100,7 +89,7 @@ function legacy() {
             </div>
             <div className="w-[40%] h-[1px] bg-white " />
           </div>
-        )}
+        )} */}
 
         {showButtons && <Scrollbar />}
       </div>

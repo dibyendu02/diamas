@@ -3,8 +3,9 @@ import logo from "../assets/logo.png";
 
 const LINKS = [
   {
-    title: "Support",
+    
     items: [
+      { label: "Home", link: "/" },
       { label: "Help Center", link: "help" },
       { label: "Disclaimer", link: "terms" },
       { label: "Legal", link: "legal" },
@@ -13,25 +14,28 @@ const LINKS = [
     ],
   },
   {
-    title: "Company",
+    
     items: [
       {
         label: "About us",
         link: "about",
       },
-      { label: "Blog", link: "media" },
+      { label: "Legacy", link: "legacy" },
+      { label: "Collection", link: "collection" },
+      { label: "Media", link: "media" },
       { label: "Contact Us", link: "contact" },
-      { label: "Testimonials", link: "collection" },
+      
     ],
   },
 ];
 
 const FooterWithSocialLinks = () => {
   return (
-    <div className="flex flex-wrap w-full py-10 lg:px-20 xl:px-40 mx-auto border-t-2 border-white">
+    <div className="flex flex-col items-center">
+      <div className="flex flex-wrap w-full pt-10 lg:px-20 xl:px-40 mx-auto border-t-2 border-white">
       <div className="flex flex-1 lg:block flex-col justify-center items-center w-full">
-        <img src={logo} width={160} height={160} alt="Flowbite Logo" />
-        <div className="flex gap-5">
+        <img src={logo} width={200} height={200} alt="Flowbite Logo" />
+        <div className="flex ms-8 gap-5">
           <Link to="https://www.facebook.com/profile.php?id=61554517292760">
             <i className="fa-brands fa-facebook-f text-white text-lg"></i>
           </Link>
@@ -48,18 +52,13 @@ const FooterWithSocialLinks = () => {
             <i className="fa-brands fa-instagram text-white text-lg"></i>
           </Link>
         </div>
-        
-        <h3 className="text-white mb-3 mt-5 text-sm">
-        All rights reserved
-        </h3>
-        <h3 className="text-white mb-5 text-sm">Copyright © 2024 Diamas by Aditya Dhawan <br/>(A Kasturi Jewellers Craft)</h3>
       </div>
 
       <div className="flex gap-10 flex-wrap  justify-center mx-auto lg:mx-0">
         <div className=" flex my-8 lg:grid lg:grid-cols-2 items-center justify-center lg:justify-between gap-16">
-          {LINKS.map(({ title, items }) => (
-            <ul key={title} className="lg:flex-col">
-              <h1 className="mb-3 text-white font-bold text-lg">{title}</h1>
+          {LINKS.map(({items}, index) => (
+            <ul key={index} className="lg:flex-col">
+              
               {items.map(({ label, link }) => (
                 <Link to={link}>
                   <li key={label}>
@@ -103,6 +102,9 @@ const FooterWithSocialLinks = () => {
         </div>
       </div>
     </div>
+    <h3 className="text-white m-5 text-sm">All rights reserved. Copyright © 2024 Diamas by Aditya Dhawan(A Kasturi Jewellers Craft)</h3>
+    </div>
+    
   );
 };
 

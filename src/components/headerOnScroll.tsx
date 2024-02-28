@@ -1,5 +1,4 @@
 import { useEffect, useState } from "react";
-import logo from "../assets/logo.png";
 import { Link, useLocation } from "react-router-dom";
 
 export default function NavbarSimple() {
@@ -58,16 +57,16 @@ export default function NavbarSimple() {
   return (
     <div
         className="flex gap-10 justify-center items-center  
-         fixed lg:top-10 z-50  w-full
+         fixed lg:top-2 z-50  w-full
         p-4 text-white"
       >
     <nav className="bg-transparent border-gray-200 px-4 lg:absolute z-20 w-full font-[Butler] font-normal">
-      <div className="flex flex-wrap justify-between mx-auto">
-        <img
+      <div className="flex flex-wrap justify-end mx-auto">
+        {/* <img
           src={logo}
           className="sm:h-[100px] w-[100px] "
           alt="Flowbite Logo"
-        />
+        /> */}
         <button
           data-collapse-toggle="navbar-default"
           type="button"

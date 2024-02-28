@@ -14,12 +14,11 @@ export default function Scrollbar() {
   return (
     <div>
       <div
-        className="hidden lg:flex gap-10 justify-center items-center  
+        className="hidden lg:flex gap-10  
          fixed bottom-0 z-50  w-full
         p-4 text-white"
       >
-        {/* <div className="w-[40%] h-[1px] bg-white " /> */}
-        <div className="h-16 w-10 rounded-full border-2 border-white flex flex-col gap-2 items-center justify-between py-2 text-white ">
+        <div className="h-16 w-10 rounded-full border-2 border-white flex flex-col gap-2 items-center justify-between py-2 text-white absolute right-10 bottom-5 ">
           <button onClick={scrollToTop}>
             <svg
               xmlns="http://www.w3.org/2000/svg"
@@ -54,7 +53,6 @@ export default function Scrollbar() {
             </svg>
           </button>
         </div>
-        {/* <div className="w-[40%] h-[1px] bg-white " /> */}
       </div>
     </div>
   );
