@@ -1,4 +1,4 @@
-import { useEffect, useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import one from "../assets/media/1.png";
 import two from "../assets/media/2.png";
 import three from "../assets/media/3.png";
@@ -9,10 +9,9 @@ import gal2 from "../assets/media/gallery/2.png";
 import gal3 from "../assets/media/gallery/3.png";
 import gal4 from "../assets/media/gallery/4.png";
 
-import blog1 from "../assets/media/blogs/1.png";
+
 import blog2 from "../assets/media/blogs/2.png";
 import blog3 from "../assets/media/blogs/3.png";
-import blog4 from "../assets/media/blogs/4.png";
 import Scrollbar from "../components/scrollbar";
 import NavbarOnScroll from "../components/headerOnScroll";
 
@@ -21,6 +20,18 @@ function Media() {
   const [scrollPosition, setScrollPosition] = useState(0);
   const [showButtons, setShowButtons] = useState(true);
   const [showNavbar, setShowNavbar] = useState(false);
+
+  const sectionRefs: { [key: string]: React.RefObject<HTMLDivElement> } = {
+    section1: useRef<HTMLDivElement>(null),
+    section2: useRef<HTMLDivElement>(null),
+  };
+
+  const scrollToSection = (sectionId: string) => {
+    if (sectionRefs[sectionId].current) {
+      sectionRefs[sectionId].current?.scrollIntoView({ behavior: 'smooth' });
+    }
+  };
+
 
   useEffect(() => {
     const handleScroll = () => {
@@ -53,6 +64,14 @@ function Media() {
     });
   };
 
+  //scroll to top on load
+  useEffect(() => {
+    window.scrollTo({
+      top: 0,
+      behavior: "smooth",
+    });
+  },[])
+
   return (
     <>
     {showNavbar && <NavbarOnScroll />}
@@ -78,7 +97,7 @@ function Media() {
            w-full absolute -bottom-12
         p-4 text-white"
             >
-              <div className="w-[40%] h-[1px] bg-white " />
+              {/* <div className="w-[40%] h-[1px] bg-white " /> */}
               <div className="h-16 w-10 rounded-full border-2 border-white flex flex-col gap-2 items-center justify-between py-2 text-white ">
                 <button onClick={scrollToTop}>
                   <svg
@@ -114,7 +133,7 @@ function Media() {
                   </svg>
                 </button>
               </div>
-              <div className="w-[40%] h-[1px] bg-white " />
+              {/* <div className="w-[40%] h-[1px] bg-white " /> */}
             </div>
           )}
         </div>
@@ -129,24 +148,30 @@ function Media() {
         <div
           className="text-white lg:text-2xl lg:ms-28 cursor-pointer"
           style={{
-            textDecorationLine: active === "Events" ? "underline" : "none",
+            textDecorationLine: active === "Gallery" ? "underline" : "none",
             textDecorationThickness: 2,
             textUnderlineOffset: 5,
           }}
-          onClick={() => setActive("Events")}
+          onClick={() => {
+            setActive("Gallery");
+            scrollToSection("section1");
+          }}
         >
-          Events
+          Gallery
         </div>
         <div
-          className="text-white lg:text-2xl lg:mx-28 cursor-pointer"
+          className="text-white lg:text-2xl  lg:mx-28 cursor-pointer"
           style={{
-            textDecorationLine: active === "Press" ? "underline" : "none",
+            textDecorationLine: active === "Blogs" ? "underline" : "none",
             textDecorationThickness: 2,
             textUnderlineOffset: 5,
           }}
-          onClick={() => setActive("Press")}
+          onClick={() => {
+            setActive("Blogs");
+            scrollToSection("section2");
+          }}
         >
-          Press
+          Blogs
         </div>
         <div className="w-full h-[1px] bg-white"></div>
       </div>
@@ -197,7 +222,7 @@ function Media() {
         </div>
       </div>
 
-      <h1
+      <h1  ref={sectionRefs.section1} id="section1" 
         className="text-3xl lg:text-7xl mt-3 font-[Bulter] font-bold text-white text-center lg:text-start z-10 uppercase"
         style={{
           letterSpacing: 5,
@@ -238,7 +263,7 @@ function Media() {
         </svg>
       </a>
 
-      <h1
+      <h1 ref={sectionRefs.section2} id="section2"
         className="text-3xl lg:text-7xl my-3 font-[Bulter] font-bold text-white text-center lg:text-start z-10 uppercase"
         style={{
           letterSpacing: 5,
@@ -248,10 +273,17 @@ function Media() {
         BLOGS
       </h1>
 
-      <div className="flex flex-col lg:flex-row w-full p-8 gap-3">
+      <div  className="flex flex-col lg:flex-row w-full p-8 gap-3">
         <div className="flex flex-col lg:w-1/2 w-full gap-3">
           <div className="block lg:flex w-full items-center gap-3">
-            <h3 className="text-white mx-auto h-full  text-justify text-lg leading-tight tracking-wider my-10 sm:w-full ">
+            <h3 className="text-white mx-auto h-full  text-justify text-lg leading-tight tracking-wider my-5 sm:w-full ">
+              Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam
+              nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam
+              erat volutpat.Lorem ipsum dolor sit amet, consectetuer adipiscing
+              elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore
+              magna aliquam erat volutpat.Lorem ipsum dolor sit amet,
+              consectetuer adipiscing elit, sed diam nonummy nibh euismod
+              tincidunt ut laoreet dolore magna aliquam erat volutpat.
               Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam
               nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam
               erat volutpat.Lorem ipsum dolor sit amet, consectetuer adipiscing
@@ -260,7 +292,7 @@ function Media() {
               consectetuer adipiscing elit, sed diam nonummy nibh euismod
               tincidunt ut laoreet dolore magna aliquam erat volutpat.
             </h3>
-            <img src={blog1} alt="" />
+            
           </div>
           <img src={blog3} alt="" />
         </div>
@@ -268,7 +300,14 @@ function Media() {
         <div className="block lg:flex flex-col lg:w-1/2 w-full gap-3">
           <img src={blog2} alt="" />
           <div className="block lg:flex w-full items-center gap-3">
-            <h3 className="text-white mx-auto h-full  text-justify text-lg leading-tight tracking-wider my-10 sm:w-full ">
+            <h3 className="text-white mx-auto h-full  text-justify text-lg leading-tight tracking-wider my-5 sm:w-full ">
+              Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam
+              nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam
+              erat volutpat.Lorem ipsum dolor sit amet, consectetuer adipiscing
+              elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore
+              magna aliquam erat volutpat.Lorem ipsum dolor sit amet,
+              consectetuer adipiscing elit, sed diam nonummy nibh euismod
+              tincidunt ut laoreet dolore magna aliquam erat volutpat.
               Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam
               nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam
               erat volutpat.Lorem ipsum dolor sit amet, consectetuer adipiscing
@@ -277,10 +316,27 @@ function Media() {
               consectetuer adipiscing elit, sed diam nonummy nibh euismod
               tincidunt ut laoreet dolore magna aliquam erat volutpat.
             </h3>
-            <img src={blog4} alt="" />
+            
           </div>
         </div>
       </div>
+      <a className="text-white text-sm inline-flex items-center space-x-1 mb-10 rounded-lg border-blue-300 border p-1 px-2 hover:bg-slate-500 hover:cursor-pointer">
+        <h6 className="text-sm text-blue-300 font-sans">Read More</h6>
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          fill="none"
+          viewBox="0 0 24 24"
+          strokeWidth={1.5}
+          stroke="currentColor"
+          className="w-3 h-3 text-blue-300"
+        >
+          <path
+            strokeLinecap="round"
+            strokeLinejoin="round"
+            d="M13.5 4.5 21 12m0 0-7.5 7.5M21 12H3"
+          />
+        </svg>
+      </a>
     </div>
     </>
     

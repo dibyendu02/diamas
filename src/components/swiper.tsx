@@ -45,9 +45,7 @@ const CollectionSwiper = () => {
 
         
         
-        <SwiperSlide>
-          <img src={slide1} alt="slide_image" />
-        </SwiperSlide>
+        
         <SwiperSlide>
           <img src={slide2} alt="slide_image" />
         </SwiperSlide>
@@ -62,6 +60,9 @@ const CollectionSwiper = () => {
         </SwiperSlide>
         <SwiperSlide>
           <img src={slide6} alt="slide_image" />
+        </SwiperSlide>
+        <SwiperSlide>
+          <img src={slide1} alt="slide_image" />
         </SwiperSlide>
         
 

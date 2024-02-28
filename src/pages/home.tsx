@@ -43,6 +43,14 @@ const home = () => {
     };
   }, [scrollPosition]);
 
+  //scroll to top on load
+  useEffect(() => {
+    window.scrollTo({
+      top: 0,
+      behavior: "smooth",
+    });
+  },[])
+
   return (
     <div className="w-full ">
       {showNavbar && <NavbarOnScroll />}
@@ -170,7 +178,7 @@ const home = () => {
           alt="diamond"
           className="absolute bottom-20 left-72 blur-sm w-1/2 hidden lg:block "
         />
-        <div className="h-full p-4 lg:absolute top-[8%]  lg:left-40 z-20 lg:w-[40%]">
+        <div className="h-full p-4 lg:absolute top-[8%]  lg:left-[10%] z-20 lg:w-[40%]">
           <div className=" lg:pt-16 pb-16 relative">
             <h1
               className="font-[Bulter] font-normal text-3xl lg:text-7xl mb-3 text-white text-center lg:text-start"
@@ -263,8 +271,10 @@ const home = () => {
             </p>
 
             <p className="text-white text-[16px] lg:w-[28%]">
-              Kasturi Jewellers Tilak Nagar, First Floor, 5B-16, Tilak Nagar,
-              Delhi, 110018
+
+              Diamas by Aditya Dhawan (A Kasturi Jewellers Craft) 5B-16, Second Floor, Tilak nagar,
+              Delhi
+
             </p>
 
             <a

@@ -55,6 +55,14 @@ function collection() {
       behavior: "smooth",
     });
   };
+
+  //scroll to top on load
+  useEffect(() => {
+    window.scrollTo({
+      top: 0,
+      behavior: "smooth",
+    });
+  },[])
   return (
     <>
     {showNavbar && <NavbarOnScroll />}
@@ -85,7 +93,7 @@ function collection() {
        w-full absolute -bottom-12
       p-4 text-white"
           >
-            <div className="w-[40%] h-[1px] bg-white " />
+            {/* <div className="w-[40%] h-[1px] bg-white " /> */}
             <div className="h-16 w-10 rounded-full border-2 border-white flex flex-col gap-2 items-center justify-between py-2 text-white ">
               <button onClick={scrollToTop}>
                 <svg
@@ -121,7 +129,7 @@ function collection() {
                 </svg>
               </button>
             </div>
-            <div className="w-[40%] h-[1px] bg-white " />
+            {/* <div className="w-[40%] h-[1px] bg-white " /> */}
           </div>
         )}
       </div>

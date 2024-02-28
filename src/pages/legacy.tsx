@@ -39,6 +39,14 @@ function legacy() {
       behavior: "smooth",
     });
   };
+
+  //scroll to top on load
+  useEffect(() => {
+    window.scrollTo({
+      top: 0,
+      behavior: "smooth",
+    });
+  },[])
   return (
     <>
     {showNavbar && <NavbarOnScroll />}

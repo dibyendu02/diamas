@@ -76,6 +76,15 @@ function Contact() {
     },
   ];
 
+
+  //scroll to top on load
+  useEffect(() => {
+    window.scrollTo({
+      top: 0,
+      behavior: "smooth",
+    });
+  },[])
+
   return (
 
     <>
@@ -114,15 +123,10 @@ function Contact() {
               d="m2.25 12 8.954-8.955c.44-.439 1.152-.439 1.591 0L21.75 12M4.5 9.75v10.125c0 .621.504 1.125 1.125 1.125H9.75v-4.875c0-.621.504-1.125 1.125-1.125h2.25c.621 0 1.125.504 1.125 1.125V21h4.125c.621 0 1.125-.504 1.125-1.125V9.75M8.25 21h8.25"
             />
           </svg>
-          <h3 className="text-white text-xl">Visit US</h3>
+          <h3 className="text-white text-xl">Visit Us</h3>
           <p className="mb-3 text-white text-justify tracking-wider my-12 mx-[30px]">
-            Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam
-            nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat
-            volutpat.Lorem ipsum dolor sit amet, consectetuer adipiscing elit,
-            sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna
-            aliquam erat volutpat.Lorem ipsum dolor sit amet, consectetuer
-            adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet
-            dolore magna aliquam erat volutpat.
+            Diamas by Aditya Dhawan (A Kasturi Jewellers Craft) 5B-16, Second Floor, Tilak nagar,
+            Delhi
           </p>
         </div>
 
@@ -143,15 +147,9 @@ function Contact() {
             />
           </svg>
 
-          <h3 className="text-white text-xl">Call US</h3>
+          <h3 className="text-white text-xl">Call Us</h3>
           <p className="mb-3 text-white text-justify my-12 mx-[30px]">
-            Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam
-            nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat
-            volutpat.Lorem ipsum dolor sit amet, consectetuer adipiscing elit,
-            sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna
-            aliquam erat volutpat.Lorem ipsum dolor sit amet, consectetuer
-            adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet
-            dolore magna aliquam erat volutpat.
+          <a href="callto:01128544163">011 2854 4163</a>
           </p>
         </div>
 
@@ -171,15 +169,9 @@ function Contact() {
             />
           </svg>
 
-          <h3 className="text-white text-xl">Contact US</h3>
+          <h3 className="text-white text-xl">Contact Us</h3>
           <p className="mb-3 text-white text-justify my-12 mx-[30px]">
-            Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam
-            nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat
-            volutpat.Lorem ipsum dolor sit amet, consectetuer adipiscing elit,
-            sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna
-            aliquam erat volutpat.Lorem ipsum dolor sit amet, consectetuer
-            adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet
-            dolore magna aliquam erat volutpat.
+          <a href="mailto:info@diamas.in"> info@diamas.in</a>
           </p>
         </div>
       </div>
@@ -190,12 +182,12 @@ function Contact() {
           <i className="fa-brands fa-facebook-f text-white text-2xl"></i>
         </Link>
 
-        <Link to={""}>
+        <Link to={"https://www.linkedin.com/in/aditya-dhawan-7799902a4/"}>
           <i className="fa-brands fa-linkedin text-white text-2xl"></i>
         </Link>
 
-        <Link to={""}>
-          <i className="fa-brands fa-twitter text-white text-2xl"></i>
+        <Link to={"https://in.pinterest.com/diamasbyadityadhawan/"}>
+          <i className="fa-brands fa-pinterest text-white text-2xl"></i>
         </Link>
 
         <Link to="https://www.instagram.com/diamasbyadityadhawan/">
@@ -263,16 +255,17 @@ function Contact() {
         <h3 className="text-white text-2xl font-semibold">Trademark Notice</h3>
 
         <p className="text-white font-light text-[16px] lg:mx-32 mx-[30px] mt-8 text-justify">
-          Diamas by Aditya Dhawan and the Diamas logo are registered trademarks
-          of Diamas (A Kasturi Jewellers Craft). All content and designs on this
-          website are copyrighted and owned by Diamas (A Kasturi Jewellers
-          Craft). Use of our trademarks or content without explicit written
-          permission is prohibited. Legal action will be taken against
-          infringement or misuse of our intellectual property. The website
-          contains material which is owned by or licensed to us. This material
-          includes, but is not limited to, the content, design, product design,
-          layout, appearance, look and graphics of the website. Any reproduction
-          of the website's material is prohibited without prior consent.
+          Diamas by Aditya Dhawan and the Diamas logo are registered trademarks of
+          Diamas (A Kasturi Jewellers Craft). All content and designs on this
+          website are copyrighted and owned by Diamas (A Kasturi Jewellers Craft).
+          Use of our trademarks or content without explicit written permission is
+          prohibited. Legal action will be taken against infringement or misuse of
+          our intellectual property. The website contains material which is owned
+          by or licensed to us. This material includes, but is not limited to, the
+          content, design, product design, layout, appearance, look and graphics
+          of the website. Any reproduction of the website's material is prohibited
+          without prior consent. For any queries or concern please email at 
+          <a href="mailto:info@diamas.in"> info@diamas.in</a>
         </p>
       </div>
     </div>

@@ -5,10 +5,10 @@ const LINKS = [
   {
     title: "Support",
     items: [
-      { label: "Help Center", link: "" },
-      { label: "Terms of Service", link: "" },
-      { label: "Legal", link: "" },
-      { label: "Privacy Policy", link: "" },
+      { label: "Help Center", link: "help" },
+      { label: "Disclaimer", link: "terms" },
+      { label: "Legal", link: "legal" },
+      { label: "Privacy Policy", link: "privacy" },
       
     ],
   },
@@ -19,9 +19,9 @@ const LINKS = [
         label: "About us",
         link: "about",
       },
-      { label: "Blog", link: "" },
+      { label: "Blog", link: "media" },
       { label: "Contact Us", link: "contact" },
-      { label: "Testimonials", link: "" },
+      { label: "Testimonials", link: "collection" },
     ],
   },
 ];
@@ -36,12 +36,12 @@ const FooterWithSocialLinks = () => {
             <i className="fa-brands fa-facebook-f text-white text-lg"></i>
           </Link>
 
-          <Link to={""}>
+          <Link to={"https://www.linkedin.com/in/aditya-dhawan-7799902a4/"}>
             <i className="fa-brands fa-linkedin text-white text-lg"></i>
           </Link>
 
-          <Link to={""}>
-            <i className="fa-brands fa-twitter text-white text-lg"></i>
+          <Link to={"https://in.pinterest.com/diamasbyadityadhawan/"}>
+            <i className="fa-brands fa-pinterest text-white text-lg"></i>
           </Link>
 
           <Link to="https://www.instagram.com/diamasbyadityadhawan/">
@@ -50,9 +50,9 @@ const FooterWithSocialLinks = () => {
         </div>
         
         <h3 className="text-white mb-3 mt-5 text-sm">
-          Copyright © 2020 Landify UI Kit.
+        All rights reserved
         </h3>
-        <h3 className="text-white mb-5 text-sm">All rights reserved</h3>
+        <h3 className="text-white mb-5 text-sm">Copyright © 2024 Diamas by Aditya Dhawan <br/>(A Kasturi Jewellers Craft)</h3>
       </div>
 
       <div className="flex gap-10 flex-wrap  justify-center mx-auto lg:mx-0">
