@@ -9,8 +9,8 @@ import gal2 from "../assets/media/gallery/2.png";
 import gal3 from "../assets/media/gallery/3.png";
 import gal4 from "../assets/media/gallery/4.png";
 
-import blog2 from "../assets/media/blogs/2.png";
-import blog3 from "../assets/media/blogs/3.png";
+import blog2 from "../assets/media/blogs/blog1.png";
+import blog3 from "../assets/media/blogs/blog2.png";
 import Scrollbar from "../components/scrollbar";
 import NavbarOnScroll from "../components/headerOnScroll";
 
@@ -19,7 +19,7 @@ function Media() {
   const [scrollPosition, setScrollPosition] = useState(0);
   const [showButtons, setShowButtons] = useState(false);
   const [showNavbar, setShowNavbar] = useState(false);
-  const [showback, setShowback] = useState(false);
+  
 
   const sectionRefs: { [key: string]: React.RefObject<HTMLDivElement> } = {
     section1: useRef<HTMLDivElement>(null),
@@ -34,11 +34,9 @@ function Media() {
 
   useEffect(() => {
     const handleScroll = () => {
-      const prevPosition = scrollPosition;
       const currentPosition = window.scrollY;
       setScrollPosition(currentPosition);
 
-      currentPosition > prevPosition ? setShowback(true) : setShowback(false);
 
       // Show buttons if scrolled more than half the screen
       setShowButtons(currentPosition > window.innerHeight / 2);
@@ -63,9 +61,7 @@ function Media() {
 
   return (
     <>
-      {showback && (
-        <div className="fixed bg-[#090D29] h-20 w-full z-40 top-0"></div>
-      )}
+    
       {showNavbar && <NavbarOnScroll />}
       <div className="flex flex-col justify-center items-center">
         <div className="flex flex-col justify-center items-center w-full mb-20">

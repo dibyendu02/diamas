@@ -24,15 +24,11 @@ const home = () => {
   const [scrollPosition, setScrollPosition] = useState(0);
   const [showButtons, setShowButtons] = useState(false);
   const [showNavbar, setShowNavbar] = useState(false);
-  const [showback, setShowback] = useState(false);
 
   useEffect(() => {
     const handleScroll = () => {
-      const prevPosition = scrollPosition;
       const currentPosition = window.scrollY;
       setScrollPosition(currentPosition);
-
-      (currentPosition > prevPosition) ? setShowback(true) : setShowback(false);
 
       // Show buttons if scrolled more than half the screen
       setShowButtons(currentPosition > window.innerHeight/2);
@@ -57,7 +53,6 @@ const home = () => {
 
   return (
     <div className="w-full relative ">
-      {showback && <div className="fixed bg-[#090D29] h-20 w-full z-40 top-0"></div>}
       {showNavbar && <NavbarOnScroll />}
 
       <div className="video-container w-full h-[850px] lg:h-[850px]">

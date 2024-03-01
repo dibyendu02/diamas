@@ -12,7 +12,6 @@ import ErrorPage from "./pages/404";
 import { Help } from "./pages/help";
 import { Legal } from "./pages/legal";
 import { Terms } from "./pages/terms";
-import { Privacy } from "./pages/privacy";
 
 function App() {
   return (
@@ -30,7 +29,6 @@ function App() {
           <Route path="/help" element={<Help />} />
           <Route path="/legal" element={<Legal />} />
           <Route path="/terms" element={<Terms />} />
-          <Route path="/privacy" element={<Privacy />} />
           {/* Catch-all route for paths not matched by any other route */}
           <Route path="*" element={<ErrorPage />} />
         </Routes>

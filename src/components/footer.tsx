@@ -5,16 +5,12 @@ const LINKS = [
   {
     
     items: [
-      { label: "Home", link: "/" },
       { label: "Help Center", link: "help" },
       { label: "Disclaimer", link: "terms" },
-      { label: "Blog", link: "media" },
-      { label: "Privacy Policy", link: "privacy" },
-      
+      { label: "Blog", link: "media" },      
     ],
   },
   {
-    
     items: [
       {
         label: "About us",
@@ -55,7 +51,7 @@ const FooterWithSocialLinks = () => {
       </div>
 
       <div className="flex gap-10 flex-wrap  justify-center mx-auto lg:mx-0">
-        <div className=" flex my-8 lg:grid lg:grid-cols-2 items-center justify-center lg:justify-between gap-16">
+        <div className=" flex my-8 lg:grid lg:grid-cols-2  justify-center lg:justify-between gap-16">
           {LINKS.map(({items}, index) => (
             <ul key={index} className="lg:flex-col">
               
