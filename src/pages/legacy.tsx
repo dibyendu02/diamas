@@ -90,7 +90,7 @@ function legacy() {
               lineHeight: 1.4,
             }}
           >
-            LAGECY
+            LEGACY
           </h1>
           <img src={main} alt="main" className="w-full object-cover" />
           {showButtons && <Scrollbar />}

@@ -7,15 +7,15 @@ const LINKS = [
     items: [
       { label: "Help Center", link: "help" },
       { label: "Disclaimer", link: "terms" },
-      { label: "Blog", link: "media" },      
+      { label: "Blog", link: "media" },  
+      {
+        label: "About us",
+        link: "about",
+      },    
     ],
   },
   {
     items: [
-      {
-        label: "About us",
-        link: "about",
-      },
       { label: "Legacy", link: "legacy" },
       { label: "Collection", link: "collection" },
       { label: "Media", link: "media" },

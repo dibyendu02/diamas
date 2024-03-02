@@ -274,9 +274,9 @@ const home = () => {
               AN APPOINTMENT
             </p>
 
-            <p className="text-white text-[16px] text-justify lg:w-[28%]">
+            <p className="text-white text-[16px] text-justify  lg:w-[28%]">
               Diamas by Aditya Dhawan (A Kasturi Jewellers Craft) 5B-16, Second
-              Floor, Tilak nagar, Delhi
+              Floor, Tilak Nagar, Delhi, Pin - 110018
             </p>
 
             <a
