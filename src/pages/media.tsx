@@ -9,13 +9,17 @@ import gal2 from "../assets/media/gallery/2.png";
 import gal3 from "../assets/media/gallery/3.png";
 import gal4 from "../assets/media/gallery/4.png";
 
+import feed1 from "../assets/media/feeds/1.png";
+import feed2 from "../assets/media/feeds/2.png";
+import feed3 from "../assets/media/feeds/3.png";
+
 import blog2 from "../assets/media/blogs/blog1.png";
 import blog3 from "../assets/media/blogs/blog2.png";
 import Scrollbar from "../components/scrollbar";
 import NavbarOnScroll from "../components/headerOnScroll";
 
 function Media() {
-  const [active, setActive] = useState("Press");
+  const [active, setActive] = useState("Events");
   const [scrollPosition, setScrollPosition] = useState(0);
   const [showButtons, setShowButtons] = useState(false);
   const [showNavbar, setShowNavbar] = useState(false);
@@ -24,6 +28,7 @@ function Media() {
   const sectionRefs: { [key: string]: React.RefObject<HTMLDivElement> } = {
     section1: useRef<HTMLDivElement>(null),
     section2: useRef<HTMLDivElement>(null),
+    section3: useRef<HTMLDivElement>(null),
   };
 
   const scrollToSection = (sectionId: string) => {
@@ -99,23 +104,8 @@ function Media() {
           >
             Events
           </div>
-          <a
-            target="blank"
-            href="https://www.instagram.com/diamasbyadityadhawan/"
-            className="text-white lg:text-2xl lg:mx-12 cursor-pointer"
-            style={{
-              textDecorationLine: active === "Press" ? "underline" : "none",
-              textDecorationThickness: 2,
-              textUnderlineOffset: 5,
-            }}
-            onClick={() => {
-              setActive("Press");
-            }}
-          >
-            Feeds
-          </a>
           <div
-            className="text-white lg:text-2xl lg:mr-12 cursor-pointer"
+            className="text-white lg:text-2xl lg:mx-12 cursor-pointer"
             style={{
               textDecorationLine: active === "Gallery" ? "underline" : "none",
               textDecorationThickness: 2,
@@ -127,6 +117,20 @@ function Media() {
             }}
           >
             Gallery
+          </div>
+          <div
+            className="text-white lg:text-2xl lg:mr-12 cursor-pointer"
+            style={{
+              textDecorationLine: active === "Social" ? "underline" : "none",
+              textDecorationThickness: 2,
+              textUnderlineOffset: 5,
+            }}
+            onClick={() => {
+              setActive("Social");
+              scrollToSection("section3");
+            }}
+          >
+            Social
           </div>
           <div
             className="text-white lg:text-2xl  lg:mr-12 cursor-pointer"
@@ -217,6 +221,68 @@ function Media() {
         </div>
 
         <a className="text-white text-sm inline-flex items-center space-x-1 rounded-lg border-blue-300 border p-1 px-2 hover:bg-slate-500 hover:cursor-pointer">
+          <h6 className="text-sm text-blue-300 font-sans">See More</h6>
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            fill="none"
+            viewBox="0 0 24 24"
+            strokeWidth={1.5}
+            stroke="currentColor"
+            className="w-3 h-3 text-blue-300"
+          >
+            <path
+              strokeLinecap="round"
+              strokeLinejoin="round"
+              d="M13.5 4.5 21 12m0 0-7.5 7.5M21 12H3"
+            />
+          </svg>
+        </a>
+
+
+        <h1
+          ref={sectionRefs.section3}
+          id="section3"
+          className="text-3xl lg:text-7xl my-3 font-[Bulter] font-bold text-white text-center lg:text-start z-10 uppercase"
+          style={{
+            letterSpacing: 5,
+            lineHeight: 1.4,
+          }}
+        >
+          Social
+        </h1>
+
+        <div className="flex flex-col items-center justify-center w-full font-[Bulter] lg:flex-row gap-8 p-8">
+          <div className="flex flex-col lg:w-1/3 gap-3">
+            <img src={feed1} alt="" />
+            {/* <h3 className="text-white">17 February 2022</h3> */}
+            <h3 className="text-white lg:text-2xl">
+            A pristine pearl is cradled gently within an open diamond...
+            </h3>
+          </div>
+
+          <div className="flex flex-col lg:w-1/3 gap-3">
+            <img src={feed2} alt="" />
+            {/* <h3 className="text-white">26 February 2022</h3> */}
+            <h3 className="text-white lg:text-2xl">
+            A strand of lustrous pearls indelibly fused with diamond ...
+            </h3>
+            
+          </div>
+
+          <div className="flex flex-col lg:w-1/3 gap-3">
+            <img src={feed3} alt="" />
+            {/* <h3 className="text-white">20 February 2022</h3> */}
+            <h3 className="text-white lg:text-2xl">
+            Luminescent pearl droplets fused seamlessly within...
+            </h3>
+            
+          </div>
+        </div>
+
+        <a 
+          target="blank"
+          href="https://www.instagram.com/diamasbyadityadhawan/" 
+          className="text-white text-sm inline-flex items-center space-x-1 rounded-lg border-blue-300 border p-1 px-2 hover:bg-slate-500 hover:cursor-pointer">
           <h6 className="text-sm text-blue-300 font-sans">See More</h6>
           <svg
             xmlns="http://www.w3.org/2000/svg"

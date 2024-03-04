@@ -196,6 +196,7 @@ const home = () => {
               blending time-honoured techniques with the highest quality
               diamonds.
               <br />
+              <br />
               Our artisans ensure that each design radiates brilliance, meant to
               inspire for generations.
             </p>
@@ -274,9 +275,9 @@ const home = () => {
               AN APPOINTMENT
             </p>
 
-            <p className="text-white text-[16px] text-justify  lg:w-[28%]">
-              Diamas by Aditya Dhawan (A Kasturi Jewellers Craft) 5B-16, Second
-              Floor, Tilak Nagar, Delhi, Pin - 110018
+            <p className="text-white text-[16px] ">
+              Diamas by Aditya Dhawan <br/> (A Kasturi Jewellers Craft) <br/>5B-16, Second
+              Floor, Tilak Nagar, <br/>Delhi, Pin - 110018
             </p>
 
             <a

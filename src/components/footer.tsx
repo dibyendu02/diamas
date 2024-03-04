@@ -68,7 +68,7 @@ const FooterWithSocialLinks = () => {
           ))}
         </div>
 
-        <div className="mt-[8%]">
+        <div className="mt-9">
           <h1 className="mb-3 text-white font-bold text-lg">Stay up to date</h1>
 
           <div className="w-72">
@@ -98,7 +98,7 @@ const FooterWithSocialLinks = () => {
         </div>
       </div>
     </div>
-    <h3 className="text-white m-5 text-sm">All rights reserved. Copyright © 2024 Diamas by Aditya Dhawan(A Kasturi Jewellers Craft)</h3>
+    <h3 className="text-white m-5 text-sm">All rights reserved. Copyright © 2024 Diamas by Aditya Dhawan ( A Kasturi Jewellers Craft )</h3>
     </div>
     
   );

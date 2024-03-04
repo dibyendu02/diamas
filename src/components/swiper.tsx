@@ -44,10 +44,9 @@ const CollectionSwiper = () => {
         modules={[EffectCoverflow, Pagination, Navigation]}
         className="swiper_container"
       >
-
-        
-        
-        
+        <SwiperSlide>
+          <img src={slide1} alt="slide_image" />
+        </SwiperSlide>
         <SwiperSlide>
           <img src={slide2} alt="slide_image" />
         </SwiperSlide>
@@ -69,9 +68,7 @@ const CollectionSwiper = () => {
         <SwiperSlide>
           <img src={slide8} alt="slide_image" />
         </SwiperSlide>
-        <SwiperSlide>
-          <img src={slide1} alt="slide_image" />
-        </SwiperSlide>
+        
         
 
         {/* <div className="slider-controler">
