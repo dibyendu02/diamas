@@ -7,9 +7,11 @@ import pendant from "../assets/collection/pendants.png";
 import bracelet from "../assets/collection/bracelets.png";
 import ring from "../assets/collection/rings.png";
 
+import screenBg from "../assets/collection/screen-bg.png";
+import screenBgR from "../assets/collection/screen-bg-rotate.png";
+
 import NavbarOnScroll from "../components/headerOnScroll";
 import Scrollbar from "../components/scrollbar";
-// import lines3 from "../assets/collection/lines3.png";
 
 const collectionData = [
   {
@@ -80,7 +82,7 @@ function collection() {
     });
   }, []);
   return (
-    <>
+    <div className="w-full relative">
       {showNavbar && <NavbarOnScroll />}
 
       <div className="flex flex-col justify-center items-center ">
@@ -108,58 +110,66 @@ function collection() {
           {showButtons && <Scrollbar />}
         </div>
 
-        {collectionData.map((item, index) => {
-          return (
-            <div
-              key={item.id}
-              className={`flex ${
-                index % 2 ? "flex-row-reverse-lg" : "flex-row-lg"
-              } ${
-                index % 2 ? "flex-col-sm" : "flex-col-sm"
-              } sm:w-full lg:w-auto justify-center items-center`}
-            >
-              <div className="h-full p-4 lg:w-1/2 ">
-                <img src={item.image} className="" alt="" />
-              </div>
-              <div className="h-full p-10 lg:w-1/2 ">
-                <h1
-                  className="text-white bacalisties "
-                  style={{
-                    fontSize: "5rem",
-                  }}
-                >
-                  {item.name}
-                </h1>
-                <p className="text-white  text-justify text-lg leading-tight tracking-wider lg:w-96 sm:w-full ">
-                  {item.desc}
-                </p>
-                <a
-                  href={item.goto}
-                  className=" text-white h-8 w-28 mt-3 text-sm inline-flex items-center justify-center space-x-1 rounded-3xl border-blue-300 border p-1 px-2 hover:bg-slate-500 hover:cursor-pointer"
-                >
-                  <h6 className="text-sm text-blue-300 font-sans">View More</h6>
-                  <svg
-                    xmlns="http://www.w3.org/2000/svg"
-                    fill="none"
-                    viewBox="0 0 24 24"
-                    strokeWidth={1.5}
-                    stroke="currentColor"
-                    className="w-3 h-3 text-blue-300"
-                  >
-                    <path
-                      strokeLinecap="round"
-                      strokeLinejoin="round"
-                      d="M13.5 4.5 21 12m0 0-7.5 7.5M21 12H3"
-                    />
-                  </svg>
-                </a>
-              </div>
-            </div>
-          );
-        })}
+        <img src={screenBg} alt="diamond" className="hidden lg:block absolute opacity-40 z-0 -left-40 top-[28%]" />
+        <img src={screenBgR} alt="diamond" className="hidden lg:block absolute opacity-40 z-0 -right-72 top-[53%]" />
+        <img src={screenBg} alt="diamond" className="hidden lg:block absolute opacity-40 z-0 -left-40 bottom-0" />
 
+        <div className="relative z-20">
+          
+          {collectionData.map((item, index) => {
+            return (
+              <div
+                key={item.id}
+                className={`flex ${
+                  index % 2 ? "flex-row-reverse-lg" : "flex-row-lg"
+                } ${
+                  index % 2 ? "flex-col-sm" : "flex-col-sm"
+                } sm:w-full lg:w-auto justify-center items-center`}
+              >
+                <div className="h-full p-4 lg:w-1/2 ">
+                  <img src={item.image} className="z-20" alt="" />
+                </div>
+                <div className="h-full p-10 lg:w-1/2 ">
+                  <h1
+                    className="text-white bacalisties "
+                    style={{
+                      fontSize: "5rem",
+                    }}
+                  >
+                    {item.name}
+                  </h1>
+                  <p className="text-white  text-justify text-lg leading-tight tracking-wider lg:w-96 sm:w-full ">
+                    {item.desc}
+                  </p>
+                  <a
+                    href={item.goto}
+                    className=" text-white h-8 w-28 mt-3 text-sm inline-flex items-center justify-center space-x-1 rounded-3xl border-blue-300 border p-1 px-2 hover:bg-slate-500 hover:cursor-pointer"
+                  >
+                    <h6 className="text-sm text-blue-300 font-sans">
+                      View More
+                    </h6>
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      fill="none"
+                      viewBox="0 0 24 24"
+                      strokeWidth={1.5}
+                      stroke="currentColor"
+                      className="w-3 h-3 text-blue-300"
+                    >
+                      <path
+                        strokeLinecap="round"
+                        strokeLinejoin="round"
+                        d="M13.5 4.5 21 12m0 0-7.5 7.5M21 12H3"
+                      />
+                    </svg>
+                  </a>
+                </div>
+              </div>
+            );
+          })}
+        </div>
       </div>
-    </>
+    </div>
   );
 }
 
