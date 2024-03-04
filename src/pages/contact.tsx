@@ -124,9 +124,9 @@ function Contact() {
             />
           </svg>
           <h3 className="text-white text-xl">Visit Us</h3>
-          <p className="mb-3 text-white text-justify tracking-wider my-12 mx-[30px]">
-            Diamas by Aditya Dhawan (A Kasturi Jewellers Craft) 5B-16, Second Floor, Tilak nagar,
-            Delhi
+          <p className="mb-3 text-white text-center tracking-wider my-12 mx-[30px]">
+            Diamas by Aditya Dhawan <br/> (A Kasturi Jewellers Craft) <br/>5B-16, Second
+            Floor, Tilak Nagar, <br/>Delhi, Pin - 110018
           </p>
         </div>
 

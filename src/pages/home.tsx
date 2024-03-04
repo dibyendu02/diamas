@@ -221,11 +221,6 @@ const home = () => {
                 />
               </svg>
             </a>
-            {/* <img
-              src={diamondIcon}
-              alt="icon"
-              className="lg:w-20 w-10 mx-auto lg:mx-0"
-            /> */}
             </div>
           </div>
         </div>

@@ -1,24 +1,53 @@
 import { useEffect, useState } from "react";
 import one from "../assets/collection/1.png";
-// import two from "../assets/collection/2.png";
-// import three from "../assets/collection/3.png";
-// import four from "../assets/collection/4.png";
-import five from "../assets/collection/5.png";
-import six from "../assets/collection/6.png";
-import seven from "../assets/collection/7.png";
-import eight from "../assets/collection/8.png";
-import Scrollbar from "../components/scrollbar";
 
-import neclace1 from "../assets/collection/2.png";
-import neclace2 from "../assets/collection/3.png";
-import neclace3 from "../assets/collection/4.png";
-// import neclace4 from "../assets/collection/Necklace4.png";
-// import neclace5 from "../assets/collection/Necklace5.png";
+import neclace from "../assets/collection/neclace.png";
+import earring from "../assets/collection/earrings.png";
+import pendant from "../assets/collection/pendants.png";
+import bracelet from "../assets/collection/bracelets.png";
+import ring from "../assets/collection/rings.png";
 
-import lines1 from "../assets/collection/lines1.png";
-import lines2 from "../assets/collection/lines2.png";
 import NavbarOnScroll from "../components/headerOnScroll";
+import Scrollbar from "../components/scrollbar";
 // import lines3 from "../assets/collection/lines3.png";
+
+const collectionData = [
+  {
+    id: 1,
+    name: "Necklace",
+    desc: "Diamas necklaces embrace the extraordinary in the ordinary. Delicate drops become bold when layered, while sculptural centre pieces command attention. Our pieces accentuate and amplify, designed to empower confidence, flair and fearless femininity.",
+    image: neclace,
+    goto: "/necklace",
+  },
+  {
+    id: 2,
+    name: "Earrings",
+    desc: "Diamas earrings redefine everyday luxury whether accenting an occasion ensemble or adding intrigue to casual wear. Delicate dazzlers one day and statement pieces the next – our versatile designs celebrate the many facets of your ever-evolving spirit.",
+    image: earring,
+    goto: "/earring",
+  },
+  {
+    id: 3,
+    name: "Pendants",
+    desc: "Suspended on delicate chains, Diamas pendants preserve precious memories. Exquisite motifs layer sentimental value within elegant frames. An engraved initial pays tribute to a loved one; an inspired emblem celebrates a meaningful journey. Hold your most cherished moments forever - close to the heart.",
+    image: pendant,
+    goto: "/pendant",
+  },
+  {
+    id: 4,
+    name: "Bracelets",
+    desc: "Stackable, movable artistry granting wrists a novelist’s touch - Diamas bracelets and bangles become the distinguishing signature of a woman and her story. Dainty chains one day and bold cuffs the next – these treasured keepsakes empower you to curate looks as unique as each new chapter.",
+    image: bracelet,
+    goto: "/bracelet",
+  },
+  {
+    id: 5,
+    name: "Rings",
+    desc: "A symbol of commitment or a meaningful self-gift – Diamas rings commemorate relationships and milestones close to the heart. An heirloom passed down honouring family ties; an anniversary band etching promises in gold; an exquisite gem declaring self-love. Each ring tells a story as unique as yours.",
+    image: ring,
+    goto: "/ring",
+  },
+];
 
 function collection() {
   const [scrollPosition, setScrollPosition] = useState(0);
@@ -53,18 +82,19 @@ function collection() {
   return (
     <>
       {showNavbar && <NavbarOnScroll />}
+
       <div className="flex flex-col justify-center items-center ">
         <div
           style={{
             backgroundImage: `url(${one})`,
           }}
           className="bg-[image:var(--image-url)] bg-cover 
-         bg-center w-full h-[300px] md:h-[500px] lg:h-[600px] object-cover 
-         justify-center items-center flex  gayscale relative z-10
+         bg-center w-full h-[300px] md:h-[500px] lg:h-[761px] object-cover 
+         justify-start px-[15%] items-center flex  gayscale relative z-10
          "
         >
           <h1
-            className="text-3xl lg:text-7xl my-3 font-[Bolter] font-bold text-white text-center lg:text-start lg:-ms-14 z-10 uppercase"
+            className="text-3xl lg:text-6xl my-3 font-[Bolter] font-bold text-white text-center lg:text-start lg:-ms-14 z-10 uppercase"
             style={{
               letterSpacing: 5,
               lineHeight: 1.4,
@@ -78,163 +108,56 @@ function collection() {
           {showButtons && <Scrollbar />}
         </div>
 
-        <div className="relative">
-          <div className="">
-            <h1
-              className="text-white bacalisties dancing-script text-center mt-36"
-              style={{
-                fontSize: "5rem",
-              }}
+        {collectionData.map((item, index) => {
+          return (
+            <div
+              key={item.id}
+              className={`flex ${
+                index % 2 ? "flex-row-reverse-lg" : "flex-row-lg"
+              } ${
+                index % 2 ? "flex-col-sm" : "flex-col-sm"
+              } sm:w-full lg:w-auto justify-center items-center`}
             >
-              Necklace
-            </h1>
-
-            <div className="flex flex-col md:flex-row md:flex-wrap lg:flex-row lg:flex-wrap sm:w-full lg:w-full justify-center items-center  mt-10 lg:mt-10 mx-5  gap-10 lg:absolute z-10 ">
-              <div className="h-full md:w-[40%] lg:w-[28%] bg-black">
-                <img src={neclace1} className="w-full" alt="" />
+              <div className="h-full p-4 lg:w-1/2 ">
+                <img src={item.image} className="" alt="" />
               </div>
-              <div className="h-full md:w-[40%] lg:w-[28%] bg-black">
-                <img src={neclace2} className="w-full" alt="" />
-              </div>
-              <div className="h-full md:w-[40%] lg:w-[28%] bg-black">
-                <img src={neclace3} className="w-full" alt="" />
-              </div>
-              {/* <div className="h-full p-4 md:w-[40%] lg:w-[28%] bg-black">
-                <img src={neclace4} className="w-full" alt="" />
-              </div>
-              <div className="h-full p-4 md:w-[40%] lg:w-[28%] bg-black">
-                <img src={neclace5} className="w-full" alt="" />
-              </div>
-              <div className="h-full p-4 md:w-[40%] lg:w-[28%] bg-black">
-                <img src={neclace5} className="w-full" alt="" />
-              </div> */}
-            </div>
-
-            <p className="mb-3 text-white font-light  text-justify my-12 lg:mx-24 lg:text-2xl mx-[30px] lg:mt-[42%] ">
-              Diamas necklaces embrace the extraordinary in the ordinary.
-              Delicate drops become bold when layered, while sculptural
-              centrepieces command attention. Our pieces accentuate and amplify,
-              designed to empower confidence, flair and fearless femininity.
-            </p>
-          </div>
-
-          <div className="flex flex-col mt-10 lg:mt-40 gap-5">
-            <h1
-              className="text-white bacalisties text-center lg:absolute z-10 lg:-mt-10 lg:mr-8 self-center sm:mb-5"
-              style={{
-                fontSize: "5rem",
-              }}
-            >
-              Rings
-            </h1>
-            <div className="flex flex-col lg:flex-row sm:w-full lg:w-auto justify-center items-center">
-              <div className="h-full p-5 lg:w-1/2 ">
-                <img src={five} className="lg:w-[75%]  " alt="" />
-              </div>
-              <div className="h-full p-4 ">
-                <p className="text-white pt-5  text-justify text-lg leading-tight tracking-wider mt-5 lg:w-80 sm:w-full ">
-                  A symbol of commitment or a meaningful self-gift – Diamas
-                  rings commemorate relationships and milestones close to the
-                  heart. An heirloom passed down honouring family ties; an
-                  anniversary band etching promises in gold; an exquisite gem
-                  declaring self-love. Each ring tells a story as unique as
-                  yours.
+              <div className="h-full p-10 lg:w-1/2 ">
+                <h1
+                  className="text-white bacalisties "
+                  style={{
+                    fontSize: "5rem",
+                  }}
+                >
+                  {item.name}
+                </h1>
+                <p className="text-white  text-justify text-lg leading-tight tracking-wider lg:w-96 sm:w-full ">
+                  {item.desc}
                 </p>
+                <a
+                  href={item.goto}
+                  className=" text-white h-8 w-28 mt-3 text-sm inline-flex items-center justify-center space-x-1 rounded-3xl border-blue-300 border p-1 px-2 hover:bg-slate-500 hover:cursor-pointer"
+                >
+                  <h6 className="text-sm text-blue-300 font-sans">View More</h6>
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    fill="none"
+                    viewBox="0 0 24 24"
+                    strokeWidth={1.5}
+                    stroke="currentColor"
+                    className="w-3 h-3 text-blue-300"
+                  >
+                    <path
+                      strokeLinecap="round"
+                      strokeLinejoin="round"
+                      d="M13.5 4.5 21 12m0 0-7.5 7.5M21 12H3"
+                    />
+                  </svg>
+                </a>
               </div>
             </div>
-          </div>
+          );
+        })}
 
-          <img
-            src={lines1}
-            alt="lines"
-            className="absolute w-[60%] -top-36 left-0 z-0 hidden lg:block"
-          />
-          <img
-            src={lines2}
-            alt="lines"
-            className="absolute w-[80%] -bottom-[24%] right-0 z-0 hidden lg:block"
-          />
-        </div>
-
-        <div className="relative">
-          <div className="flex flex-col mt-10 lg:mt-40  gap-5">
-            <h1
-              className="text-white bacalisties text-center lg:absolute z-10 lg:-mt-14 self-center sm:mb-5"
-              style={{
-                fontSize: "5rem",
-              }}
-            >
-              Earrings
-            </h1>
-            
-
-            <div className="flex flex-col relative lg:flex-row sm:w-full lg:w-auto justify-center items-center">
-              <h1 className="absolute text-white bacalisties text-[2rem]  lg:text-7xl">
-                Diamond Quality
-              </h1>
-              <div className="h-full p-4 lg:w-1/2 ">
-                <p className="text-white  text-justify text-lg leading-tight tracking-wider mt-16 lg:w-80 sm:w-full ">
-                  Diamas earrings redefine everyday luxury whether accenting an
-                  occasion ensemble or adding intrigue to casual wear. Delicate
-                  dazzlers one day and statement pieces the next – our versatile
-                  designs celebrate the many facets of your ever-evolving
-                  spirit.
-                </p>
-              </div>
-              <div className="h-full p-4 lg:w-1/2 ">
-                <img src={six} className="w-full" alt="" />
-              </div>
-            </div>
-          </div>
-
-          <div className="flex flex-col mt-10 lg:mt-40 w-full gap-5">
-            <h1
-              className="text-white bacalisties text-center lg:absolute z-10 lg:-mt-20 self-center sm:mb-5"
-              style={{
-                fontSize: "5rem",
-              }}
-            >
-              Pendants
-            </h1>
-            <div className="flex flex-col lg:flex-row sm:w-full lg:w-auto justify-center items-center">
-              <div className="h-full p-4 lg:w-1/2 ">
-                <img src={seven} className="w-full" alt="" />
-              </div>
-              <div className="h-full p-4 lg:w-1/2 ">
-                <p className="text-white lg:ml-32  text-justify text-lg leading-tight tracking-wider mt-16 lg:w-80 sm:w-full ">
-                  Suspended on delicate chains, Diamas pendants preserve
-                  precious memories. Exquisite motifs layer sentimental value
-                  within elegant frames. An engraved initial pays tribute to a
-                  loved one; an inspired emblem celebrates a meaningful journey.
-                  Hold your most cherished moments forever - close to the heart.
-                </p>
-              </div>
-            </div>
-          </div>
-        </div>
-
-        <div className="flex flex-col mt-10 lg:mt-40  ">
-          <h1
-            className="text-white bacalisties text-center lg:absolute z-10 lg:-mt-20 self-center sm:mb-5"
-            style={{
-              fontSize: "5rem",
-            }}
-          >
-            Bracelets & Bangles
-          </h1>
-
-          <div className="flex flex-col lg:flex-row sm:w-full lg:w-auto justify-center items-center">
-            <img src={eight} alt="" className="w-full lg:h-auto h-full" />
-          </div>
-
-          <p className="mb-20 text-white font-light lg:text-xl text-center my-16 lg:mx-24 mx-[30px]">
-            Stackable, movable artistry granting wrists a novelist’s touch -
-            Diamas bracelets and bangles become the distinguishing signature of
-            a woman and her story. Dainty chains one day and bold cuffs the next
-            – these treasured keepsakes empower you to curate looks as unique as
-            each new chapter.
-          </p>
-        </div>
       </div>
     </>
   );

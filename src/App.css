@@ -45,6 +45,22 @@ a {
   padding: 10px;
 }
 
+@media (min-width: 1024px) { /* lg screen */
+  .flex-row-lg {
+    flex-direction: row;
+  }
+
+  .flex-row-reverse-lg {
+    flex-direction: row-reverse;
+  }
+}
+
+@media (max-width: 1023px) { /* small screen */
+  .flex-col-sm {
+    flex-direction: column;
+  }
+}
+
 
 /* swiper styles */
 

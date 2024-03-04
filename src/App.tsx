@@ -12,6 +12,11 @@ import ErrorPage from "./pages/404";
 import { Help } from "./pages/help";
 import { Legal } from "./pages/legal";
 import { Terms } from "./pages/terms";
+import Necklace from "./pages/necklace";
+import Earring from "./pages/earring";
+import Pendant from "./pages/pendant";
+import Bracelet from "./pages/bracelet";
+import Ring from "./pages/ring";
 
 function App() {
   return (
@@ -29,6 +34,13 @@ function App() {
           <Route path="/help" element={<Help />} />
           <Route path="/legal" element={<Legal />} />
           <Route path="/terms" element={<Terms />} />
+
+          <Route path="/necklace" element={<Necklace />} />
+          <Route path="/earring" element={<Earring />} />
+          <Route path="/pendant" element={<Pendant />} />
+          <Route path="/bracelet" element={<Bracelet />} />
+          <Route path="/ring" element={<Ring />} />
+
           {/* Catch-all route for paths not matched by any other route */}
           <Route path="*" element={<ErrorPage />} />
         </Routes>
