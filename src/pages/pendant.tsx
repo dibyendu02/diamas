@@ -2,7 +2,7 @@ import { useEffect, useState } from "react";
 import Scrollbar from "../components/scrollbar";
 
 import pendants from "../assets/collection/pendants.png";
-
+import pendant1 from "../assets/collection/pendants/pendant1.png";
 
 import lines1 from "../assets/collection/lines1.png";
 import lines2 from "../assets/collection/lines2.png";
@@ -61,7 +61,7 @@ function pendant() {
 
             <div className="flex flex-col md:flex-row md:flex-wrap lg:flex-row lg:flex-wrap sm:w-full lg:w-full justify-center items-center  mt-10 lg:mt-10 mx-5  gap-10 lg:absolute z-10 ">
               <div className="h-full md:w-[40%] lg:w-[28%] bg-black">
-                <img src={pendants} className="w-full" alt="" />
+                <img src={pendant1} className="w-full" alt="" />
               </div>
               <div className="h-full md:w-[40%] lg:w-[28%] bg-black">
                 <img src={pendants} className="w-full" alt="" />
