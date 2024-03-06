@@ -20,7 +20,7 @@ import Scrollbar from "../components/scrollbar";
 import CollectionSwiper from "../components/swiper";
 import NavbarOnScroll from "../components/headerOnScroll";
 
-const home = () => {
+const Home = () => {
   const [scrollPosition, setScrollPosition] = useState(0);
   const [showButtons, setShowButtons] = useState(false);
   const [showNavbar, setShowNavbar] = useState(false);
@@ -309,4 +309,4 @@ const home = () => {
   );
 };
 
-export default home;
+export default Home;

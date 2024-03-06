@@ -8,7 +8,7 @@ import lines1 from "../assets/collection/lines1.png";
 import lines2 from "../assets/collection/lines2.png";
 import NavbarOnScroll from "../components/headerOnScroll";
 
-function earring() {
+function Earring() {
   const [scrollPosition, setScrollPosition] = useState(0);
   const [showButtons, setShowButtons] = useState(false);
   const [showNavbar, setShowNavbar] = useState(false);
@@ -108,4 +108,4 @@ function earring() {
   );
 }
 
-export default earring;
+export default Earring;

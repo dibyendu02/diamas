@@ -48,10 +48,11 @@ const timelineElements = [
   },
 ];
 
-function legacy() {
+function Legacy() {
   const [scrollPosition, setScrollPosition] = useState(0);
   const [showButtons, setShowButtons] = useState(false);
   const [showNavbar, setShowNavbar] = useState(false);
+  const [highlightedIndex, setHighlightedIndex] = useState(-1);
 
   useEffect(() => {
     const handleScroll = () => {
@@ -77,6 +78,29 @@ function legacy() {
       top: 0,
       behavior: "smooth",
     });
+  }, []);
+
+  useEffect(() => {
+    const handleHighlight = () => {
+      const contentElements = document.querySelectorAll(".content");
+      contentElements.forEach((element, index) => {
+        const rect = element.getBoundingClientRect();
+        if (
+          rect.top >= 0 &&
+          rect.bottom <= window.innerHeight &&
+          rect.top < window.innerHeight / 2 &&
+          rect.bottom > window.innerHeight / 2
+        ) {
+          setHighlightedIndex(index);
+        }
+      });
+    };
+
+    window.addEventListener("scroll", handleHighlight);
+
+    return () => {
+      window.removeEventListener("scroll", handleHighlight);
+    };
   }, []);
   return (
     <>
@@ -105,43 +129,44 @@ function legacy() {
             src={rotateBg}
             className="hidden lg:block absolute -right-[25%] -bottom-10 opacity-40"
           />
-          {timelineElements.map((item, index) => {
-            return (
-              <div
-                key={index}
-                className="flex gap-4 lg:gap-10 lg:m-12 mx-5 my-12 "
-              >
-                <div className="relative">
-                  {item.title ? (
-                    <div className="bg-white w-2 h-[133.5%] translate-x-6 -translate-y-12 absolute z-5 " />
-                  ) : (
-                    <div className="bg-white w-2 h-[230%] translate-x-6 -translate-y-16 absolute z-5 " />
-                  )}
-                  <div className="w-14"></div>
-                  <div className="absolute ">
-                    <img src={dotImage} className=" z-20" />
-                  </div>
-                </div>
 
-                <div className="w-[90%]">
-                  <div className=" flex flex-col gap-2 lg:gap-8">
-                    {item.title && (
-                      <h1 className="font-['Butler'] text-2xl lg:text-4xl">
-                        {item.title}
-                      </h1>
-                    )}
-                    <p className="text-justify text-lg lg:text-xl">
-                      {item.content}
-                    </p>
-                  </div>
+          {timelineElements.map((item, index) => (
+            <div
+              key={index}
+              className={`flex gap-4 lg:gap-10 lg:m-12 mx-5 my-12 ${
+                index === highlightedIndex ? "" : "text-gray-400"
+              }`}
+            >
+              <div className="relative">
+                {item.title ? (
+                  <div className="bg-white w-2 h-[133.5%] translate-x-6 -translate-y-12 absolute z-5 " />
+                ) : (
+                  <div className="bg-white w-2 h-[230%] translate-x-6 -translate-y-16 absolute z-5 " />
+                )}
+                <div className="w-14"></div>
+                <div className="absolute ">
+                  <img src={dotImage} className=" z-20" />
                 </div>
               </div>
-            );
-          })}
+
+              <div className="w-[90%]">
+                <div className="flex flex-col gap-2 lg:gap-8">
+                  {item.title && (
+                    <h1 className="font-['Butler']  text-2xl lg:text-4xl">
+                      {item.title}
+                    </h1>
+                  )}
+                  <p className="text-justify text-lg  lg:text-xl content">
+                    {item.content}
+                  </p>
+                </div>
+              </div>
+            </div>
+          ))}
         </div>
       </div>
     </>
   );
 }
 
-export default legacy;
+export default Legacy;

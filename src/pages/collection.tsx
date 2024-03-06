@@ -51,7 +51,7 @@ const collectionData = [
   },
 ];
 
-function collection() {
+function Collection() {
   const [scrollPosition, setScrollPosition] = useState(0);
   const [showButtons, setShowButtons] = useState(false);
   const [showNavbar, setShowNavbar] = useState(false);
@@ -173,4 +173,4 @@ function collection() {
   );
 }
 
-export default collection;
+export default Collection;
