@@ -1,11 +1,14 @@
 import { useEffect, useState } from "react";
 import Scrollbar from "../components/scrollbar";
 
-import rings from "../assets/collection/rings.png";
+import ring1 from "../assets/collection/rings/Ring1.jpg";
+import ring2 from "../assets/collection/rings/Ring2.jpg";
+import ring3 from "../assets/collection/rings/Ring3.jpg";
+import ring4 from "../assets/collection/rings/Ring4.jpg";
+import ring5 from "../assets/collection/rings/Ring5.jpg";
+import ring6 from "../assets/collection/rings/Ring6.jpg";
+import ring7 from "../assets/collection/rings/Ring7.png";
 
-import ring1 from "../assets/collection/rings/ring1.png";
-import ring2 from "../assets/collection/rings/ring2.png";
-import ring3 from "../assets/collection/rings/ring3.png";
 
 
 import lines1 from "../assets/collection/lines1.png";
@@ -74,17 +77,20 @@ function Ring() {
                 <img src={ring3} className="w-full" alt="" />
               </div>
               <div className="h-full md:w-[40%] lg:w-[28%] bg-black">
-                <img src={rings} className="w-full" alt="" />
+                <img src={ring4} className="w-full" alt="" />
               </div>
               <div className="h-full md:w-[40%] lg:w-[28%] bg-black">
-                <img src={rings} className="w-full" alt="" />
+                <img src={ring5} className="w-full" alt="" />
               </div>
               <div className="h-full md:w-[40%] lg:w-[28%] bg-black">
-                <img src={rings} className="w-full" alt="" />
+                <img src={ring6} className="w-full" alt="" />
+              </div>
+              <div className="h-full md:w-[40%] lg:w-[28%] bg-black">
+                <img src={ring7} className="w-full" alt="" />
               </div>
             </div>
 
-            <p className="mb-3 text-white font-light  text-justify my-12 lg:mx-24 lg:text-2xl mx-[30px] lg:mt-[60%] ">
+            <p className="mb-3 text-white font-light  text-justify my-12 lg:mx-24 lg:text-2xl mx-[30px] lg:mt-[90%] ">
               Diamas necklaces embrace the extraordinary in the ordinary.
               Delicate drops become bold when layered, while sculptural
               centrepieces command attention. Our pieces accentuate and amplify,

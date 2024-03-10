@@ -1,11 +1,12 @@
 import { useEffect, useState } from "react";
 import Scrollbar from "../components/scrollbar";
 
-import neclace1 from "../assets/collection/Necklace1.png";
-import neclace2 from "../assets/collection/Necklace2.png";
-import neclace3 from "../assets/collection/Necklace3.png";
-import neclace4 from "../assets/collection/Necklace4.png";
-import neclace5 from "../assets/collection/Necklace5.png";
+import neclace1 from "../assets/collection/Necklace1.jpg";
+import neclace2 from "../assets/collection/Necklace2.jpg";
+import neclace3 from "../assets/collection/Necklace3.jpg";
+import neclace4 from "../assets/collection/Necklace4.jpg";
+import neclace5 from "../assets/collection/Necklace5.jpg";
+import neclace6 from "../assets/collection/Necklace6.jpg";
 
 import lines1 from "../assets/collection/lines1.png";
 import lines2 from "../assets/collection/lines2.png";
@@ -63,23 +64,23 @@ function Necklace() {
             </h1>
 
             <div className="flex flex-col md:flex-row md:flex-wrap lg:flex-row lg:flex-wrap sm:w-full lg:w-full justify-center items-center  mt-10 lg:mt-10 mx-5  gap-10 lg:absolute z-10 ">
-              <div className="h-full md:w-[40%] lg:w-[28%] bg-black">
+              <div className="h-full md:w-[40%] lg:w-[28%] ">
                 <img src={neclace1} className="w-full" alt="" />
               </div>
-              <div className="h-full md:w-[40%] lg:w-[28%] bg-black">
+              <div className="h-full md:w-[40%] lg:w-[28%] ">
                 <img src={neclace2} className="w-full" alt="" />
               </div>
-              <div className="h-full md:w-[40%] lg:w-[28%] bg-black">
+              <div className="h-full md:w-[40%] lg:w-[28%] ">
                 <img src={neclace3} className="w-full" alt="" />
               </div>
-              <div className="h-full p-4 md:w-[40%] lg:w-[28%] bg-black">
+              <div className="h-full p-4 md:w-[40%] lg:w-[28%] ">
                 <img src={neclace4} className="w-full" alt="" />
               </div>
-              <div className="h-full p-4 md:w-[40%] lg:w-[28%] bg-black">
+              <div className="h-full p-4 md:w-[40%] lg:w-[28%] ">
                 <img src={neclace5} className="w-full" alt="" />
               </div>
-              <div className="h-full p-4 md:w-[40%] lg:w-[28%] bg-black">
-                <img src={neclace5} className="w-full" alt="" />
+              <div className="h-full p-4 md:w-[40%] lg:w-[28%] ">
+                <img src={neclace6} className="w-full" alt="" />
               </div>
             </div>
 
