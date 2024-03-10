@@ -60,9 +60,8 @@ function About() {
     <>
       <Helmet>
       <title>About</title>
-      <meta 
-      name="Diamas: Aditya Dhawan's Vision Unveiled in Exquisite Diamond Jewelry" 
-      content=" Discover the artistry of Aditya Dhawan at Diamas, where diamonds transcend stones, embodying enduring beauty. Infused with nature's inspiration, each design is a testament to craftsmanship and a passion for the eternal allure of diamonds." />
+      <meta name="title" content="Diamas: Aditya Dhawan's Vision Unveiled in Exquisite Diamond Jewelry" />
+      <meta name="description" content=" Discover the artistry of Aditya Dhawan at Diamas, where diamonds transcend stones, embodying enduring beauty. Infused with nature's inspiration, each design is a testament to craftsmanship and a passion for the eternal allure of diamonds." />
       </Helmet>
       {showNavbar && <NavbarOnScroll />}
       <div
