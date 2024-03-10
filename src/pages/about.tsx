@@ -7,6 +7,7 @@ import lines from "../assets/about/lines.png";
 import Scrollbar from "../components/scrollbar";
 import NavbarOnScroll from "../components/headerOnScroll";
 import VideoPlayer from "../components/VideoPlayer";
+import { Helmet } from 'react-helmet';
 
 import video from "../assets/about/about-video.mp4";
 
@@ -57,6 +58,12 @@ function About() {
 
   return (
     <>
+      <Helmet>
+      <title>About</title>
+      <meta 
+      name="Diamas: Aditya Dhawan's Vision Unveiled in Exquisite Diamond Jewelry" 
+      content=" Discover the artistry of Aditya Dhawan at Diamas, where diamonds transcend stones, embodying enduring beauty. Infused with nature's inspiration, each design is a testament to craftsmanship and a passion for the eternal allure of diamonds." />
+      </Helmet>
       {showNavbar && <NavbarOnScroll />}
       <div
         style={{ backgroundImage: `url(${one})` }}
