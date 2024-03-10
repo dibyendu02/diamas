@@ -17,6 +17,7 @@ import blog2 from "../assets/media/blogs/blog1.png";
 import blog3 from "../assets/media/blogs/blog2.png";
 import Scrollbar from "../components/scrollbar";
 import NavbarOnScroll from "../components/headerOnScroll";
+import { Helmet } from "react-helmet";
 
 function Media() {
   const [active, setActive] = useState("Events");
@@ -66,7 +67,10 @@ function Media() {
 
   return (
     <>
-    
+      <Helmet>
+        <title>Luxury Diamonds Jewelry by Diamas | Event | Gallery | Blogs</title>
+        <meta name="description" content=" Immerse yourself in the world of luxury with Diamas' diamond jewelry collection. Explore stunning designs through captivating event coverage, inspiring Gallery, and insightful blogs." />
+      </Helmet>
       {showNavbar && <NavbarOnScroll />}
       <div className="flex flex-col justify-center items-center">
         <div className="flex flex-col justify-center items-center w-full mb-20">

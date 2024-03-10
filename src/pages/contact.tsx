@@ -7,6 +7,7 @@ import AccordionDetails from "@mui/material/AccordionDetails";
 import ExpandMoreIcon from "@mui/icons-material/ExpandMore";
 import NavbarOnScroll from "../components/headerOnScroll";
 import { useEffect, useState } from "react";
+import { Helmet } from "react-helmet";
 
 function Contact() {
   //const [open, setOpen] = React.useState(1);
@@ -88,6 +89,10 @@ function Contact() {
   return (
 
     <>
+    <Helmet>
+      <title> Contact Diamas: Reach Out for Exceptional Service and Support</title>
+      <meta name="description" content="Need assistance or have inquiries about our luxury diamond jewelry? Contact Diamas and experience unparalleled service and support from our dedicated team of experts." />
+    </Helmet>
     {showNavbar && <NavbarOnScroll />}
     <div className="flex flex-col justify-center w-full items-center bg-[#090D29]">
       

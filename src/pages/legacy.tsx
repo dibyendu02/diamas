@@ -6,6 +6,7 @@ import rotateBg from "../assets/legacy/screen-bg-rotate.png";
 import Scrollbar from "../components/scrollbar";
 import NavbarOnScroll from "../components/headerOnScroll";
 import dotImage from "../assets/legacy/icon.png";
+import { Helmet } from "react-helmet";
 
 const timelineElements = [
   {
@@ -104,6 +105,10 @@ function Legacy() {
   }, []);
   return (
     <>
+      <Helmet>
+        <title>The Enduring Legacy of Diamas: A Story of Strength and Honor</title>
+        <meta name="description" content="From humble beginnings to global recognition, the story of Diamas is one of strength and honor. Delve into the enduring legacy of this iconic diamond jewelry brand." />
+      </Helmet>
       {showNavbar && <NavbarOnScroll />}
       <div className="flex flex-col justify-center items-center ">
         <div className="relative flex items-center justify-start">

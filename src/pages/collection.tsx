@@ -12,6 +12,7 @@ import screenBgR from "../assets/collection/screen-bg-rotate.png";
 
 import NavbarOnScroll from "../components/headerOnScroll";
 import Scrollbar from "../components/scrollbar";
+import { Helmet } from "react-helmet";
 
 const collectionData = [
   {
@@ -83,6 +84,10 @@ function Collection() {
   }, []);
   return (
     <div className="w-full relative">
+      <Helmet>
+        <title>Exquisite Luxury Diamond Jewelry Collection: Necklaces, Earrings, Pendants, Bracelets, and Rings for Timeless Elegance | Diamas</title>
+        <meta name="description" content="Diamas presents an unparalleled collection of luxury diamond jewelry, featuring exquisitely designed necklaces, earrings, pendants, bracelets, and rings that epitomize timeless elegance and sophistication." />
+      </Helmet>
       {showNavbar && <NavbarOnScroll />}
 
       <div className="flex flex-col justify-center items-center ">
