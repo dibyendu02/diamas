@@ -1,8 +1,13 @@
 import { useEffect, useState } from "react";
 import Scrollbar from "../components/scrollbar";
 
-import earrings from "../assets/collection/earrings.png";
-
+// import earrings from "../assets/collection/earrings.png";
+import earring1 from "../assets/collection/earrings/Earings1.jpg";
+import earring2 from "../assets/collection/earrings/Earings2.jpg";
+import earring3 from "../assets/collection/earrings/Earings3.jpg";
+import earring4 from "../assets/collection/earrings/Earings4.jpg";
+import earring5 from "../assets/collection/earrings/Earings5.jpg";
+import earring6 from "../assets/collection/earrings/Earings6.jpg";
 
 import lines1 from "../assets/collection/lines1.png";
 import lines2 from "../assets/collection/lines2.png";
@@ -61,22 +66,22 @@ function Earring() {
 
             <div className="flex flex-col md:flex-row md:flex-wrap lg:flex-row lg:flex-wrap sm:w-full lg:w-full justify-center items-center  mt-10 lg:mt-10 mx-5  gap-10 lg:absolute z-10 ">
               <div className="h-full md:w-[40%] lg:w-[28%] bg-black">
-                <img src={earrings} className="w-full" alt="" />
+                <img src={earring1} className="w-full" alt="" />
               </div>
               <div className="h-full md:w-[40%] lg:w-[28%] bg-black">
-                <img src={earrings} className="w-full" alt="" />
+                <img src={earring2} className="w-full" alt="" />
               </div>
               <div className="h-full md:w-[40%] lg:w-[28%] bg-black">
-                <img src={earrings} className="w-full" alt="" />
+                <img src={earring3} className="w-full" alt="" />
               </div>
               <div className="h-full md:w-[40%] lg:w-[28%] bg-black">
-                <img src={earrings} className="w-full" alt="" />
+                <img src={earring4} className="w-full" alt="" />
               </div>
               <div className="h-full md:w-[40%] lg:w-[28%] bg-black">
-                <img src={earrings} className="w-full" alt="" />
+                <img src={earring5} className="w-full" alt="" />
               </div>
               <div className="h-full md:w-[40%] lg:w-[28%] bg-black">
-                <img src={earrings} className="w-full" alt="" />
+                <img src={earring6} className="w-full" alt="" />
               </div>
             </div>
 

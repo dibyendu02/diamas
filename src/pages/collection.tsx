@@ -3,9 +3,10 @@ import one from "../assets/collection/1.png";
 
 import neclace from "../assets/collection/neclace.png";
 import earring from "../assets/collection/earrings.png";
-import pendant from "../assets/collection/pendants.png";
+// import pendant from "../assets/collection/pendants.png";
 import bracelet from "../assets/collection/bracelets.png";
-import ring from "../assets/collection/rings.png";
+import ring from "../assets/collection/rings1.png";
+import pendant1 from "../assets/collection/pendants/pendant1.png";
 
 import screenBg from "../assets/collection/screen-bg.png";
 import screenBgR from "../assets/collection/screen-bg-rotate.png";
@@ -33,7 +34,7 @@ const collectionData = [
     id: 3,
     name: "Pendants",
     desc: "Suspended on delicate chains, Diamas pendants preserve precious memories. Exquisite motifs layer sentimental value within elegant frames. An engraved initial pays tribute to a loved one; an inspired emblem celebrates a meaningful journey. Hold your most cherished moments forever - close to the heart.",
-    image: pendant,
+    image: pendant1,
     goto: "/pendant",
   },
   {
