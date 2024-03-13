@@ -1,5 +1,5 @@
 import { useEffect, useRef, useState } from "react";
-import one from "../assets/media/1.png";
+import one from "../assets/media/10.png";
 import two from "../assets/media/2.png";
 import three from "../assets/media/3.png";
 import four from "../assets/media/4.png";
@@ -74,17 +74,17 @@ function Media() {
       {showNavbar && <NavbarOnScroll />}
       <div className="flex flex-col justify-center items-center">
         <div className="flex flex-col justify-center items-center w-full mb-20">
-          <div className="w-full h-[300px] lg:h-[700px] flex items-center justify-center relative">
-            <div className="absolute h-full inset-0 bg-opacity-20 bg-blue-950 z-10"></div>
-            <img src={one} className="z-0 object-cover h-full" alt="" />
+          <div className="w-full h-[300px] lg:h-[720px] flex items-center justify-center relative">
+            
+            <img src={one} className="z-0 object-cover w-full h-full" alt="" />
             <h1
-              className="absolute text-3xl lg:text-7xl my-3 font-[Bulter] font-bold text-white text-center lg:text-start z-10 uppercase"
+              className="absolute mt-40 sm:mt-0 text-5xl lg:text-8xl bacalisties my-3 text-white text-center lg:-ms-[50%] z-10 "
               style={{
                 letterSpacing: 5,
                 lineHeight: 1.4,
               }}
             >
-              MEDIA
+              Media
             </h1>
           </div>
         </div>

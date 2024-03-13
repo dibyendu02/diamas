@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-import one from "../assets/collection/1.png";
+import one from "../assets/collection/10.png";
 
 import neclace from "../assets/collection/neclace.png";
 import earring from "../assets/collection/earrings.png";
@@ -97,15 +97,16 @@ function Collection() {
             backgroundImage: `url(${one})`,
           }}
           className="bg-[image:var(--image-url)] bg-cover 
-         bg-center w-full h-[300px] md:h-[500px] lg:h-[761px] object-cover 
+         bg-center w-full h-[300px] md:h-[500px] lg:h-[879px] object-cover 
          justify-start px-[15%] items-center flex  gayscale relative z-10
          "
         >
           <h1
-            className="text-3xl lg:text-6xl my-3 font-[Bolter] font-bold text-white text-center lg:text-start lg:-ms-14 z-10 uppercase"
+            className="text-5xl mt-40 sm:mt-0 lg:text-8xl my-3 bacalisties text-white text-center lg:text-start lg:-ms-10 z-10"
             style={{
               letterSpacing: 5,
               lineHeight: 1.4,
+              
             }}
           >
             Collections
