@@ -63,11 +63,14 @@ export default function NavbarSimple() {
       >
     <nav className="bg-transparent border-gray-200 px-4 lg:absolute z-20 w-full font-[Butler] font-normal">
       <div className="flex flex-wrap justify-between mx-auto">
-        <img
-          src={logo}
-          className="sm:h-[100px] w-[100px] lg:h-[150px] lg:w-[150px] "
-          alt="Flowbite Logo"
-        />
+        <Link to="/">
+          <img
+            src={logo}
+            className="sm:h-[100px] w-[100px] lg:h-[150px] lg:w-[150px] "
+            alt="Flowbite Logo"
+          />
+        </Link>
+        
         <button
           data-collapse-toggle="navbar-default"
           type="button"
