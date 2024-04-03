@@ -259,26 +259,26 @@ function Media() {
           <div className="flex flex-col lg:w-1/3 gap-3">
             <img src={feed1} alt="" />
             {/* <h3 className="text-white">17 February 2022</h3> */}
-            <h3 className="text-white lg:text-2xl">
+            {/* <h3 className="text-white lg:text-2xl">
             A pristine pearl is cradled gently within an open diamond...
-            </h3>
+            </h3> */}
           </div>
 
           <div className="flex flex-col lg:w-1/3 gap-3">
             <img src={feed2} alt="" />
             {/* <h3 className="text-white">26 February 2022</h3> */}
-            <h3 className="text-white lg:text-2xl">
+            {/* <h3 className="text-white lg:text-2xl">
             A strand of lustrous pearls indelibly fused with diamond ...
-            </h3>
+            </h3> */}
             
           </div>
 
           <div className="flex flex-col lg:w-1/3 gap-3">
             <img src={feed3} alt="" />
             {/* <h3 className="text-white">20 February 2022</h3> */}
-            <h3 className="text-white lg:text-2xl">
+            {/* <h3 className="text-white lg:text-2xl">
             Luminescent pearl droplets fused seamlessly within...
-            </h3>
+            </h3> */}
             
           </div>
         </div>
