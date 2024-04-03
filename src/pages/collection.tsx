@@ -145,9 +145,9 @@ function Collection() {
                   >
                     {item.name}
                   </h1>
-                  <p className="text-white  text-justify text-lg leading-tight tracking-wider lg:w-96 sm:w-full ">
+                  {/* <p className="text-white  text-justify text-lg leading-tight tracking-wider lg:w-96 sm:w-full ">
                     {item.desc}
-                  </p>
+                  </p> */}
                   <a
                     href={item.goto}
                     className=" text-white h-8 w-28 mt-3 text-sm inline-flex items-center justify-center space-x-1 rounded-3xl border-blue-300 border p-1 px-2 hover:bg-slate-500 hover:cursor-pointer"
@@ -177,7 +177,7 @@ function Collection() {
         </div>
       </div>
     </div>
-  );
+  ); 
 }
 
 export default Collection;

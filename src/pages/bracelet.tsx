@@ -80,12 +80,8 @@ function Bracelet() {
               </div>
             </div>
 
-            <p className="mb-3 text-white font-light  text-justify my-12 lg:mx-24 lg:text-2xl mx-[30px] lg:mt-[60%] ">
-              Diamas necklaces embrace the extraordinary in the ordinary.
-              Delicate drops become bold when layered, while sculptural
-              centrepieces command attention. Our pieces accentuate and amplify,
-              designed to empower confidence, flair and fearless femininity.
-            </p>
+            <div className="mb-3 text-white font-light  text-justify my-12 lg:mx-24 lg:text-2xl mx-[30px] lg:mt-[60%] w-[80vw] "/>
+
           </div>
 
           

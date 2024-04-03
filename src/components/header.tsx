@@ -58,14 +58,14 @@ export default function NavbarSimple() {
   return (
     <div
         className="flex gap-10 justify-center items-center  
-         absolute lg:top-24 z-50  w-full
+         absolute lg:top-12 z-50  w-full
         p-4 text-white"
       >
     <nav className="bg-transparent border-gray-200 px-4 lg:absolute z-20 w-full font-[Butler] font-normal">
       <div className="flex flex-wrap justify-between mx-auto">
         <img
           src={logo}
-          className="sm:h-[100px] w-[100px] lg:h-[236px] lg:w-[236px] "
+          className="sm:h-[100px] w-[100px] lg:h-[150px] lg:w-[150px] "
           alt="Flowbite Logo"
         />
         <button

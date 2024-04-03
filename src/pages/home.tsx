@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
 import video from "../assets/video.mp4";
-import one from "../assets/home/home1.png";
+import one from "../assets/home/home2.png";
 
 import line1 from "../assets/home/line_3.png";
 import line4 from "../assets/home/line_4.png";
@@ -87,7 +87,7 @@ const Home = () => {
               alt=""
               className="w-full z-1 brightness-105 hue-rotate-10 rounded-3xl"
             />
-            <div className="lg:my-16 rounded-3xl absolute inset-0 bg-gradient-to-b from-transparent to-blue-500 mix-blend-overlay" />
+            {/* <div className="lg:my-16 rounded-3xl absolute inset-0 bg-gradient-to-b from-transparent to-blue-500 mix-blend-overlay" /> */}
           </div>
         </div>
 
@@ -191,7 +191,7 @@ const Home = () => {
             >
               Legacy
             </h1>
-            <p className="text-white text-justify text-lg leading-tight tracking-wider mb-3 lg:w-[72%]  sm:w-full ">
+            {/* <p className="text-white text-justify text-lg leading-tight tracking-wider mb-3 lg:w-[72%]  sm:w-full ">
               Drawing from a legacy in jewellery craftsmanship, Diamas excels by
               blending time-honoured techniques with the highest quality
               diamonds.
@@ -199,6 +199,12 @@ const Home = () => {
               <br />
               Our artisans ensure that each design radiates brilliance, meant to
               inspire for generations.
+            </p> */}
+            <p className="text-white text-start text-lg  mb-3 lg:w-[80%] sm:w-full">
+              Drawing from a legacy in jewellery craftsmanship, Diamas excels by blending time-honoured techniques with the highest quality diamonds.
+              <br />
+              <br />
+              Our artisans ensure that each design radiates brilliance, meant to inspire for generations.
             </p>
             <div className="flex items-center lg:gap-10 gap-3">
             <a

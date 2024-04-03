@@ -1,12 +1,19 @@
 import { useEffect, useState } from "react";
 import Scrollbar from "../components/scrollbar";
 
-import neclace1 from "../assets/collection/Necklace1.jpg";
-import neclace2 from "../assets/collection/Necklace2.jpg";
-import neclace3 from "../assets/collection/Necklace3.jpg";
-import neclace4 from "../assets/collection/Necklace4.jpg";
-import neclace5 from "../assets/collection/Necklace5.jpg";
-import neclace6 from "../assets/collection/Necklace6.jpg";
+// import neclace1 from "../assets/collection/Necklace1.jpg";
+// import neclace2 from "../assets/collection/Necklace2.jpg";
+// import neclace3 from "../assets/collection/Necklace3.jpg";
+// import neclace4 from "../assets/collection/Necklace4.jpg";
+// import neclace5 from "../assets/collection/Necklace5.jpg";
+// import neclace6 from "../assets/collection/Necklace6.jpg";
+
+import neclace1 from "../assets/collection/necklace/Necklace1.jpg";
+import neclace2 from "../assets/collection/necklace/Necklace2.jpg";
+import neclace3 from "../assets/collection/necklace/Necklace3.jpg";
+import neclace4 from "../assets/collection/necklace/Necklace4.jpg";
+import neclace5 from "../assets/collection/necklace/Necklace5.jpg";
+import neclace6 from "../assets/collection/necklace/Necklace6.jpg";
 
 import lines1 from "../assets/collection/lines1.png";
 import lines2 from "../assets/collection/lines2.png";
@@ -84,12 +91,8 @@ function Necklace() {
               </div>
             </div>
 
-            <p className="mb-3 text-white font-light  text-justify my-12 lg:mx-24 lg:text-2xl mx-[30px] lg:mt-[80%] ">
-              Diamas necklaces embrace the extraordinary in the ordinary.
-              Delicate drops become bold when layered, while sculptural
-              centrepieces command attention. Our pieces accentuate and amplify,
-              designed to empower confidence, flair and fearless femininity.
-            </p>
+            <div className="mb-3 text-white font-light  text-justify my-12 lg:mx-24 lg:text-2xl mx-[30px] lg:mt-[80%] w-[80vw] "/>
+
           </div>
 
           
