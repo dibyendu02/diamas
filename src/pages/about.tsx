@@ -89,7 +89,7 @@ function About() {
           </div>
 
           <div className="flex flex-col gap-5 items-center lg:mb-20 my-8 ">
-            <h1 className="lg:text-8xl font-[Butler] text-white  ">DIAMAS</h1>
+            <h1 className="lg:text-8xl text-xl font-[Butler] text-white  ">DIAMAS</h1>
             <div className="flex w-56 mb-5 ">
               <div className="h-1 bg-blue-600 w-1/3 rounded-full"></div>
               <div className="h-1 bg-white w-1/3"></div>
@@ -125,7 +125,7 @@ function About() {
                 <h1 className="text-white bacalisties relative z-10 text-4xl lg:ml-8 lg:text-8xl">
                   Craftsmanship
                 </h1>
-                <h3 className="text-white mx-auto pt-5 p-3 text-justify text-lg leading-tight tracking-wider mt-5 lg:w-96 sm:w-full">
+                <h3 className="text-white mx-auto pt-5 p-2 text-start text-lg leading-tight tracking-wider mt-5 lg:w-96 sm:w-full">
                   Beyond technical mastery, our artisans employ generations of
                   experience, honing jewellery excellence. Guided by Aditya
                   Dhawan’s pioneering vision, each piece is sculpted with
@@ -150,25 +150,25 @@ function About() {
               {/* <div className="absolute inset-0 opacity-0 bg-blue-950 z-10"></div> */}
               <img src={four} className="w-full z-0 brightness-125" alt="" />
             </div>
-            <div className="w-full lg:w-1/2 space-y-5 lg:ms-16 ">
+            <div className="w-full lg:w-1/2  lg:ms-16 ">
               {/* <div>
               <h1 className="text-white bacalisties text-center text-[2rem]  lg:ms-96 lg:text-7xl mt-8">
                 Diamond Quality
               </h1>
             </div> */}
 
-              <h3 className="text-white mx-auto pt-5  text-justify text-lg leading-tight tracking-wider mt-5 p-2 sm:w-full ">
+              <h3 className="text-white mx-auto  text-start text-lg leading-tight tracking-wider p-2 sm:w-full ">
                 At Diamas, we hold a simple yet profound philosophy: the value
                 of a diamond is not just appreciated; it inherently grows.
               </h3>
-              <h3 className="text-white mx-auto pt-5  text-justify text-lg leading-tight tracking-wider mt-5 p-2 sm:w-full ">
+              <h3 className="text-white mx-auto   text-start text-lg leading-tight tracking-wider p-2 sm:w-full ">
                 Our commitment to this principle is reflected in our exclusive
                 selection of high-quality diamonds, sourced individually from
                 international sources and meeting standards set by the
                 International Gemological Institute (IGI), a global authority in
                 diamond and jewellery certification since 1975.
               </h3>
-              <h3 className="text-white mx-auto pt-5  text-justify text-lg leading-tight tracking-wider mt-5 p-2 sm:w-full ">
+              <h3 className="text-white mx-auto  text-start text-lg leading-tight tracking-wider p-2 sm:w-full ">
                 Building on the foundation of his father's applied knowledge and
                 his own IGI certification, Aditya envisions a unique mission,
                 aspiring to introduce exceptional diamonds to India, crafting

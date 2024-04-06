@@ -99,7 +99,7 @@ const Home = () => {
               Diamas
             </h1>
 
-            <p className="text-white text-justify text-lg leading-tight lg:w-96 sm:w-full">
+            <p className="text-white text-start text-lg leading-tight lg:w-96 sm:w-full">
   Diamonds are a statement unto themselves. At Diamas, Aditya Dhawan transforms his passion for diamonds into contemporary and luxurious works of art – each one, as unique as you.
 </p>
             <div className="flex items-center lg:gap-10 gap-3">
@@ -198,7 +198,7 @@ const Home = () => {
               Our artisans ensure that each design radiates brilliance, meant to
               inspire for generations.
             </p> */}
-            <p className="text-white text-justify  text-lg  mb-3 lg:w-[75%] sm:w-full" >
+            <p className="text-white text-start  text-lg  mb-3 lg:w-[75%] sm:w-full" >
               Drawing from a legacy in jewellery craftsmanship, Diamas excels by blending time-honoured techniques with the highest quality diamonds.
               <br />
               <br />
