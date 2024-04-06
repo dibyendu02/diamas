@@ -113,7 +113,7 @@ function Contact() {
 
       <div className="w-full flex flex-col lg:flex-row gap-10 justify-center items-center mt-8 relative">
         <div className="w-full lg:w-1/3 flex flex-col  justify-center items-center space-y-5 relative ">
-          <div className="h-[140%] -right-[5%] top-0 w-[1px] bg-white absolute hidden lg:block" />
+          
           <svg
             xmlns="http://www.w3.org/2000/svg"
             fill="none"
@@ -136,7 +136,8 @@ function Contact() {
         </div>
 
         <div className="w-full lg:w-1/3 flex flex-col justify-center items-center space-y-5 relative ">
-          <div className="h-[140%] -right-[5%] top-0 w-[2px] bg-white absolute hidden lg:block" />
+          <div className="h-[140%] -left-[5%] top-0 w-[2px] bg-white absolute hidden lg:block" />
+          <div className="h-[140%] -right-[5%] -top-5 w-[2px] bg-white absolute hidden lg:block" />
           <svg
             xmlns="http://www.w3.org/2000/svg"
             fill="none"

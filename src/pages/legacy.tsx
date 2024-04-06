@@ -13,7 +13,7 @@ const timelineElements = [
     id: 1,
     title: "1978",
     content:
-      "he roots of Diamas trace back to 1978 in the colourful bazaars of Amritsar, where Kasturi Lal founded a small yet ambitious jewellery shop. His craftsmanship and eye for stunning designs earned him a loyal clientele over the decades.",
+      "The roots of Diamas trace back to 1978 in the colourful bazaars of Amritsar, where Kasturi Lal founded a small yet ambitious jewellery shop. His craftsmanship and eye for stunning designs earned him a loyal clientele over the decades.",
   },
   {
     id: 2,
@@ -106,23 +106,49 @@ function Legacy() {
   return (
     <>
       <Helmet>
-        <title>The Enduring Legacy of Diamas: A Story of Strength and Honor</title>
-        <meta name="description" content="From humble beginnings to global recognition, the story of Diamas is one of strength and honor. Delve into the enduring legacy of this iconic diamond jewelry brand." />
+        <title>
+          The Enduring Legacy of Diamas: A Story of Strength and Honor
+        </title>
+        <meta
+          name="description"
+          content="From humble beginnings to global recognition, the story of Diamas is one of strength and honor. Delve into the enduring legacy of this iconic diamond jewelry brand."
+        />
       </Helmet>
       {showNavbar && <NavbarOnScroll />}
       <div className="flex flex-col justify-center items-center ">
-        <div className="relative flex items-center justify-start">
+        {/* <div className="relative flex items-center justify-start">
           <h1
-            className="absolute text-3xl lg:text-8xl mt-20 ml-20 font-[Bulter] font-semibold text-white text-center lg:text-start z-10 uppercase"
+            className="text-5xl mt-40 sm:mt-0 lg:text-8xl my-3 bacalisties text-white text-center lg:text-start lg:-ms-10 z-10"
             style={{
               letterSpacing: 5,
               lineHeight: 1.4,
+              
             }}
           >
             LEGACY
           </h1>
           <img src={main} alt="main" className="w-full object-cover" />
           {showButtons && <Scrollbar />}
+        </div> */}
+
+        <div
+          style={{
+            backgroundImage: `url(${main})`,
+          }}
+          className="bg-[image:var(--image-url)] bg-cover 
+         bg-center w-full h-[300px] md:h-[500px] lg:h-[879px] object-cover 
+         justify-start px-[15%] items-center flex  gayscale relative z-10
+         "
+        >
+          <h1
+            className="text-5xl mt-40 sm:mt-0 lg:text-8xl my-3 bacalisties text-white text-center lg:text-start lg:-ms-10 z-10"
+            style={{
+              letterSpacing: 5,
+              lineHeight: 1.4,
+            }}
+          >
+            Legacy
+          </h1>
         </div>
 
         <div className=" lg:px-40 text-white text-xl relative">
