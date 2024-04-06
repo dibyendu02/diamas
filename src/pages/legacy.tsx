@@ -3,10 +3,10 @@ import main from "../assets/legacy/bg.png";
 import bg from "../assets/legacy/screen-bg.png";
 import rotateBg from "../assets/legacy/screen-bg-rotate.png";
 
-import Scrollbar from "../components/scrollbar";
 import NavbarOnScroll from "../components/headerOnScroll";
 import dotImage from "../assets/legacy/icon.png";
 import { Helmet } from "react-helmet";
+import Scrollbar from "../components/scrollbar";
 
 const timelineElements = [
   {
@@ -149,6 +149,7 @@ function Legacy() {
           >
             Legacy
           </h1>
+          {showButtons && <Scrollbar />}
         </div>
 
         <div className=" lg:px-40 text-white text-xl relative">
