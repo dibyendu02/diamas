@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react";
 import Scrollbar from "../components/scrollbar";
 
-import pendants from "../assets/collection/pendants.png";
+// import pendants from "../assets/collection/pendants.png";
 import pendant1 from "../assets/collection/pendants/pendant1.png";
 
 import lines1 from "../assets/collection/lines1.png";
