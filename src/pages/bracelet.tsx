@@ -60,20 +60,20 @@ function Bracelet() {
               <div className="h-full md:w-[40%] lg:w-[28%] bg-black">
                 <img src={bracelets} className="w-full" alt="" />
               </div>
-              <div className="h-full md:w-[40%] lg:w-[28%] bg-black">
-                <img src="" className="w-full" alt="" />
+              <div className="h-[360px] w-[360px]  md:w-[40%] lg:w-[28%] bg-black">
+                {/* <img src="" className="w-full" alt="" /> */}
               </div>
-              <div className="h-full md:w-[40%] lg:w-[28%] bg-black">
-                <img src="" className="w-full" alt="" />
+              <div className="h-[360px] w-[360px]  md:w-[40%] lg:w-[28%] bg-black">
+                {/* <img src="" className="w-full" alt="" /> */}
               </div>
-              <div className="h-full md:w-[40%] lg:w-[28%] bg-black">
-                <img src="" className="w-full" alt="" />
+              <div className="h-[360px] w-[360px]  md:w-[40%] lg:w-[28%] bg-black">
+                {/* <img src="" className="w-full" alt="" /> */}
               </div>
-              <div className="h-full md:w-[40%] lg:w-[28%] bg-black">
-                <img src="" className="w-full" alt="" />
+              <div className="h-[360px] w-[360px]  md:w-[40%] lg:w-[28%] bg-black">
+                {/* <img src="" className="w-full" alt="" /> */}
               </div>
-              <div className="h-full md:w-[40%] lg:w-[28%] bg-black">
-                <img src="" className="w-full" alt="" />
+              <div className="h-[360px] w-[360px]  md:w-[40%] lg:w-[28%] bg-black">
+                {/* <img src="" className="w-full" alt="" /> */}
               </div>
             </div>
 
