@@ -42,8 +42,6 @@ function Pendant() {
     <>
       {showNavbar && <NavbarOnScroll />}
       <div className="flex flex-col justify-center items-center ">
-        
-
         <div className="flex w-full justify-between">
           {showButtons && <Scrollbar />}
         </div>
@@ -64,19 +62,19 @@ function Pendant() {
                 <img src={pendant1} className="w-full" alt="" />
               </div>
               <div className="h-full md:w-[40%] lg:w-[28%] bg-black">
-                <img src={pendants} className="w-full" alt="" />
+                <img src="" className="w-full" alt="" />
               </div>
               <div className="h-full md:w-[40%] lg:w-[28%] bg-black">
-                <img src={pendants} className="w-full" alt="" />
+                <img src="" className="w-full" alt="" />
               </div>
               <div className="h-full md:w-[40%] lg:w-[28%] bg-black">
-                <img src={pendants} className="w-full" alt="" />
+                <img src="" className="w-full" alt="" />
               </div>
               <div className="h-full md:w-[40%] lg:w-[28%] bg-black">
-                <img src={pendants} className="w-full" alt="" />
+                <img src="" className="w-full" alt="" />
               </div>
               <div className="h-full md:w-[40%] lg:w-[28%] bg-black">
-                <img src={pendants} className="w-full" alt="" />
+                <img src="" className="w-full" alt="" />
               </div>
             </div>
 
@@ -86,11 +84,8 @@ function Pendant() {
               centrepieces command attention. Our pieces accentuate and amplify,
               designed to empower confidence, flair and fearless femininity.
             </p> */}
-            <div className="mb-3 text-white font-light  text-justify my-12 lg:mx-24 lg:text-2xl mx-[30px] lg:mt-[60%] w-[80vw] "/>
-
+            <div className="mb-3 text-white font-light  text-justify my-12 lg:mx-24 lg:text-2xl mx-[30px] lg:mt-[60%] w-[80vw] " />
           </div>
-
-          
 
           <img
             src={lines1}
@@ -103,8 +98,6 @@ function Pendant() {
             className="absolute w-[80%] -bottom-[60%] right-0 z-0 hidden lg:block"
           />
         </div>
-
-        
       </div>
     </>
   );
